@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #f2f6e9;
+}
+
+.navbar {
+    background:#6ab446;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.navbar-brand:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+    text-decoration: none;
+}
+
+
+.nav-link:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+/*Start from here is css for subscription page*/
+.sub-header{
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg');
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.sub-desciption {
+    padding: 80px;
+    vertical-align: center;
+    text-align: center;
+
+}
+
+.carousel-item img {
+    height: 400px;
+}
+
+
+#specials {
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel-inner a i  {
+    font-size: 30px;
+    color: #6ab446;
+    opacity: 1;
+}
+
+.sub-plan-list {
+    background-color: #6ab446;
+    border-radius: 10px;
+}
+
+.sub-plan-price{
+    font-size: 40px;
+}
+
+.sub-button {
+    background-color: white;
+    color: #6ab446;
+}
+
+.before-discount {
+    text-decoration: line-through;
+    font-size: 22px;
+    align-items: start; 
+    color: rgb(78, 75, 75);
+}
+
+.snack h2{
+    font-size:30px;
+}
+
+
+.discount-tag {
+    font-size: 15px;
+    opacity: 70%;     
+}
+.advantage  {
+    color: #0a1535;
+
+}
+
