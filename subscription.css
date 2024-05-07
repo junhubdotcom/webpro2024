@@ -9,11 +9,11 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    background: #f2f6e9;
+    background: #d3bbb7;
 }
 
 .navbar {
-    background:#6ab446;
+    background:#fe632c;
     position: fixed;
     top: 0;
     left: 0;
@@ -55,6 +55,10 @@ body {
 
 
 /*Start from here is css for subscription page*/
+.subscription{
+    background-color: #f3f3f3;
+}
+
 .sub-header{
     background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg');
     /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg'); */
@@ -82,12 +86,12 @@ body {
 
 .carousel-inner a i  {
     font-size: 30px;
-    color: #6ab446;
+    color: #fe632c;
     opacity: 1;
 }
 
 .sub-plan-list {
-    background-color: #6ab446;
+    background-color: #f26734;
     border-radius: 10px;
 }
 
@@ -96,9 +100,22 @@ body {
 }
 
 .sub-button {
-    background-color: white;
-    color: #6ab446;
+    background-color: #183248;
+    color: white;
 }
+
+.sub-button:hover{
+    background-color: white;
+    color:#ed470a ;
+}
+
+.sub-button:active{
+    background-color: white;
+    color:#ed470a ;
+}
+
+
+
 
 .before-discount {
     text-decoration: line-through;
@@ -109,6 +126,11 @@ body {
 
 .snack h2{
     font-size:30px;
+    color: #ed470a ;
+}
+
+.snack-list{
+    color:#021425;
 }
 
 
@@ -116,8 +138,13 @@ body {
     font-size: 15px;
     opacity: 70%;     
 }
-.advantage  {
-    color: #0a1535;
+
+.advantage  i{
+    color: #ed470a;
 
 }
 
+oran {
+    color: #fe632c;
+    font-weight: 800;
+}
