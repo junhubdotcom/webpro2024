@@ -71,7 +71,14 @@ body {
     padding: 80px;
     vertical-align: center;
     text-align: center;
+}
 
+.sub-desciption h1 {
+    font-size: 60px;
+}
+
+.sub-desciption p {
+    font-size: 20px;
 }
 
 .carousel-item img {
