@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #d3bbb7;
+}
+
+.navbar {
+    background:#fe632c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.navbar-brand:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+    text-decoration: none;
+}
+
+
+.nav-link:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+#mouse-trailer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 50%;
+    pointer-events: none; /* Makes the trailer ignore mouse events */
+    box-shadow: 0 0 15px orange;
+    transition: transform 0.1s, opacity 0.1s; /* Smooth follow effect */
+    opacity: 0.7;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Gallery description */
+
+.sub-header {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/snacks-in-america.jpg?quality=82&strip=1'); 
+    padding: 3rem 1rem;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
+
+.sub-header .gallery-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.sub-header h1 {
+    font-size: 3.0rem;
+    margin-bottom: 1rem;
+}
+
+.sub-header p {
+    font-size: 1.5rem;
+}
+
+/* Gallery */
+h2 {
+    font-weight: bold;
+    font-family: "Kranky", serif;
+    font-style: normal;
+    font-size: 50px;
+}
+
+h3 {
+    color: #000;
+    font-size: 25px;
+    font-family: "Glegoo", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h5 {
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p { 
+  font-family: "Puritan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.snack-container {
+    margin-bottom: 3rem;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-indicators li {
+    background-color: #000;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+}
+
+/*Button*/
+
+.btn-orange {
+    background-color: orange;
+    border-color: orange; /* Optional: If you want the border color to match */
+    color: white; /* Optional: Set text color to white for better visibility */
+}
+
+.btn-orange:hover {
+    background-color: darkorange;
+    border-color: darkorange; /* Optional: Adjust border color on hover */
+    color: white; /* Optional: Adjust text color on hover */
+}
+
+/*Subscription*/
+.subscription-container {
+    text-align: center;
+    color: white;
+}
