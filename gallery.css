@@ -95,27 +95,19 @@ body {
 /* Gallery */
 h2 {
     font-weight: bold;
-    font-family: "Kranky", serif;
+    font-family: "Rubik Doodle Shadow", system-ui;
     font-style: normal;
     font-size: 50px;
 }
 
-h3 {
-    color: #000;
-    font-size: 25px;
-    font-family: "Glegoo", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
 h5 {
-    font-family: "Sigmar", sans-serif;
-    font-weight: 400;
+    font-family: "Coming Soon", cursive;
+    font-weight: 800;
     font-style: normal;
 }
 
 p { 
-  font-family: "Puritan", sans-serif;
+  font-family: "Coming Soon", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -137,6 +129,24 @@ p {
     margin-bottom: 1.5rem;
 }
 
+/*Subscription*/
+.subscription-container {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    color: #000;
+    font-size: 25px;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.form-group{
+    color: #000;
+}
+
 /*Button*/
 
 .btn-orange {
@@ -149,10 +159,4 @@ p {
     background-color: darkorange;
     border-color: darkorange; /* Optional: Adjust border color on hover */
     color: white; /* Optional: Adjust text color on hover */
-}
-
-/*Subscription*/
-.subscription-container {
-    text-align: center;
-    color: white;
 }
