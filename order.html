@@ -53,13 +53,13 @@
     <header class="page-header header container-fluid">
         <div class="overlay">
             <div class="description">
-                <h1>FILL YOUR NIGHT WITH SUPRIZE</h1>
-                <p>Delight in <span>exclusive</span> snack experiences from <span>around the globe</span> with
-                    <span>SUB-prize</span>! Indulge in limited edition snack boxes delivered straight to your door,
-                    adding a dose of excitement to your nights."
+                <h1>WANT TO TRY OUT?</h1>
+                <p>Embark on a <span>Global</span> Snack Adventure with us! </p>
+                <p>
+                    Discover <span>exclusive</span>, limited-edition treats from around the world, 
+                    delivered <span>right</span> to your door. Check if we deliver to your country 
+                    and get ready to add a dash of excitement to your nights!
                 </p>
-                <a href="#"><button class="btn btn-outline-secondary btn-lg">Tell Me More!</button></a>
-
             </div>
         </div>
     </header>
@@ -101,19 +101,24 @@
         function checkAvailability() {
             var country = document.getElementById("country").value;
             var availableCountries = ["usa", "uk", "canada", "china", "france", "japan", "malaysia", "singapore"]; // List of available countries for delivery
-
-            if (availableCountries.includes(country)) {
-                document.getElementById("availabilityMessage").innerText = "Delivery is available to " + country.toUpperCase() + ".";
-                document.getElementById("availabilityMessage").classList.remove("not-available"); // Remove not-available class if present
-            } else {
-                document.getElementById("availabilityMessage").innerText = "Sorry, delivery is not available to " + country.toUpperCase() + ".";
-                document.getElementById("availabilityMessage").classList.add("not-available"); // Add not-available class
-            }
             
-        // Scroll to the availability message
-        document.getElementById("availabilityMessage").scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Display an alert message
+            alert("Checking availability for " + country.toUpperCase() + "...");
+            
+            // Delay the display of the result
+            setTimeout(function() {
+                if (availableCountries.includes(country)) {
+                    document.getElementById("availabilityMessage").innerText = "Delivery is available to " + country.toUpperCase() + ".";
+                    document.getElementById("availabilityMessage").classList.remove("not-available"); // Remove not-available class if present
+                } else {
+                    document.getElementById("availabilityMessage").innerText = "Sorry, delivery is not available to " + country.toUpperCase() + ".";
+                    document.getElementById("availabilityMessage").classList.add("not-available"); // Add not-available class
+                }
+                
+                // Scroll to the availability message
+                document.getElementById("availabilityMessage").scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100); // Delay in milliseconds (100ms)
         }
-
     </script>
     
     <!--Footer-->
