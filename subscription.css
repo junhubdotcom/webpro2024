@@ -53,6 +53,18 @@ body {
     justify-content: flex-end;
 }
 
+#mouse-trailer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 50%;
+    pointer-events: none; /* Makes the trailer ignore mouse events */
+    box-shadow: 0 0 15px orange;
+    transition: transform 0.1s, opacity 0.1s; /* Smooth follow effect */
+    opacity: 0.7;
+    z-index: 1000; /* Ensure it stays on top */
+}
 
 /*Start from here is css for subscription page*/
 .subscription{
