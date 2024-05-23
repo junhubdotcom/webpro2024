@@ -38,11 +38,7 @@ body {
     font-weight: 900;
     text-align: center;
 }
-#clock {
-    color: #fff;
-    font-weight: 900;
-    text-align: center;
-}
+
 .navbar-brand:hover {
     color: black;
     transition: 0.3s;
@@ -64,7 +60,7 @@ body {
 }
 
 .header {
-    height: 20px;
+    height: 100vh;
     background-image: url(snacks\ picture.jpeg);
     background-size: cover;
     background-position: center;
