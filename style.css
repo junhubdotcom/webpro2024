@@ -9,6 +9,7 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
+    position: relative;
     background: #d3bbb7;
 }
 
@@ -135,7 +136,7 @@ oran {
 .aboutUs p{
     color: #0d273c;
     text-align: justify;
-    font-size: 1.3rem;
+    font-size: 2rem 5vw;
     line-height: 1.5;
 }
 
@@ -174,16 +175,27 @@ oran {
 }
 
 
-#mouse-trailer {
+/* #mouse-trailer {
     position: absolute;
     width: 20px;
     height: 20px;
     background-color: orange;
     border-radius: 50%;
-    pointer-events: none; /* Makes the trailer ignore mouse events */
+    pointer-events: none; 
     box-shadow: 0 0 15px orange;
-    transition: transform 0.1s, opacity 0.1s; /* Smooth follow effect */
+    transition: transform 0.1s, opacity 0.1s; 
     opacity: 0.7;
-    z-index: 1000; /* Ensure it stays on top */
-}
+    z-index: 1000;
+} */
 
+:root {
+    --glow-rgb: 255, 255, 255;
+  }
+  
+.glow-point {
+    position: absolute;
+    box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+    pointer-events: none;
+  }
+  
+  
