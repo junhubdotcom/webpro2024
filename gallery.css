@@ -33,6 +33,16 @@ body {
     font-weight: 900;
 }
 
+#clock {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+}
+#clock {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+}
 .navbar-brand:hover {
     color: black;
     transition: 0.3s;
@@ -51,19 +61,6 @@ body {
 
 .navbar-collapse {
     justify-content: flex-end;
-}
-
-#mouse-trailer {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: orange;
-    border-radius: 50%;
-    pointer-events: none; /* Makes the trailer ignore mouse events */
-    box-shadow: 0 0 15px orange;
-    transition: transform 0.1s, opacity 0.1s; /* Smooth follow effect */
-    opacity: 0.7;
-    z-index: 1000; /* Ensure it stays on top */
 }
 
 /* Gallery description */
@@ -160,3 +157,13 @@ h3 {
     border-color: darkorange; /* Optional: Adjust border color on hover */
     color: white; /* Optional: Adjust text color on hover */
 }
+
+:root {
+    --glow-rgb: 255, 255, 255;
+  }
+  
+.glow-point {
+    position: absolute;
+    box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+    pointer-events: none;
+  }
