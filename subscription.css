@@ -33,6 +33,12 @@ body {
     font-weight: 900;
 }
 
+#clock {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+}
+
 .navbar-brand:hover {
     color: black;
     transition: 0.3s;
