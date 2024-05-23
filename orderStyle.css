@@ -64,8 +64,8 @@ body {
 }
 
 .header {
-    height: 100vh;
-    background-image: url(intro.png);
+    height: 20px;
+    background-image: url(snacks\ picture.jpeg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -93,6 +93,7 @@ body {
     color: #fff;
     font-size: 70px;
     font-weight: 900;
+    padding: 20px;
 }
 
 .description p {
