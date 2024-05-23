@@ -147,3 +147,13 @@ oran {
     color: #fe632c;
     font-weight: 800;
 }
+
+:root {
+    --glow-rgb: 255, 255, 255;
+  }
+  
+.glow-point {
+    position: absolute;
+    box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+    pointer-events: none;
+  }
