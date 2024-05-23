@@ -134,11 +134,15 @@ body {
 }
 
 
-
-
 .before-discount {
     text-decoration: line-through;
     font-size: 22px;
+    align-items: start; 
+    color: rgb(78, 75, 75);
+}
+
+.basic-plan{
+    font-size: 20px;
     align-items: start; 
     color: rgb(78, 75, 75);
 }
@@ -167,3 +171,139 @@ oran {
     color: #fe632c;
     font-weight: 800;
 }
+
+.popup{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+  
+}
+
+.popup-content{
+    /* margin: 10px; */
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    position:relative;
+    z-index: 1051;
+}
+
+/* .popup-content p{
+    
+   padding: 0;
+} */
+.popup-content h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* .popup-content .row{
+    justify-content: space-between;
+}
+
+.popup-content .price{
+    text-align: end;
+    align-items: center;
+}  */
+
+
+.plan{
+    text-align: center;
+    align-items: center;
+   
+}
+
+.plan img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.plan .planTitle{
+  font-weight: 600;
+  font-size: 18px;
+  text-align: start;
+}
+
+.plan .planPrice{
+    font-weight: 600;
+    font-size: 20px;
+    color:  #f69605;;
+    text-align: end;
+  }
+
+.popup-content form{
+   display: flex;
+   flex-direction: column;
+}
+
+.input-control{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-control input{
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.input-control input:focus{
+    outline: 0;
+    /* border-color: transparent; */
+    
+}
+
+.input-control.success input{
+    border-color: #09c372;
+    /* outline: 0; */
+}
+
+.input-control.error input{
+    border-color: #ff3860;
+}
+
+.input-control .error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+    padding: 0;
+}
+
+
+
+form p{
+    margin: 0;
+    padding: 0;
+}
+
+input[type="submit"]{
+    background-color: #183248;
+    color: white;
+    font-weight:600;
+    margin-top: 10px;
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+#close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 30px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    z-index: 1049; 
+}
+
