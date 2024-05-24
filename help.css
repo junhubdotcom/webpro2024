@@ -105,7 +105,7 @@ body {
     font-size: 30px;
     border-style: none;
     border-width: 2px;
-    background-color: #ddd;
+    background-color: rgb(240, 240, 240);
 }
 
 .search-bar button {
@@ -131,7 +131,7 @@ body {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
-    background-color: #ddd;
+    background-color: rgb(240, 240, 240);
     border-radius: 10px;
 }
 
