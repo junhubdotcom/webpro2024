@@ -71,7 +71,7 @@ body {
 }
 
 .title2{
-    background: url('aboutus.png');
+    background: url('../images/aboutus.png');
     background-size: cover;
     width: 100%;
     height: auto;
@@ -131,12 +131,42 @@ body {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
+    height: 250px;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
 }
 
-.faq-item h4,p{
-    font-weight: 700;
+.faq-item h4{
+    font-weight: 800;
+}
+
+.printButton button{
+    padding: 10px 20px;
+    border:1px solid #0d273c;
+    background:#0d273c;
+    border-radius: 4;
+    height: 80px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 900;
+    color:#fff;
+    position: center;
+}
+
+
+.printButton button:hover {
+    border:1px solid #0a4778;
+    background:#0a4778;
+}
+
+@media print{
+    body * {
+        display: none;
+    }
+    #FAQ, #FAQ *{
+        display: block;
+    
+    }
 }
 
 span {

@@ -63,6 +63,16 @@ body {
     justify-content: flex-end;
 }
 
+span {
+    color: #ffff;
+    font-weight: 800;
+}
+
+oran {
+    color: #fe632c;
+    font-weight: 800;
+}
+
 /* Gallery description */
 
 .sub-header {
