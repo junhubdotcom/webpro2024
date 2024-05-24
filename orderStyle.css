@@ -60,7 +60,7 @@ body {
 }
 
 .header {
-    height: 100vh;
+    height:500px;  
     background-image: url(snacks\ picture.jpeg);
     background-size: cover;
     background-position: center;
