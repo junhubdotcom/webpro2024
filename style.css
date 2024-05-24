@@ -34,6 +34,12 @@ body {
     font-weight: 900;
 }
 
+#clock {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+}
+
 .navbar-brand:hover {
     color: black;
     transition: 0.3s;
@@ -173,20 +179,6 @@ oran {
 .how2 h3{
     font-weight: 700;
 }
-
-
-/* #mouse-trailer {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: orange;
-    border-radius: 50%;
-    pointer-events: none; 
-    box-shadow: 0 0 15px orange;
-    transition: transform 0.1s, opacity 0.1s; 
-    opacity: 0.7;
-    z-index: 1000;
-} */
 
 :root {
     --glow-rgb: 255, 255, 255;
