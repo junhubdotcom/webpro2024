@@ -103,8 +103,9 @@ body {
     padding: 10px;
     padding-right: 40px;
     font-size: 30px;
-    border-style: none none solid;
+    border-style: none;
     border-width: 2px;
+    background-color: rgb(240, 240, 240);
 }
 
 .search-bar button {
@@ -118,7 +119,7 @@ body {
     cursor: pointer;
     font-size: 25px;
     background:#fe632c;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .answer h3{
@@ -130,7 +131,7 @@ body {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
-    background-color: #ddd;
+    background-color: rgb(240, 240, 240);
     border-radius: 10px;
 }
 
