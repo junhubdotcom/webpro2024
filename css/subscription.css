@@ -79,15 +79,21 @@ body {
 }
 
 .sub-desciption h1 {
-    font-size: 60px;
+    /* font-size: 60px; */
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
 }
 
 .sub-desciption p {
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 1.3rem;
+    line-height: 1.5;
 }
 
 .carousel-item img {
     height: 400px;
+    
 }
 
 
