@@ -139,13 +139,24 @@ body {
 
 
 .choose-plan{
-    font-size: 30px;
-    padding-right: 150px;
+    font-size: 28px;
+    /* padding-right: 150px; */
     padding-bottom: 20px;
+    padding-top: 38px;
     font-weight: 800;
     color:#051421 ;
 }
 
+.subscribeSlogan{
+    font-weight: 900;
+    font-size: 28px;
+    padding-bottom: 15px;
+}
+
+.subscribeSlogan span{
+    font-size: 35px;
+    color: #fe632c;
+}
 
 
 .sub-plan-list {
