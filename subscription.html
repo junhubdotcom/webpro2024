@@ -36,16 +36,16 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Gallery</a>
+                    <a class="nav-link" href="gallery.html">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Subscription</a>
+                    <a class="nav-link" href="subscription.html">Subscription</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Order</a>
+                    <a class="nav-link" href="order.html">Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Help</a>
+                    <a class="nav-link" href="help.html">Help</a>
                 </li>
             </ul>
         </div>
@@ -59,6 +59,80 @@
             <p>Unlock a Monthly Surprise with Our International Snack Subscription</p>
         </div>
     </header>
+
+    <div class='choose-country-box'>
+        <div class="container-fluid py-1 px-1">
+            <div class="row py-1">
+                <!-- Column for the heading -->
+                <div class="col-md-6 col-lg-6 text-center">
+                    <h1>Choose Your Preferred Snack Box Type:</h1>
+                </div>
+                <!-- Column for the Yearly Adventure -->
+                <div class="col-md-6 col-xs-6">
+                    <div class="sub-country-list container-fluid  pt-1 mb-2">
+                        <div class="row ">
+                            <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
+                                <input type="radio" id="country-1" name="choose-country" value="country-1"
+                                    class="mr-2" onclick="scrollToAvailability('korea')">
+                                <label class="sub-country-title" for="country-1">JAPAN</label>
+                                <p class="sub-country-caption">Pocky, Calbee Potato Chips, Mochi and more</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-country-list container-fluid  pt-1 mb-2">
+                        <div class="row ">
+                            <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
+                                <input type="radio" id="country-2" name="choose-country" value="country-2"
+                                    class="mr-2" onclick="scrollToAvailability('japan')">
+                                <label class="sub-country-title" for="country-2">THAILAND</label>
+                                <p class="sub-country-caption">Lays, Tao Kae Noi Seaweed, Koh Kae and more</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-country-list container-fluid  pt-1 mb-2">
+                        <div class="row ">
+                            <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
+                                <input type="radio" id="country-3" name="choose-country" value="country-3"
+                                    class="mr-2" onclick="scrollToAvailability('thailand')">
+                                <label class="sub-country-title" for="country-3">KOREA</label>
+                                <p class="sub-country-caption">Pepero, Shin Ramyun, Melon Banana Milk and more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='country-availability-list'>
+        <h1>Wonder which country are we available for delivery?</h1>
+        <p>Have a check with your country <span>right now</span> !</p>
+        <form id="deliveryForm">
+            <label for="country">Select Your Country:</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="brazil">Brazil</option>
+                <option value="canada">Canada</option>
+                <option value="china">China</option>
+                <option value="france">France</option>
+                <option value="germany">Germany</option>
+                <option value="india">India</option>
+                <option value="japan">Japan</option>
+                <option value="malaysia">Malaysia</option>
+                <option value="philippines">Philippines</option>
+                <option value="singapore">Singapore</option>
+                <option value="thailand">Thailand</option>
+                <option value="uk">United Kingdom</option>
+                <option value="usa">United States</option>
+                <option value="vietnam">Vietnam</option>
+                <!-- Add more countries as needed -->
+            </select>
+            <button type="button" onclick="checkAvailability()">Check</button>
+        </form>
+    </div>
+
+    <p id="availabilityMessage"></p>
+
     
     <div class="row mx-4">
         <div class="col-md-6 col-xs-12">
@@ -76,25 +150,34 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="images/Snack4.jpg" alt="Snack Around The World" class="img-fluid" id="img1">
-                        <p><strong>Taste the World's Flavors: </strong>Indulge in a symphony of tastes, from savory to sweet, spanning continents and cultures.</p>
+                        <p><strong id="snackName1">Taste the World's Flavors: </strong><span id="snackDesc1">Indulge in a symphony of tastes, from savory to sweet, spanning continents and cultures</span>.</p>
                     </div>
         
                     <div class="carousel-item ">
                         <img src="images/Snack6.jpg" alt="Snack Around The World" class="img-fluid" id="img2">
-                        <p><strong>Unbox Delightful Discoveries: </strong>Experience the thrill of unveiling unique snacks from far-off lands right at your doorstep.</p>
+                        <p><strong id="snackName2">Unbox Delightful Discoveries: </strong><span id="snackDesc2">Experience the thrill of unveiling unique snacks from far-off lands right at your doorstep.</span></p>
                     </div>
         
-                    <div class="carousel-item " id="img3">
-                        <img src="images/Snack9.jpg" alt="Snack Around The World" class="img-fluid" id="img2">
-                        <p><strong>Gift Joy, Share Smiles: </strong>Give the gift of global snacking to loved ones, sparking joy with every surprise delivery.</p>
+                    <div class="carousel-item ">
+                        <img src="images/Snack9.jpg" alt="Snack Around The World" class="img-fluid" id="img3">
+                        <p><strong id="snackName3">Gift Joy, Share Smiles: </strong><span id="snackDesc3"> the gift of global snacking to loved ones, sparking joy with every surprise delivery.</span></p>
                     </div>
 
-        
-                    <!-- <div class="carousel-item ">
-                        <img src="images/Snack7.jpg" alt="Snack Around The World" class="img-fluid">
-                        <p><strong>From Our Hands to Your Mouth: </strong>Enjoy handpicked selections curated with love and passion by snack aficionados.</p>
-                    </div> -->
-        
+                    <div class="carousel-item ">
+                        <img src="images/Snack9.jpg" alt="Snack Around The World" class="img-fluid" id="img4">
+                        <p><strong id="snackName4">Gift Joy, Share Smiles: </strong><span id="snackDesc4">Give the gift of global snacking to loved ones, sparking joy with every surprise delivery.</span></p>
+                    </div>
+
+                    <div class="carousel-item ">
+                        <img src="images/Snack9.jpg" alt="Snack Around The World" class="img-fluid" id="img5">
+                        <p><strong id="snackName5">Gift Joy, Share Smiles: </strong><span id="snackDesc5">Give the gift of global snacking to loved ones, sparking joy with every surprise delivery.</span></p>
+                    </div>
+
+                    <div class="carousel-item ">
+                        <img src="images/Snack9.jpg" alt="Snack Around The World" class="img-fluid" id="img6">
+                        <p><strong id="snackName6">Gift Joy, Share Smiles: </strong><span id="snackDesc6">Give the gift of global snacking to loved ones, sparking joy with every surprise delivery.</span></p>
+                    </div>
+
                     <!-- Left and right controls-->
                     <a class="carousel-control-prev control" href="#specials" data-slide="prev">
                          <i class="fa-solid fa-circle-chevron-left"></i>
@@ -124,83 +207,6 @@
 
             </div>
 
-            <!-- <div class="row text-center small-image">
-                <div class="col"><img src="images/Snack4.jpg" alt="Snack Around The World" class="img-fluid"></div>
-                <div class="col"><img src="images/Snack6.jpg" alt="Snack Around The World" class="img-fluid "></div>
-                <div class="col"><img src="images/Snack9.jpg" alt="Snack Around The World" class="img-fluid "></div>
-                <div class="col"><img src="images/Snack7.jpg" alt="Snack Around The World" class="img-fluid "></div>
-            </div> -->
-            <!-- <div class="snack">
-                <h2 class="mb-4 font-weight-bold">What include in Snack Surpirsed Box?</h2>
-                <div class="snack-list row">
-                    <div class="col text-center">
-                        <i class="fa-solid fa-cookie fa-3x p-3 " ></i>
-                        <p>Chips & Cookies</p>
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-solid fa-candy-cane fa-3x p-3 "></i>
-                        <p>Candy & Chocolate</p>
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-solid fa-bottle-water fa-3x p-3 rounded"></i>
-                        <p>Beverage</p>
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-solid fa-stroopwafel fa-3x p-3 "></i>
-                        <p>Waffle, Cake & Bun</p>
-                    </div>
-
-                    <div class="col text-center">
-                        <i class="fa-solid fa-ice-cream fa-3x p-3 "></i>
-                        <p>Ice Cream</p>
-                    </div>
-                </div>
-                <div class="advantage row text-center mt-3">
-                    <div class="col mr-3">
-                        <div class="row ">
-                            <div class="col">
-                                <i class="fa-solid fa-earth-americas fa-2x"></i>
-                            </div>
-                            <div class="col">
-                                <p>Global Variety</p>
-                            </div>
-
-                        </div>
-                        
-                        
-                    </div>
-
-                    <div class="col mr-3">
-                        <div class="row">
-                            <div class="col">
-                                <i class="fa-solid fa-truck fa-2x"></i>
-                            </div>
-                            <div class="col">
-                                <p>Doorstep Delivery</p>
-                            </div>
-
-                        </div>
-                       
-                       
-                    </div>
-
-                    <div class="col mr-3">
-                        <div class="row">
-                            <div class="col">
-                                <i class="fa-solid fa-gift fa-2x"></i>
-                            </div>
-                            <div class="col">
-                                <p>Surprise Unveiled</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                
-
-            </div> -->
-            
     </div>
 
     
