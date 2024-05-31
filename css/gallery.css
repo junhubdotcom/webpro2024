@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-    background:#fe632c;
+    background:#18183e;
     position: fixed;
     top: 0;
     left: 0;
@@ -87,6 +87,16 @@ oran {
     margin: 0 auto;
     padding: 1rem;
     border-radius: 10px;
+}
+
+.footer {
+    background: #18183e;
+}
+
+hr{
+    background-color: #e69b46;
+    margin: 25px 0px;
+    height: 1px; 
 }
 
 .gallery-description h1 {

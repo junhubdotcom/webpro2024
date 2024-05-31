@@ -45,7 +45,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: #18183e;
+    color: #fe632c;
     transition: 0.3s;
 }
 
@@ -56,7 +56,7 @@ body {
 
 
 .nav-link:hover {
-    color: black;
+    color: #fe632c;
     transition: 0.3s;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .footer {
-    background: #18183e
+    background: #18183e;
 }
 
 
@@ -97,7 +97,7 @@ body {
     background-size: cover;
     position: relative;
     margin-bottom: 0px;
-    padding: 200px 0px;
+    padding: 130px 0px;
 }
 
 .sub-desciption {
@@ -137,7 +137,7 @@ body {
     margin: 0 auto; /* Center the container */
     display: flex;
     align-items: center;
-    background-color: rgba(244, 77, 17, 0.7);
+    background-color: rgba(244, 78, 17, 0.3);
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -314,7 +314,7 @@ body {
 
 
 .sub-plan-list {
-    background-color: rgba(244, 77, 17, 0.7);
+    background-color: rgba(244, 77, 17, 0.3);
     border-radius: 10px;
     height: 120px;
     align-items: center;
