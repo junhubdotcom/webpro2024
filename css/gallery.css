@@ -89,6 +89,16 @@ oran {
     border-radius: 10px;
 }
 
+.footer {
+    background: #18183e;
+}
+
+hr{
+    background-color: #e69b46;
+    margin: 25px 0px;
+    height: 1px; 
+}
+
 .gallery-description h1 {
     font-size: 70px;
     margin-bottom: 1rem;
