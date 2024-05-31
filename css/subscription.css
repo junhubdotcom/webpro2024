@@ -290,21 +290,21 @@ body {
     font-size: 28px;
     /* padding-right: 150px; */
     padding-bottom: 20px;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     font-weight: 800;
     color:#051421 ;
 }
 
 .subscriptionPlan{
     background-color: #ead6be;
-    padding: 40px 0px;
+    padding: 60px 0px;
 }
 
 .subscribeSlogan{
     font-weight: 900;
     font-size: 28px;
     padding-bottom: 15px;
-    padding-top: 150px;
+    
 }
 
 .subscribeSlogan span{
@@ -329,7 +329,6 @@ body {
     align-items: center;
     border: none;
 }
-
 
 
 .sub-plan-save{
@@ -479,12 +478,12 @@ oran {
     
    padding: 0;
 } */
-.popup-content h2{
+/* .popup-content h2{
     text-align: center;
     font-weight: 800;
     font-size: 30px;
     margin-bottom: 20px;
-}
+} */
 
 /* .popup-content .row{
     justify-content: space-between;
