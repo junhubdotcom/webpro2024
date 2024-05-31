@@ -9,7 +9,7 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    background: #d3bbb7;
+    background: #fef1ee;
 }
 
 .navbar {
@@ -57,8 +57,9 @@ body {
     justify-content: flex-end;
 }
 
-.title{
+.image{
     height: 40vh;
+    background-image: url();
 }
 
 .title h1{
@@ -70,78 +71,116 @@ body {
     transform: translate(-50%, -55%);
 }
 
-.title2{
-    background: url('../images/aboutus.png');
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    padding: 7em 0;
-    background-position: center;
+.bar{
+    background-color: hsl(13, 100%, 93%);
 }
 
-.title .question h3{
-    font-size: 10px;
-}
-
-.title2 h3{
+.bar h2{
+    text-align: center;
     font-weight: 800;
-    font-size: 35px;
-}
-
-.title2 p{
-    font-size: 20px;
-    font-weight: 600;
+    color: #fe632c;
 }
 
 .search-bar{
-    position: relative;
-    margin: 50px 0;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 10px;
-    padding-right: 40px;
-    font-size: 30px;
+    padding: 30px;
+    font-size: 20px;
     border-style: none;
-    border-width: 2px;
     background-color: rgb(240, 240, 240);
+    text-align: center;
 }
 
 .search-bar button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
     border: none;
-    background: transparent;
-    padding: 0 20px;
+    margin-top: 40px;
+    padding: 20px 30px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
     background:#fe632c;
     border-radius: 5px;
 }
 
-.answer h3{
+.wrapper{
+    max-width: 60%;
+    margin: auto;
+}
+
+.wrapper h2{
     padding: 40px 0px 30px 20px;
     font-weight: 800;
+    text-align: center;
+    color: #fe632c;
 }
 
-.faq-item .column{
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    height: 250px;
-    background-color: rgb(240, 240, 240);
-    border-radius: 10px;
+.faq{
+    border-bottom: 2px solid #fe632c;
 }
 
-.faq-item h4{
-    font-weight: 800;
+.accordion{
+    background: transparent;
+    font-size: 25px;
+    padding: 15px 0;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
 }
+
+.accordion i{
+    font-size: 20px;
+    color: #fe632c;
+}
+
+.panel{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1.4s ease;
+}
+
+.panel p{
+    font-size: 20px;
+}
+
+.faq.active .panel{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active i{
+    transform: rotate(180deg);
+}
+
+i{
+    transition: transform 0.5s ease-in;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+  
 
 .printButton button{
     padding: 10px 20px;
+    margin-top: 50px;
     border:1px solid #0d273c;
     background:#0d273c;
     border-radius: 4;

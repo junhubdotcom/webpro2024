@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Surprize Box</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/61bf9d238a.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="css/help.css">
-        <script src="https://kit.fontawesome.com/61bf9d238a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/61bf9d238a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/help.css">
+    <script src="https://kit.fontawesome.com/61bf9d238a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-        <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 
     <nav class="navbar navbar-expand-md">
         <div class="logo-navbar">
             <a class="navbar-brand" href="index.html">SUB-prize</a>
-            <a id = clock></a>
+            <a id=clock></a>
         </div>
- 
+
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,77 +50,72 @@
         </div>
     </nav>
 
-    <div class="title">
-        <div class="container-fluid p-5">
+    <div class="image">
+        <div class="container-fluid p-5 title">
             <h1 class="display-4">Your right to know</h1>
         </div>
     </div>
 
-    <div class="title2">
-        <div class="container-fluid py-4 px-5">
-            <div class = "row py-2">
-                <div class = "col-md-6 col-lg-6 pt-5">
-                    <h3>Got your question?</h3>
-                    <h3>Get your answer</h3>
-                    <p>Curious about SUB-Prize's? Ask us anything about our brand and food, and get factual responses.</p>
-                </div>
+
+    <div class="container-fluid p-4 bar">
+        <h2>What can we help you with?</h2>
+        <div class="container search-bar">
+            <div class="col-lg-12 col-md-12">
+                <input type="text" class="form-control" placeholder="Search for a question">
+                <button>SEARCH</button>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="search-bar">
-            <input type="text" class="form-control" placeholder="Search for a question">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div>
-    </div>
 
-    
-    <div class="answer">
-        <h3 class="display-6">We've got the answers for thousands of questions.</h3>
-    </div>
-    <div class = "container-fluid" id = "FAQ">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 faq-item">
-                <div class="column">
-                    <h4>What is a Surprise Box?</h3>
-                    <p>A Surprise Box is a specially curated package containing a variety of themed items. Each box is designed to bring joy and excitement as you uncover its contents. The items inside are a mystery until you open it!</p>
-                </div>
+
+    <div class="wrapper">
+        <h2 class="display-6">Frequently Asked Question</h2>
+
+        <div class="faq">
+            <div class="accordion">
+                How does it work?
+                <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 faq-item">
-                <div class="column">
-                    <h4>Can I customize my box?</h3>
-                    <p>Currently, the contents of each box are a surprise and cannot be customized. However, we carefully select high-quality items that we believe you'll love based on the theme you choose.</p>
-                </div>
+            <div class="panel">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis distinctio
+                    voluptatibus, quod molestiae numquam sunt corporis fugit, hic rem quos fuga doloremque optio
+                    inventore
+                    eveniet culpa repellendus atque. Ad.
+                </p>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 faq-item">
-                <div class="column">
-                    <h4>What if I don’t like an item in my box?</h3>
-                    <p>We strive to curate boxes that you'll love. However, if an item doesn’t meet your expectations, please contact our customer service team. We appreciate your feedback and will use it to improve future boxes.</p>
-                </div>
+        </div>
+
+        <div class="faq">
+            <div class="accordion">
+                How does it fly?
+                <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 faq-item">
-                <div class="column">
-                    <h4>When will I receive my box?</h4>
-                    <p>Your box will be shipped within 5-7 business days after your order is processed. For subscribers, boxes are shipped around the same time each month. Delivery times may vary based on your location.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 faq-item">
-                <div class="column">
-                    <h4>What if my box is damaged or missing?</h4>
-                    <p>If your box arrives damaged or goes missing, please contact our customer service team within 7 days of the expected delivery date. We will assist you in resolving the issue as quickly as possible.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 faq-item">
-                <div class="column">
-                    <h4>Can I give a Surprise Box as a gift?</h4>
-                    <p>Absolutely! You can purchase a Surprise Box or a subscription as a gift for someone special. Just provide the recipient’s address at checkout, and we’ll take care of the rest.</p>
-                </div>
+            <div class="panel">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis distinctio
+                    voluptatibus, quod molestiae numquam sunt corporis fugit, hic rem quos fuga doloremque optio
+                    inventore
+                    eveniet culpa repellendus atque. Ad.
+                </p>
             </div>
         </div>
     </div>
 
-    <div class = "printButton text-center">
+    <script>
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach((faq) => { 
+            faq.addEventListener("click", () => { 
+                faq.classList.toggle("active"); 
+            }); 
+        });
+    </script>
+
+
+
+    <div class="printButton text-center">
         <p></p>
         <button class="btn-print btn-outline-secondary btn-lg" type="button">Print Me</button>
     </div>
@@ -133,91 +131,102 @@
     </script>
 
 
-    <footer class = "bg-dark text-white pt-5 pb-4">
-        
-        <div class = "container text-center text-md-left">
-           
-            <div class = "row text-center text-md-left">
+    <footer class="bg-dark text-white pt-5 pb-4">
 
-                <div class = "col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class = "text-uppercase mb-4 font-weight-bold text-success"><oran>SUB-Prize</oran></h5>
+        <div class="container text-center text-md-left">
+
+            <div class="row text-center text-md-left">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-success">
+                        <oran>SUB-Prize</oran>
+                    </h5>
                     <p>Accessing snack from different regions all time with SUB-prize</p>
                 </div>
 
-                <div class = "col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class = "text-uppercase mb-4 font-weight-bold text-success"><oran>Products</oran></h5>
-                    <p><a href = "#">Product 1</a></p>
-                    <p><a href = "#">Product 2</a></p>
-                    <p><a href = "#">Product 3</a></p>
-                    <p><a href = "#">Product 4</a></p>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-success">
+                        <oran>Products</oran>
+                    </h5>
+                    <p><a href="#">Product 1</a></p>
+                    <p><a href="#">Product 2</a></p>
+                    <p><a href="#">Product 3</a></p>
+                    <p><a href="#">Product 4</a></p>
                 </div>
 
-                <div class = "col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class = "text-uppercase mb-4 font-weight-bold text-success"><oran>Useful Links</oran></h5>
-                    <p><a href = "#">Your Account</a></p>
-                    <p><a href = "#">Dunno</a></p>
-                    <p><a href = "#">Available Region</a></p>
-                    <p><a href = "#">Help</a></p>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-success">
+                        <oran>Useful Links</oran>
+                    </h5>
+                    <p><a href="#">Your Account</a></p>
+                    <p><a href="#">Dunno</a></p>
+                    <p><a href="#">Available Region</a></p>
+                    <p><a href="#">Help</a></p>
                 </div>
 
-                <div class = "col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class = "text-uppercase mb-4 font-weight-bold text-success"><oran>Contact</oran></h5>
-                    <p><i class =  "fas fa-home mr-3"></i>Address</p>
-                    <p><i class =  "fas fa-envelope mr-3"></i>Gmail</p>
-                    <p><i class =  "fas fa-phone mr-3"></i>Contact no</p>
-                    <p><i class =  "fas fa-print mr-3"></i>Fax</p>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-success">
+                        <oran>Contact</oran>
+                    </h5>
+                    <p><i class="fas fa-home mr-3"></i>Address</p>
+                    <p><i class="fas fa-envelope mr-3"></i>Gmail</p>
+                    <p><i class="fas fa-phone mr-3"></i>Contact no</p>
+                    <p><i class="fas fa-print mr-3"></i>Fax</p>
                 </div>
             </div>
 
-            <hr class = "mb-4">
+            <hr class="mb-4">
 
-            <div class = "row algin-items-center">
+            <div class="row algin-items-center">
 
-                <div class = "col-md-7 col-lg-8">
+                <div class="col-md-7 col-lg-8">
                     <p>Copyright ©2020 All rights reserved by:
-                        <a href = "#" style="text-decoration: none;">
-                        <strong><oran>SUB-Prize</oran></strong></a>
+                        <a href="#" style="text-decoration: none;">
+                            <strong>
+                                <oran>SUB-Prize</oran>
+                            </strong></a>
                     </p>
-            </div>
+                </div>
 
-            <div class = "col-md-5 col-lg-4">
-                <div class = "text-center text-md-right">
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
 
-                    <ul class = "list-unstyled list-inline">
-                        <li class = "list-inline-item">
-                            <a href = "#" class = "btn-floating btn-lg text-white" style = "font-size: 23px;">
-                                <i class = "fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class = "list-inline-item">
-                            <a href = "#" class = "btn-floating btn-lg text-white" style = "font-size: 23px;">
-                                <i class = "fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class = "list-inline-item">
-                            <a href = "#" class = "btn-floating btn-lg text-white" style = "font-size: 23px;">
-                                <i class = "fab fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li class = "list-inline-item">
-                            <a href = "#" class = "btn-floating btn-lg text-white" style = "font-size: 23px;">
-                                <i class = "fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li class = "list-inline-item">
-                            <a href = "#" class = "btn-floating btn-lg text-white" style = "font-size: 23px;">
-                                <i class = "fab fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-lg text-white" style="font-size: 23px;">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-lg text-white" style="font-size: 23px;">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-lg text-white" style="font-size: 23px;">
+                                    <i class="fab fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-lg text-white" style="font-size: 23px;">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-lg text-white" style="font-size: 23px;">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
 
     </footer>
-        
+
 
 </body>
+
 </html>

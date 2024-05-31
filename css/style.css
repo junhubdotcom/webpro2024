@@ -14,7 +14,7 @@ body {
 }
 
 .navbar {
-    background:#fe632c;
+    background: #fe632c;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,6 +25,8 @@ body {
     text-align: center;
     align-items: center;
     z-index: 100;
+    height: max-content;
+    margin: 0;
 }
 
 .nav-link,
@@ -50,7 +52,6 @@ body {
     text-decoration: none;
 }
 
-
 .nav-link:hover {
     color: black;
     transition: 0.3s;
@@ -60,12 +61,14 @@ body {
     justify-content: flex-end;
 }
 
-.header {
+
+/* .header {
     height: 100vh;
     background-image: url("../images/intro.png");
     background-size: cover;
     background-position: center;
     position: relative;
+    
 }
 
 .overlay {
@@ -97,7 +100,60 @@ body {
     color: rgb(245, 155, 122);
     font-size: 1.3rem;
     line-height: 1.5;
+} */
+
+
+.header{
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/intro.png");
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* padding-bottom: 0px;
+    margin-bottom: 0; */
 }
+
+.description {
+    vertical-align: center;
+    text-align: center;
+}
+
+.description h1 {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    /* font-size: 60px; */
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.description p {
+    /* font-size: 20px; */
+    font-size: 1.3rem;
+    padding: 0px 50px;
+    line-height: 1.5;
+}
+
+.btn{
+    padding: 10px 20px;
+    border: none;
+    background:#0d273c;
+    border-radius: 4;
+    height: 80px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 900;
+    color:#fff;
+    /* margin-bottom: 30px; */
+}
+
+.description button:hover {
+    border:1px solid #0a4778;
+    background:#0a4778;
+}
+
+
+
 
 span {
     color: #ffff;
@@ -109,85 +165,108 @@ oran {
     font-weight: 800;
 }
 
-.description button {
-    padding: 10px 20px;
-    border:1px solid #0d273c;
-    background:#0d273c;
-    border-radius: 4;
-    height: 80px;
-    width: 250px;
-    font-size: 22px;
-    font-weight: 900;
-    color:#fff;
-}
-
-.description button:hover {
-    border:1px solid #0a4778;
-    background:#0a4778;
-}
-
 .aboutUs {
-    height: 100vh;
-    background-image: url("../images/aboutus.png"); 
-    background-size: cover;
-    background-position: center;
+    margin-top: 0;
+    padding-top: 0;
+    
+      /* height: 100vh;
+    background-position: center; */
 }
 
-.aboutUs h1{
+.aboutUsDesc {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px
+}
+
+.aboutUsDesc h1 {
     color: #0d273c;
-    font-size: 70px;
+    font-size: 55px;
     font-weight: 900;
 }
 
-.aboutUs p{
+.aboutUsDesc p {
     color: #0d273c;
     text-align: justify;
     font-size: 2rem 5vw;
     line-height: 1.5;
 }
 
-.aboutUs button {
+.aboutUsDesc button {
+    margin-top: 20px;
     padding: 10px 20px;
-    border:1px solid #0d273c;
-    background:#0d273c;
-    border-radius: 4;
+    border: 1px solid #0d273c;
+    background: #0d273c;
+    border-radius: 4px;
     height: 80px;
     width: 250px;
     font-size: 22px;
     font-weight: 900;
-    color:#fff;
+    color: #fff;
 }
 
 .aboutUs button:hover {
-    border:1px solid #0a4778;
-    background:#0a4778;
+    border: 1px solid #0a4778;
+    background: #0a4778;
 }
 
-.how2 h1{
+.aboutUsImg {
+    background-image: url("https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/snacks-in-america.jpg?quality=82&strip=all");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aboutUsImg img{
+    /* width: 400px; */
+    height: 430px;
+}
+
+.how2 h1 {
     color: #fe632c;
     font-size: 70px;
     font-weight: 900;
 }
 
-.how2 h2{
-    color: 2c2f5d;
+.how2 h2 {
+    color: #2c2f5d;
     font-size: 30px;
     font-weight: 900;
     margin: 20px;
 }
 
-.how2 h3{
+.how2 h3 {
     font-weight: 700;
 }
 
 :root {
     --glow-rgb: 255, 255, 255;
-  }
-  
+}
+
 .glow-point {
     position: absolute;
     box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
     pointer-events: none;
-  }
-  
-  
+}
+
+/* @media (max-width: 640px) {
+    .description {
+        left: 50%;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -55%);
+        text-align: center;
+    }
+
+    .description h1 {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .description p {
+        color: rgb(245, 155, 122);
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+} */
