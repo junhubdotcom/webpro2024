@@ -69,32 +69,26 @@
                 </div>
                 <!-- Column for the Yearly Adventure -->
                 <div class="col-md-6 col-xs-6">
-                    <div class="sub-country-list container-fluid  pt-1 mb-2">
-                        <div class="row ">
+                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'korea')">
+                        <div class="row">
                             <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
-                                <input type="radio" id="country-1" name="choose-country" value="country-1"
-                                    class="mr-2" onclick="scrollToAvailability('korea')">
-                                <label class="sub-country-title" for="country-1">JAPAN</label>
+                                <label class="sub-country-title">Japan</label>
                                 <p class="sub-country-caption">Pocky, Calbee Potato Chips, Mochi and more</p>
                             </div>
                         </div>
                     </div>
-                    <div class="sub-country-list container-fluid  pt-1 mb-2">
-                        <div class="row ">
+                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'japan')">
+                        <div class="row">
                             <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
-                                <input type="radio" id="country-2" name="choose-country" value="country-2"
-                                    class="mr-2" onclick="scrollToAvailability('japan')">
-                                <label class="sub-country-title" for="country-2">THAILAND</label>
+                                <label class="sub-country-title">Thailand</label>
                                 <p class="sub-country-caption">Lays, Tao Kae Noi Seaweed, Koh Kae and more</p>
                             </div>
                         </div>
                     </div>
-                    <div class="sub-country-list container-fluid  pt-1 mb-2">
-                        <div class="row ">
+                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'thailand')">
+                        <div class="row">
                             <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
-                                <input type="radio" id="country-3" name="choose-country" value="country-3"
-                                    class="mr-2" onclick="scrollToAvailability('thailand')">
-                                <label class="sub-country-title" for="country-3">KOREA</label>
+                                <label class="sub-country-title">Korea</label>
                                 <p class="sub-country-caption">Pepero, Shin Ramyun, Melon Banana Milk and more</p>
                             </div>
                         </div>
@@ -129,9 +123,8 @@
             </select>
             <button type="button" onclick="checkAvailability()">Check</button>
         </form>
+        <p id="availabilityMessage"></p>
     </div>
-
-    <p id="availabilityMessage"></p>
 
     
     <div class="row mx-4">
@@ -340,7 +333,7 @@
     </div>
 
         <!--Footer-->
-        <footer class = "bg-dark text-white pt-5 pb-4">
+        <footer class = "footer text-white pt-5 pb-4">
         
             <div class = "container text-center text-md-left">
                
