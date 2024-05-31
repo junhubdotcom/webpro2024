@@ -14,7 +14,7 @@ body {
 }
 
 .navbar {
-    background:#fe632c;
+    background: #fe632c;
     position: fixed;
     top: 0;
     left: 0;
@@ -51,7 +51,6 @@ body {
     margin-right: 1em !important;
     text-decoration: none;
 }
-
 
 .nav-link:hover {
     color: black;
@@ -110,14 +109,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    /* padding-bottom: 0px;
+    margin-bottom: 0; */
 }
 
-.desciption {
+.description {
     vertical-align: center;
     text-align: center;
 }
 
-.desciption h1 {
+.description h1 {
     padding-top: 60px;
     padding-bottom: 10px;
     /* font-size: 60px; */
@@ -126,7 +127,7 @@ body {
     font-weight: 900;
 }
 
-.desciption p {
+.description p {
     /* font-size: 20px; */
     font-size: 1.3rem;
     padding: 0px 50px;
@@ -143,12 +144,14 @@ body {
     font-size: 22px;
     font-weight: 900;
     color:#fff;
+    /* margin-bottom: 30px; */
 }
 
 .description button:hover {
     border:1px solid #0a4778;
     background:#0a4778;
 }
+
 
 
 
@@ -162,26 +165,27 @@ oran {
     font-weight: 800;
 }
 
-
 .aboutUs {
-    height: 100vh;
-    /* background-image: url("../images/aboutus.png");  */
-    /* background-size: cover;
+    margin-top: 0;
+    padding-top: 0;
+    
+      /* height: 100vh;
     background-position: center; */
 }
 
-.aboutUsDesc{
-    padding: 0px 50px;
-    
+.aboutUsDesc {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px
 }
 
-.aboutUsDesc h1{
+.aboutUsDesc h1 {
     color: #0d273c;
     font-size: 55px;
     font-weight: 900;
 }
 
-.aboutUsDesc p{
+.aboutUsDesc p {
     color: #0d273c;
     text-align: justify;
     font-size: 2rem 5vw;
@@ -191,66 +195,60 @@ oran {
 .aboutUsDesc button {
     margin-top: 20px;
     padding: 10px 20px;
-    border:1px solid #0d273c;
-    background:#0d273c;
-    border-radius: 4;
+    border: 1px solid #0d273c;
+    background: #0d273c;
+    border-radius: 4px;
     height: 80px;
     width: 250px;
     font-size: 22px;
     font-weight: 900;
-    color:#fff;
+    color: #fff;
 }
 
 .aboutUs button:hover {
-    border:1px solid #0a4778;
-    background:#0a4778;
+    border: 1px solid #0a4778;
+    background: #0a4778;
 }
 
-/* .aboutUsImg{
-    background-image: url("../images/person.png") ; 
+.aboutUsImg {
+    background-image: url("https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/snacks-in-america.jpg?quality=82&strip=all");
     background-size: cover;
-    background-position: center; 
     background-repeat: no-repeat;
-    
-} */
+}
 
 .aboutUsImg img{
-    width: fit-content;
-    height: max-content;
+    /* width: 400px; */
+    height: 430px;
 }
 
-.how2 h1{
+.how2 h1 {
     color: #fe632c;
     font-size: 70px;
     font-weight: 900;
 }
 
-.how2 h2{
-    color: 2c2f5d;
+.how2 h2 {
+    color: #2c2f5d;
     font-size: 30px;
     font-weight: 900;
     margin: 20px;
 }
 
-.how2 h3{
+.how2 h3 {
     font-weight: 700;
 }
 
 :root {
     --glow-rgb: 255, 255, 255;
-  }
-  
+}
+
 .glow-point {
     position: absolute;
     box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
     pointer-events: none;
-  }
-  
+}
 
-  
-  /* @media (max-width: 640px) {
-    
-
+/* @media (max-width: 640px) {
     .description {
         left: 50%;
         width: 70%;
@@ -259,18 +257,16 @@ oran {
         transform: translate(-50%, -55%);
         text-align: center;
     }
-    
+
     .description h1 {
         color: #fff;
         font-size: 30px;
         font-weight: 900;
     }
-    
+
     .description p {
-        
         color: rgb(245, 155, 122);
         font-size: 1rem;
         line-height: 1.5;
     }
-}
-   */
+} */
