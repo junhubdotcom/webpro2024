@@ -64,59 +64,6 @@ body {
     justify-content: flex-end;
 }
 
-
-/* .header {
-    height: 100vh;
-    background-image: url("../images/intro.png");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    
-}
-
-.overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.description {
-    left: 50%;
-    width: 70%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -55%);
-    text-align: center;
-}
-
-.description h1 {
-    color: #fff;
-    font-size: 70px;
-    font-weight: 900;
-}
-
-.description p {
-    padding: 0px 80px;
-    color: rgb(245, 155, 122);
-    font-size: 1.3rem;
-    line-height: 1.5;
-} */
-
-
-.header{
-    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/intro.png");
-    /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    padding: 100px 0px;
-    /* padding-bottom: 0px;
-    margin-bottom: 0; */
-}
-
 .footer {
     background: #18183e;
 }
@@ -126,31 +73,6 @@ hr{
     margin: 25px 0px;
     height: 1px; 
 }
-
-.description {
-    vertical-align: center;
-    text-align: center;
-}
-
-.description h1 {
-    padding-top: 60px;
-    padding-bottom: 10px;
-    /* font-size: 60px; */
-    color: #fff;
-    font-size: 70px;
-    font-weight: 900;
-}
-
-.description p {
-    /* font-size: 20px; */
-    font-size: 1.3rem;
-    padding: 0px 50px;
-    line-height: 1.5;
-}
-
-/* .description span {
-   color: #df4c17;
-} */
 
 .btn{
     padding: 10px 20px;
@@ -165,17 +87,47 @@ hr{
     /* margin-bottom: 30px; */
 }
 
-.description button:hover {
-    border:1px solid #0a4778;
-    background:#0a4778;
+.sub-header{
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/intro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0px;
+    padding: 130px 0px;
 }
 
+.sub-description {
+    vertical-align: center;
+    text-align: center;
+}
 
+.sub-description h1 {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    /* font-size: 60px; */
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+}
 
+.sub-description p {
+    font-size: 1.3rem;
+    padding: 0px 50px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 21px;
+    border-radius: 10px;
+}
 
-span {
+.sub-description p span {
     color: #ffff;
     font-weight: 800;
+}
+
+.sub-description button:hover {
+    border:1px solid #0a4778;
+    background:#0a4778;
 }
 
 oran {
