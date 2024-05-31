@@ -60,6 +60,8 @@ body {
 }
 
 
+
+
 /* .carousel-indicators img{
     width: 70px;
     display: block;
@@ -89,12 +91,13 @@ body {
 }
 
 .sub-desciption {
-    padding: 80px;
     vertical-align: center;
     text-align: center;
 }
 
 .sub-desciption h1 {
+    padding-top: 60px;
+    padding-bottom: 10px;
     /* font-size: 60px; */
     color: #fff;
     font-size: 70px;
@@ -105,6 +108,156 @@ body {
     /* font-size: 20px; */
     font-size: 1.3rem;
     line-height: 1.5;
+}
+
+.choose-country-box h1 {
+    color: #0d273c;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    padding: 50px;
+}
+
+.sub-country-list {
+    max-width: 700px; /* Adjust the max-width to reduce the container size */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    align-items: center;
+    background-color: #ecd4cd;
+    border-radius: 10px;
+}
+
+.sub-country-list input[type="radio"] {
+    display: none;
+}
+
+.sub-country-list input[type="radio"] + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust the font size of the title */
+}
+
+.sub-country-list input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.sub-country-list input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff693c;;
+}
+
+.sub-country-list .sub-country-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sub-country-list label {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    color: #ff693c;
+}
+
+.sub-country-list p {
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 25px;
+    color: #ff693c;
+}
+
+.country-availability-list h1 {
+    font-size: 70px;
+    font-weight: 900;
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px 100px;
+}
+
+.country-availability-list p {
+    font-size: 35px;
+    font-weight: 900;
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.country-availability-list label {
+    font-size: 25px;
+}
+
+.country-availability-list form {
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.country-availability-list span {
+    color: #fe892f;
+    font-weight: 800;
+}
+
+.country-availability-list label{
+    padding: 15px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.country-availability-list select{
+    border: 1px solid #be6403;
+    background: #f18334;
+    border-radius: 4;
+    height: 70px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.country-availability-list button{
+    border: 1px solid #0d273c;
+    background: #0d273c;
+    border-radius: 4;
+    height: 50px;
+    width: 150px;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+}
+
+#availabilityMessage {
+    font-size: 30px;
+    font-weight: 900;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .carousel-item img {
