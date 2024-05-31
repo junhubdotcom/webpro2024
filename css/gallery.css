@@ -9,7 +9,7 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    background: #d3bbb7;
+    background: #fdffee;
 }
 
 .navbar {
@@ -123,7 +123,6 @@ h2 {
     border-radius: 5px;
     padding: 15px;
     color: #614226cb;
-
 }
 
 h5{
@@ -214,7 +213,12 @@ p {
 
 .carousel-overview-container h2 {
     margin-bottom: 1rem; /* Add this line to create space between the title and carousel */
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    background-color: rgb(255, 236, 109);
+    border-radius: 5px;
+    padding: 15px;
+    color: #614226cb;
 }
 
 
