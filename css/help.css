@@ -68,14 +68,23 @@ body {
     background: #18183e;
 }
 
-.image{
-    height: 40vh;
+.sub-header{
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/webpro2024/images/know.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0px;
+    padding: 130px 0px;
 }
 
-.image h1 {
+.sub-desciption {
+    vertical-align: center;
+    text-align: center;
+}
+
+.sub-desciption h1 {
     padding-top: 60px;
     padding-bottom: 10px;
-    /* font-size: 60px; */
     color: #fff;
     font-size: 70px;
     font-weight: 900;
