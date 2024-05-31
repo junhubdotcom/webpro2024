@@ -29,10 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Order Confirmation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkout.css">
+
 </head>
 <body class="bg-light">
-    <div class="container">
+    <div class="container" id="SUM">
         <div class="py-5 text-center">
+            <img class="mx-auto" src ="images/oLogo.png" width="360" height="180">
             <h2>Order Confirmation</h2>
             <p class="lead">Thank you for your order! Below are the details of your purchase.</p>
         </div>
@@ -83,8 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between">
-                            <h4>Total</h4>
-                            <h4>$<?php echo $totalPrice; ?></h4>
+                            <h4><oran>Total</oran></h4>
+                            <h4><oran>$<?php echo $totalPrice; ?></oran></h4>
                         </div>
                     </li>
                 </ul>
@@ -109,5 +112,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+
+    <div class = "printButton text-center">
+        <button class="btn-print btn-outline-secondary btn-lg" type="button">Print Me</button>
+    </div>
+
+    <br>
+
+    <script>
+        const btnPrint = document.querySelector('.btn-print');
+
+        btnPrint.addEventListener('click', () => {
+            window.print();
+        });
+    </script>
 </body>
 </html>
