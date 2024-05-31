@@ -25,6 +25,8 @@ body {
     text-align: center;
     align-items: center;
     z-index: 100;
+    height: max-content;
+    margin: 0;
 }
 
 .nav-link,
@@ -60,12 +62,14 @@ body {
     justify-content: flex-end;
 }
 
-.header {
+
+/* .header {
     height: 100vh;
     background-image: url("../images/intro.png");
     background-size: cover;
     background-position: center;
     position: relative;
+    
 }
 
 .overlay {
@@ -97,21 +101,41 @@ body {
     color: rgb(245, 155, 122);
     font-size: 1.3rem;
     line-height: 1.5;
+} */
+
+
+.header{
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/intro.png");
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-span {
-    color: #ffff;
-    font-weight: 800;
+.desciption {
+    vertical-align: center;
+    text-align: center;
 }
 
-oran {
-    color: #fe632c;
-    font-weight: 800;
+.desciption h1 {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    /* font-size: 60px; */
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
 }
 
-.description button {
+.desciption p {
+    /* font-size: 20px; */
+    font-size: 1.3rem;
+    padding: 0px 50px;
+    line-height: 1.5;
+}
+
+.btn{
     padding: 10px 20px;
-    border:1px solid #0d273c;
+    border: none;
     background:#0d273c;
     border-radius: 4;
     height: 80px;
@@ -126,27 +150,46 @@ oran {
     background:#0a4778;
 }
 
-.aboutUs {
-    height: 100vh;
-    background-image: url("../images/aboutus.png"); 
-    background-size: cover;
-    background-position: center;
+
+
+span {
+    color: #ffff;
+    font-weight: 800;
 }
 
-.aboutUs h1{
+oran {
+    color: #fe632c;
+    font-weight: 800;
+}
+
+
+.aboutUs {
+    height: 100vh;
+    /* background-image: url("../images/aboutus.png");  */
+    /* background-size: cover;
+    background-position: center; */
+}
+
+.aboutUsDesc{
+    padding: 0px 50px;
+    
+}
+
+.aboutUsDesc h1{
     color: #0d273c;
-    font-size: 70px;
+    font-size: 55px;
     font-weight: 900;
 }
 
-.aboutUs p{
+.aboutUsDesc p{
     color: #0d273c;
     text-align: justify;
     font-size: 2rem 5vw;
     line-height: 1.5;
 }
 
-.aboutUs button {
+.aboutUsDesc button {
+    margin-top: 20px;
     padding: 10px 20px;
     border:1px solid #0d273c;
     background:#0d273c;
@@ -161,6 +204,19 @@ oran {
 .aboutUs button:hover {
     border:1px solid #0a4778;
     background:#0a4778;
+}
+
+/* .aboutUsImg{
+    background-image: url("../images/person.png") ; 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+} */
+
+.aboutUsImg img{
+    width: fit-content;
+    height: max-content;
 }
 
 .how2 h1{
@@ -190,4 +246,31 @@ oran {
     pointer-events: none;
   }
   
+
   
+  /* @media (max-width: 640px) {
+    
+
+    .description {
+        left: 50%;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -55%);
+        text-align: center;
+    }
+    
+    .description h1 {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    
+    .description p {
+        
+        color: rgb(245, 155, 122);
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+   */
