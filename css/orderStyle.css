@@ -33,6 +33,10 @@ body {
     font-weight: 900;
 }
 
+.navbar-brand img{
+    width: 120px;
+    height: 30px;
+}
 #clock {
     color: #fff;
     font-weight: 900;
@@ -50,8 +54,8 @@ body {
 }
 
 
-.nav-link:hover {
-    color: black;
+.navbar-brand:hover {
+    color: #fe632c;
     transition: 0.3s;
 }
 

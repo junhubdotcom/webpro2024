@@ -39,6 +39,10 @@ clickedPlan.classList.add('clicked');
 
     totalPriceDisplay.textContent = 'RM' + totalPrice;
     saver.textContent = 'RM' + saveAmount;
+
+    localStorage.setItem('selectedPlanTotalPrice', totalPrice);
+    localStorage.setItem('selectedPlanSaveAmount', saveAmount);
+    localStorage.setItem('selectedPlanTitle', clickedPlan.querySelector('.sub-plan-title').textContent);
 }
 
 function displayCarousel(snackCountry){
