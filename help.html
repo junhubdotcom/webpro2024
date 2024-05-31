@@ -54,11 +54,12 @@
     <header class="sub-header jumbotron jumbotron-fluid text-white">
         <div class="sub-desciption">
             <h1>YOUR RIGHT TO KNOW</h1>
+            <p>Delight in <span>exclusive</span> snack experiences from <span>around the globe</span> with <span>SUB-prize</span>! Indulge in limited edition snack boxes delivered straight to your door, adding a dose of excitement to your nights</p>
         </div>
     </header>
 
     <!--Search-->
-    <div class="container-fluid p-4 bar">
+    <div class="container-fluid p-5 bar">
         <h2>What can we help you with?</h2>
         <div class="container search-bar">
             <div class="row d-flex justify-content-between">
@@ -142,6 +143,11 @@
         </div>
     </div>
 
+    <div class="container-fluid p-5 bar text-center">
+        <h2>Give Your Feedback Here</h2>
+        <button id="feedback">Submit Feedback</button>
+    </div>
+
     <script>
         const faqs = document.querySelectorAll(".faq");
 
@@ -150,6 +156,11 @@
                 faq.classList.toggle("active");
             });
         });
+
+        document.getElementById('feedback').onclick = function(){
+            var feedback = prompt('Got a suggestion? Share it here to help us improve!');
+            alert('Thank you for your suggestion!');
+        }
     </script>
 
     <!--Footer-->
