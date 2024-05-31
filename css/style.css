@@ -105,17 +105,23 @@ body {
 
 .header{
     background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/intro.png");
-    /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    /* padding-bottom: 0px;
-    margin-bottom: 0; */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .description {
-    vertical-align: center;
-    text-align: center;
+    left: 50%;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    text-align: center
 }
 
 .description h1 {
@@ -152,9 +158,6 @@ body {
     background:#0a4778;
 }
 
-
-
-
 span {
     color: #ffff;
     font-weight: 800;
@@ -166,14 +169,17 @@ oran {
 }
 
 .aboutUs {
-    margin-top: 0;
-    padding-top: 0;
-    
-      /* height: 100vh;
-    background-position: center; */
-}
+        background:url("../images/aboutus.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+  }
 
 .aboutUsDesc {
+    padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 30px
@@ -208,17 +214,6 @@ oran {
 .aboutUs button:hover {
     border: 1px solid #0a4778;
     background: #0a4778;
-}
-
-.aboutUsImg {
-    background-image: url("https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/snacks-in-america.jpg?quality=82&strip=all");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.aboutUsImg img{
-    /* width: 400px; */
-    height: 430px;
 }
 
 .how2 h1 {
