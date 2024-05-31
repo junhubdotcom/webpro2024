@@ -27,49 +27,50 @@
                 <p class="lead">Please fill in your details below</p>
             </div>
 
-            <h4 class="mb-3">Contact Information</h4>
-            <form novalidate>
+            <form action="order_confirmation.php" method="POST">
+
+                <h4 class="mb-3">Contact Information</h4>
+            
                 <div class="form-floating col-12 mt-3">
-                    <input id="email" type="email" class="form-control" placeholder="Email Address" required>
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Email Address" >
                     <label for="email" class="form-label">Email Address</label>
                     <div class="invalid-feedback">Please enter a valid email address</div>
-                </div>           
-            </form>
-            
-            <h4 class="mt-3 mb-3">Shipping Address</h4>
-            <form action="order_confirmation.php" method="POST">
+                </div>  
+
+                <h4 class="mt-3 mb-3">Shipping Address</h4>
+
                 <div class="row g-2">
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="firstName" type="text" class="form-control" placeholder="First Name" required>
+                        <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" >
                         <label for="firstName" class="form-label">First Name</label>
                         <div class="invalid-feedback">Please enter your first name</div>
                     </div>
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="lastName" type="text" class="form-control" placeholder="Last Name" required>
+                        <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name" >
                         <label for="lastName" class="form-label">Last Name</label>
                         <div class="invalid-feedback">Please enter your last name</div>
                     </div>
                 </div>
 
                 <div class = "form-floating col-12 mb-3">
-                    <input id="phone" type="text" class="form-control" placeholder="Phone" required> 
+                    <input id="phone" name="phone" type="text" class="form-control" placeholder="Phone" > 
                     <label for="phone" class="form-label">Phone</label>
                 </div>
                 
                 <div class = "form-floating col-12 mb-3">
-                    <input id="address" type="text" class="form-control" placeholder="Address" required> 
+                    <input id="address" name="address" type="text" class="form-control" placeholder="Address" > 
                     <label for="address" class="form-label">Address</label>
                 </div>
 
                 <div class="row g-2">
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="postalCode" type="text" class="form-control" placeholder="Postal Code" required>
+                        <input id="postalCode" name="postalCode" type="text" class="form-control" placeholder="Postal Code" >
                         <label for="postalCode" class="form-label">Postal Code</label>
                         <div class="invalid-feedback">Please enter your postal code</div>
                     </div>
 
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="state" type="text" class="form-control" placeholder="State" required>
+                        <input id="state" name="state" type="text" class="form-control" placeholder="State" >
                         <label for="state" class="form-label">State</label>
                         <div class="invalid-feedback">Please enter your state</div>
                     </div>
@@ -78,12 +79,12 @@
                 <div class="row g-2 mb-3">
                     <div class="col-sm-6 mb-3">
                         <div class="form-floating">
-                            <select id="city" class="form-control"> 
+                            <select id="city" name="city" class="form-control"> 
                                 <option value="">Select City...</option>
-                                <option value="1">Perak</option>
-                                <option value="2">Melacca</option>
-                                <option value="3">Selangor</option>
-                                <option value="4">Kuala Lumpur</option>
+                                <option value="Perak">Perak</option>
+                                <option value="Melacca">Melacca</option>
+                                <option value="Selangor">Selangor</option>
+                                <option value="Kuala Lumpur">Kuala Lumpur</option>
                             </select>
                             <label for="city" class="form-label">City</label>
                             <div class="invalid-feedback">Please enter your city</div>
@@ -92,12 +93,12 @@
     
                     <div class="col-sm-6 mb-3">
                         <div class="form-floating">
-                            <select id="country" class="form-control"> 
+                            <select id="country" name="country"class="form-control"> 
                                 <option value="">Select Country...</option>
-                                <option value="1">Malaysia</option>
-                                <option value="2">Thailand</option>
-                                <option value="3">Japan</option>
-                                <option value="4">Korea</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Korea">Korea</option>
                             </select>
                             <label for="country" class="form-label">Country</label>
                             <div class="invalid-feedback">Please enter your Country</div>
@@ -115,43 +116,43 @@
                 <h4 class="mb-3">Payment Method</h4>
                 
                 <div class="form-check mb-3">
-                    <input type="radio" name="paymentMethod" class="form-check-input" id="creditDebitCard" check required>
+                    <input type="radio" name="paymentMethod" value="Credit Card/Debit Card" class="form-check-input" id="creditDebitCard" check >
                     <label class="form-check-label" for="creditDebitCard">Credit Card/Debit Card</label>    
                 </div>
                 <div class="form-check mb-3">
-                    <input type="radio" name="paymentMethod" class="form-check-input" id="paypal" check required>
+                    <input type="radio" name="paymentMethod" value="Paypal" class="form-check-input" id="paypal" check >
                     <label class="form-check-label" for="paypal">PayPal</label>    
                 </div>
 
                 <div class="row g-2">
                     <div class="form-floating col-sm-6 mb-3"> 
-                        <input id="cardName" type="text" class="form-control" placeholder="Name on Card" required>
+                        <input id="cardName" name="cardName" type="text" class="form-control" placeholder="Name on Card" >
                         <label for="cardName" class="form-label">Name on Card</label>
                         <small class="text-muted">Full name as displayed on card</small>
                     </div>
     
                     <div class="form-floating col-sm-6 mb-3"> 
-                        <input id="cardNo" type="text" class="form-control" placeholder="Card Number" required>
+                        <input id="cardNo" name="cardNo" type="text" class="form-control" placeholder="Card Number" >
                         <label for="cardNo" class="form-label">Card Number</label>
                     </div>
                 </div>
                 
                 <div class="row g-2 mb-3">
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="expiredDate" type="text" class="form-control" placeholder="MM / YY" required>
+                        <input id="expiredDate" name="expiredDate" type="text" class="form-control" placeholder="MM / YY" >
                         <label for="expiredDate" class="form-label">MM / YY</label>
                         <div class="invalid-feedback">Please enter your card expired date</div>
                     </div>
 
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="cardVerification" type="text" class="form-control" placeholder="CVV" required>
+                        <input id="cardVerification" name="cardVerification" type="text" class="form-control" placeholder="CVV" >
                         <label for="cardVerification" class="form-label">CVV</label>
                         <div class="invalid-feedback">Please enter your card verification</div>
                     </div>
                 </div>
 
                 <div class="d-flex justify-content-between algin-items-center">
-                    <button class="btn btn-primary btn-lg" type="submit">&lt; Back to cart</button>
+                    <a href="subscription.html"><button class="btn btn-primary btn-lg">&lt; Back to cart</button></a>
                     <button class="btn btn-primary btn-lg" type="submit">Continue to checkout</button>
                 </div>
                 
