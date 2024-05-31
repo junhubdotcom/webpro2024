@@ -45,7 +45,7 @@ function displayCarousel(snackCountry){
     const koreaSnack = ["honeybutterchip.jpg",
     "https://d1i4t8bqe7zgj6.cloudfront.net/06-15-2018/t_1529082833396_name_20180615_choco_still2.jpg",
     "https://assets.bonappetit.com/photos/5ea982c8b5410100081e3482/master/pass/HR-packaged-Shin-ramen.jpg",
-    "bananamilk.jpg",
+    "images/bananamilk.jpg",
     "https://images.summitmedia-digital.com/spotph/images/2020/07/23/pepero-640-1595478915.jpg"];
 
     const japanSnack = ["https://i0.wp.com/sporked.com/wp-content/uploads/2022/09/BEST-POCKY-RANKING_DANNY-PALUMBO_SPORKED_HEADER.jpg",
@@ -58,7 +58,7 @@ function displayCarousel(snackCountry){
     "https://food.fnr.sndimg.com/content/dam/images/food/products/2023/2/13/rx_big-roll-grilled-seaweed-snacks-by-tao-kae-noi.jpeg.rend.hgtvcom.1280.720.suffix/1676323709546.jpeg",
     "https://media.nationthailand.com/uploads/images/md/2022/01/DYTkVmGE3f7EM1LcBZnv.webp",
     "https://i0.wp.com/packagingoftheworld.com/wp-content/uploads/2024/01/3D_Boontree_3Pouch_SpoonHand.png?fit=2400%2C1350&ssl=1",
-    "bento.jpg","Kohkae.jpg"];
+    "images/bento.jpg","images/Kohkae.jpg"];
 
     if(snackCountry == "korea"){
         document.getElementById('img1').src = koreaSnack[0];
@@ -66,6 +66,7 @@ function displayCarousel(snackCountry){
         document.getElementById('img3').src = koreaSnack[2];
         document.getElementById('img4').src = koreaSnack[3];
         document.getElementById('img5').src = koreaSnack[4];
+        
         document.getElementById('snackName1').innerHTML = "Kitkat: ";
         document.getElementById('snackDesc1').innerHTML = "Joeying";
         document.getElementById('snackName2').innerHTML = "Kitkat: ";
@@ -76,6 +77,7 @@ function displayCarousel(snackCountry){
         document.getElementById('snackDesc4').innerHTML = "Joeying";
         document.getElementById('snackName5').innerHTML = "Kitkat: ";
         document.getElementById('snackDesc5').innerHTML = "Joeying";   
+        
     }
 
 
@@ -85,6 +87,7 @@ function displayCarousel(snackCountry){
         document.getElementById('img3').src = japanSnack[2];
         document.getElementById('img4').src = japanSnack[3];
         document.getElementById('img5').src = japanSnack[4];
+        
         document.getElementById('snackName1').innerHTML = "Kitkat: ";
         document.getElementById('snackDesc1').innerHTML = "Joeying";
         document.getElementById('snackName2').innerHTML = "Kitkat: ";
@@ -95,6 +98,7 @@ function displayCarousel(snackCountry){
         document.getElementById('snackDesc4').innerHTML = "Joeying";
         document.getElementById('snackName5').innerHTML = "Kitkat: ";
         document.getElementById('snackDesc5').innerHTML = "Joeying";
+        
     }
 
     else if(snackCountry == "thailand"){
@@ -103,6 +107,7 @@ function displayCarousel(snackCountry){
         document.getElementById('img3').src = thailandSnack[2];
         document.getElementById('img4').src = thailandSnack[3];
         document.getElementById('img5').src = thailandSnack[4];
+       
         document.getElementById('snackName1').innerHTML = "Kitkat: ";
         document.getElementById('snackDesc1').innerHTML = "Joeying";
         document.getElementById('snackName2').innerHTML = "Kitkat: ";
@@ -113,6 +118,7 @@ function displayCarousel(snackCountry){
         document.getElementById('snackDesc4').innerHTML = "Joeying";
         document.getElementById('snackName5').innerHTML = "Kitkat: ";
         document.getElementById('snackDesc5').innerHTML = "Joeying";
+        
     }
 }
 
