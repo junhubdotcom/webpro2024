@@ -184,9 +184,8 @@ oran {
 }
 
 .aboutUs {
-    margin-top: 0;
-    padding-top: 0;
-    
+    background-image: url("/images/aboutus.png");
+    background-size: cover;
       /* height: 100vh;
     background-position: center; */
 }
