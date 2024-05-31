@@ -134,22 +134,6 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/*Subscription*/
-.subscription-container {
-    text-align: center;
-    color: white;
-}
-
-h3 {
-    color: #000;
-    font-size: 25px;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.form-group{
-    color: #000;
-}
 
 /*Button*/
 
