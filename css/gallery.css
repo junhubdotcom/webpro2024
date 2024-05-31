@@ -9,11 +9,11 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: rgb(252, 246, 238);
 }
 
 .navbar {
-    background:#fe632c;
+    background:#18183e;
     position: fixed;
     top: 0;
     left: 0;
@@ -89,6 +89,16 @@ oran {
     border-radius: 10px;
 }
 
+.footer {
+    background: #18183e;
+}
+
+hr{
+    background-color: #e69b46;
+    margin: 25px 0px;
+    height: 1px; 
+}
+
 .gallery-description h1 {
     font-size: 70px;
     margin-bottom: 1rem;
@@ -99,21 +109,34 @@ oran {
     font-size: 1.5rem;
 }
 
-/* Gallery */
+/* General Styles */
 h2 {
     font-weight: bold;
     font-style: normal;
-    font-size: 50px;
+    font-size: 20px;
 }
 
-h5 {
+.description h2{
+    display: inline-block;
+    background-color: rgb(255, 236, 109);
+    border-radius: 5px;
+    padding: 15px;
+    color: #614226cb;
+}
+
+h5{
+    font-weight: 800;
+    font-style: normal;
+}
+
+.description h5 {
     font-weight: 800;
     font-style: normal;
 }
 
 p { 
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .snack-container {
@@ -131,6 +154,57 @@ p {
 
 .card {
     margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.carousel {
+    width: 45%;
+}
+
+.description {
+    width: 45%;
+}
+
+
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel,
+    .description {
+        width: 100%;
+    }
+}
+/*overview Carousel*/
+
+.carousel-overview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+}
+
+#overviewCarousel {
+    width: 100%;
+}
+
+.carousel-overview-container h2 {
+    margin-bottom: 1rem; /* Add this line to create space between the title and carousel */
+    font-size: 2.2rem;
 }
 
 
