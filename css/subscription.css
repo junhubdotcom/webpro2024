@@ -115,10 +115,17 @@ body {
 }
 
 .sub-desciption p {
-    /* font-size: 20px; */
     font-size: 1.3rem;
+    padding: 0px 50px;
     line-height: 1.5;
 }
+
+.sub-desciption p span {
+    color: #ffff;
+    font-weight: 800;
+}
+
+
 .choose-country-box{
     background-color: #ead6be;
     margin: 0px;

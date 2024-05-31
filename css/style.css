@@ -148,6 +148,10 @@ hr{
     line-height: 1.5;
 }
 
+/* .description span {
+   color: #df4c17;
+} */
+
 .btn{
     padding: 10px 20px;
     border: none;
