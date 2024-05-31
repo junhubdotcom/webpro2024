@@ -17,12 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cardVerification = htmlspecialchars($_POST['cardVerification']);
     $saveInfo = isset($_POST['saveInfo']) ? 'Yes' : 'No';
     // Assume order details and discounts are fetched from the session or database
-    $productName = "Product name";
-    $productPrice = 400;
-    $productDiscount = 100;
-    $totalPrice = $productPrice - $productDiscount;
+    $totalPrice = htmlspecialchars($_POST['selectedPlanTotalPrice']);
+    $productDiscount = htmlspecialchars($_POST['selectedPlanSaveAmount']);
+    $productName = htmlspecialchars($_POST['selectedPlanName']);
+    $productPrice = htmlspecialchars($_POST['selectedPlanPrice']);
 }
-?>
+?>  
 
 <!DOCTYPE html>
 <html>
@@ -75,19 +75,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between">
                             <h5><?php echo $productName; ?></h5>
-                            <h5>$<?php echo $productPrice; ?></h5>
+                            <h5>RM<?php echo $productPrice; ?></h5>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between">
                             <h5>Product Discount</h5>
-                            <h5>-$<?php echo $productDiscount; ?></h5>
+                            <h5>RM<?php echo $productDiscount; ?></h5>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between">
                             <h4><oran>Total</oran></h4>
-                            <h4><oran>$<?php echo $totalPrice; ?></oran></h4>
+                            <h4><oran>RM<?php echo $totalPrice; ?></oran></h4>
                         </div>
                     </li>
                 </ul>
@@ -126,5 +126,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             window.print();
         });
     </script>
+    
 </body>
 </html>
