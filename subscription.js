@@ -42,7 +42,7 @@ clickedPlan.classList.add('clicked');
 }
 
 function displayCarousel(snackCountry){
-    const koreaSnack = ["honeybutterchip.jpg",
+    const koreaSnack = ["images/honeybutterchip.jpg",
     "https://d1i4t8bqe7zgj6.cloudfront.net/06-15-2018/t_1529082833396_name_20180615_choco_still2.jpg",
     "https://assets.bonappetit.com/photos/5ea982c8b5410100081e3482/master/pass/HR-packaged-Shin-ramen.jpg",
     "images/bananamilk.jpg",

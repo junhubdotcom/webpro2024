@@ -33,6 +33,11 @@ body {
     font-weight: 900;
 }
 
+.navbar-brand img{
+    width: 120px;
+    height: 30px;
+}
+
 #clock {
     color: #fff;
     font-weight: 900;
@@ -91,6 +96,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-bottom: 0px;
+    padding: 200px 0px;
 }
 
 .sub-desciption {
@@ -112,7 +119,11 @@ body {
     font-size: 1.3rem;
     line-height: 1.5;
 }
-
+.choose-country-box{
+    background-color: #ead6be;
+    margin: 0px;
+    padding: 30px;
+}
 .choose-country-box h1 {
     color: #18183e;
     font-size: 50Fpx;
@@ -126,7 +137,7 @@ body {
     margin: 0 auto; /* Center the container */
     display: flex;
     align-items: center;
-    background-color: rgba(255, 84, 22, 0.70);
+    background-color: rgba(244, 77, 17, 0.7);
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -234,6 +245,7 @@ body {
     color: #fff;
 }
 
+
 #availabilityMessage {
     font-size: 30px;
     font-weight: 900;
@@ -278,16 +290,21 @@ body {
     font-size: 28px;
     /* padding-right: 150px; */
     padding-bottom: 20px;
-    padding-top: 150px;
+    /* padding-top: 150px; */
     font-weight: 800;
     color:#051421 ;
+}
+
+.subscriptionPlan{
+    background-color: #ead6be;
+    padding: 40px 0px;
 }
 
 .subscribeSlogan{
     font-weight: 900;
     font-size: 28px;
     padding-bottom: 15px;
-    padding-top: 150px;
+    /* padding-top: 20px; */
 }
 
 .subscribeSlogan span{
@@ -297,7 +314,7 @@ body {
 
 
 .sub-plan-list {
-    background-color: rgba(255, 84, 22, 0.70);
+    background-color: rgba(244, 77, 17, 0.7);
     border-radius: 10px;
     height: 120px;
     align-items: center;
