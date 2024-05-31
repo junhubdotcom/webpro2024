@@ -22,13 +22,11 @@ body {
     flex: 2;
     padding: 20px 40px;
     overflow-y: scroll;
-    background: grey;
     border-right: 1px solid #e0e0e0;
 }
 
 .summary-form {
     flex: 1;
-    background: grey;
     position: sticky;
     height: 100vh;
     overflow: hidden;
