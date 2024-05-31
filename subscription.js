@@ -57,7 +57,6 @@ function displayCarousel(snackCountry){
     const thailandSnack = ["https://i0.wp.com/sporked.com/wp-content/uploads/2022/05/5-THAI-LAYS-FLAVORS-YOU-CAN-BUY-ONLINE_DANNY-PALUMBO_SPORKED_HEADER.jpg",
     "https://food.fnr.sndimg.com/content/dam/images/food/products/2023/2/13/rx_big-roll-grilled-seaweed-snacks-by-tao-kae-noi.jpeg.rend.hgtvcom.1280.720.suffix/1676323709546.jpeg",
     "https://media.nationthailand.com/uploads/images/md/2022/01/DYTkVmGE3f7EM1LcBZnv.webp",
-    "https://i0.wp.com/packagingoftheworld.com/wp-content/uploads/2024/01/3D_Boontree_3Pouch_SpoonHand.png?fit=2400%2C1350&ssl=1",
     "images/bento.jpg","images/Kohkae.jpg"];
 
     if(snackCountry == "korea"){
@@ -67,16 +66,17 @@ function displayCarousel(snackCountry){
         document.getElementById('img4').src = koreaSnack[3];
         document.getElementById('img5').src = koreaSnack[4];
         
-        document.getElementById('snackName1').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc1').innerHTML = "Joeying";
-        document.getElementById('snackName2').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc2').innerHTML = "Joeying";
-        document.getElementById('snackName3').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc3').innerHTML = "Joeying";
-        document.getElementById('snackName4').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc4').innerHTML = "Joeying";
-        document.getElementById('snackName5').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc5').innerHTML = "Joeying";   
+        document.getElementById('snackName1').innerHTML = "Honey Butter Chips: ";
+        document.getElementById('snackDesc1').innerHTML = "Sweet and savory potato chips with a delightful honey butter flavor.";
+        document.getElementById('snackName2').innerHTML = "Orion Choco Pie: ";
+        document.getElementById('snackDesc2').innerHTML = "Marshmallow-filled cakes coated in chocolate – a classic Korean snack.";
+        document.getElementById('snackName3').innerHTML = "Shin Ramyun: ";
+        document.getElementById('snackDesc3').innerHTML = "Spicy and flavorful instant noodles that bring a kick to your taste buds.";
+        document.getElementById('snackName4').innerHTML = "Melon Banana Milk: ";
+        document.getElementById('snackDesc4').innerHTML = "Creamy and refreshing milk drinks with the sweet taste of melon and banana.";   
+        document.getElementById('snackName5').innerHTML = "Pepero: ";
+        document.getElementById('snackDesc5').innerHTML = "Deliciously thin biscuit sticks dipped in chocolate – Korea’s answer to Pocky.";
+        
         
     }
 
@@ -88,16 +88,16 @@ function displayCarousel(snackCountry){
         document.getElementById('img4').src = japanSnack[3];
         document.getElementById('img5').src = japanSnack[4];
         
-        document.getElementById('snackName1').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc1').innerHTML = "Joeying";
-        document.getElementById('snackName2').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc2').innerHTML = "Joeying";
-        document.getElementById('snackName3').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc3').innerHTML = "Joeying";
+        document.getElementById('snackName1').innerHTML = "Pocky: ";
+        document.getElementById('snackDesc1').innerHTML = "Crispy biscuit sticks coated in smooth chocolate – a Japanese favorite!";
+        document.getElementById('snackName2').innerHTML = "Calbee Potato Chips: ";
+        document.getElementById('snackDesc2').innerHTML = "Light and crispy potato chips with a savory flavor – perfect for snacking!";
+        document.getElementById('snackName3').innerHTML = "Mochi: ";
+        document.getElementById('snackDesc3').innerHTML = "Chewy rice cakes with a sweet filling – a traditional Japanese treat.";
         document.getElementById('snackName4').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc4').innerHTML = "Joeying";
-        document.getElementById('snackName5').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc5').innerHTML = "Joeying";
+        document.getElementById('snackDesc4').innerHTML = "Break off a piece of Japan with unique KitKat flavors like matcha and sake.";
+        document.getElementById('snackName5').innerHTML = "Pretz: ";
+        document.getElementById('snackDesc5').innerHTML = "Crunchy biscuit sticks seasoned with a variety of savory flavors.";
         
     }
 
@@ -108,16 +108,18 @@ function displayCarousel(snackCountry){
         document.getElementById('img4').src = thailandSnack[3];
         document.getElementById('img5').src = thailandSnack[4];
        
-        document.getElementById('snackName1').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc1').innerHTML = "Joeying";
-        document.getElementById('snackName2').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc2').innerHTML = "Joeying";
-        document.getElementById('snackName3').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc3').innerHTML = "Joeying";
-        document.getElementById('snackName4').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc4').innerHTML = "Joeying";
-        document.getElementById('snackName5').innerHTML = "Kitkat: ";
-        document.getElementById('snackDesc5').innerHTML = "Joeying";
+        document.getElementById('snackName1').innerHTML = "Lays Potato Chips: ";
+        document.getElementById('snackDesc1').innerHTML = "Crispy potato chips with unique Thai flavors like spicy seafood and sweet basil.";
+        document.getElementById('snackName2').innerHTML = "Tao Kae Noi Seaweed: ";
+        document.getElementById('snackDesc2').innerHTML = "Crispy and flavorful seaweed snacks – a healthy and tasty treat.";
+        document.getElementById('snackName3').innerHTML = "Mama Instant Noodles: ";
+        document.getElementById('snackDesc3').innerHTML = "Quick and easy noodles with authentic Thai flavors – perfect for a quick meal.";
+        document.getElementById('snackName4').innerHTML = "Bento: ";
+        document.getElementById('snackDesc4').innerHTML = "Chewy and spicy squid snacks that pack a punch of flavor.";
+        document.getElementById('snackName5').innerHTML = "Koh Kae: ";
+        document.getElementById('snackDesc5').innerHTML = "Crunchy peanuts coated in a variety of flavors – a popular Thai snack.";
+        
+       
         
     }
 }
