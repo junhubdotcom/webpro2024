@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-    background: #fe632c;
+    background: #18183e;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: black;
+    color: #18183e;
     transition: 0.3s;
 }
 
