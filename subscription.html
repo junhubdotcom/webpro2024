@@ -18,12 +18,11 @@
             integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
         <script src="subscription.js"></script>
         <script src="main.js"></script>
-        <!-- <script src="https://kit.fontawesome.com/9cbd075fe2.js" crossorigin="anonymous"></script> -->
+
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-md">
         <div class="logo-navbar">
-            <!-- <a class="navbar-brand" href="index.html">SUB-prize</a> -->
             <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
             <a id = clock></a>
         </div>
@@ -336,42 +335,38 @@
     
                 <div class="row text-center text-md-left">
     
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
                         <h5 class="text-uppercase mb-4 font-weight-bold text-success">
                             <oran>SUB-Prize</oran>
                         </h5>
                         <p>Accessing snack from different regions all time with SUB-prize</p>
                     </div>
     
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
                         <h5 class="text-uppercase mb-4 font-weight-bold text-success">
-                            <oran>Products</oran>
+                            <oran>Services</oran>
                         </h5>
-                        <p><a href="#">Product 1</a></p>
-                        <p><a href="#">Product 2</a></p>
-                        <p><a href="#">Product 3</a></p>
-                        <p><a href="#">Product 4</a></p>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="gallery.html">Gallery</a></p>
+                        <p><a href="subscription.html">Subscription</a></p>
+                        <p><a href="help.html">Help</a></p>
                     </div>
     
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h5 class="text-uppercase mb-4 font-weight-bold text-success">
-                            <oran>Useful Links</oran>
-                        </h5>
-                        <p><a href="#">Your Account</a></p>
-                        <p><a href="#">Dunno</a></p>
-                        <p><a href="#">Available Region</a></p>
-                        <p><a href="#">Help</a></p>
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 subscribe">
+                        <h4>Let's have a surprise!</h4>
+                        <p>Join our newsletter and receive tasty news and deals!</p>
+    
+                        <div class="container">
+                            <div class="email">
+                                <form>
+                                    <input type="text" class="emailinp" placeholder="Enter your email" required>
+                                    <button type="submit" onclick="openPopup()"><i
+                                            class="fa-solid fa-arrow-right"></i></button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
     
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h5 class="text-uppercase mb-4 font-weight-bold text-success">
-                            <oran>Contact</oran>
-                        </h5>
-                        <p><i class="fas fa-home mr-3"></i>Address</p>
-                        <p><i class="fas fa-envelope mr-3"></i>Gmail</p>
-                        <p><i class="fas fa-phone mr-3"></i>Contact no</p>
-                        <p><i class="fas fa-print mr-3"></i>Fax</p>
-                    </div>
                 </div>
     
                 <hr class="mb-4 text-warning">
@@ -424,8 +419,29 @@
                 </div>
     
         </footer>
+
+        <!--Pop UP-->
+        <div class="popup" id="popup">
+            <h2>Thank You!</h2>
+            <p>We will send update information to your email.</p>
+            <button type="button" class="okbutton" onclick="closePopup()">OK</button>
+        </div>
+
+        <script>
+            let popup = document.getElementById("popup");
+
+            function openPopup() {
+                popup.classList.add("open-popup");
+            }
+            function closePopup() {
+                popup.classList.remove("open-popup");
+            }
+
+        </script>
         
         <div id="mouse-trailer"></div>
+
+
         <!-- <div class="popup">
             <div class="popup-content">
                 <i class="fa fa-window-close close" aria-hidden="true"></i>
