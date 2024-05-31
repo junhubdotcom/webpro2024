@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-    background:#fe632c;
+    background: #18183e;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,6 +33,11 @@ body {
     font-weight: 900;
 }
 
+.navbar-brand img{
+    width: 120px;
+    height: 30px;
+}
+
 #clock {
     color: #fff;
     font-weight: 900;
@@ -40,7 +45,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: black;
+    color: #18183e;
     transition: 0.3s;
 }
 
@@ -59,6 +64,9 @@ body {
     justify-content: flex-end;
 }
 
+.footer {
+    background: #18183e
+}
 
 
 
@@ -88,6 +96,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-bottom: 0px;
+    padding: 200px 0px;
 }
 
 .sub-desciption {
@@ -109,9 +119,13 @@ body {
     font-size: 1.3rem;
     line-height: 1.5;
 }
-
+.choose-country-box{
+    background-color: #ead6be;
+    margin: 0px;
+    padding: 30px;
+}
 .choose-country-box h1 {
-    color: #0d273c;
+    color: #18183e;
     font-size: 50Fpx;
     font-weight: 800;
     text-align: center;
@@ -119,47 +133,18 @@ body {
 }
 
 .sub-country-list {
-    max-width: 700px; /* Adjust the max-width to reduce the container size */
+    max-width: 650px; /* Adjust the max-width to reduce the container size */
     margin: 0 auto; /* Center the container */
     display: flex;
     align-items: center;
-    background-color: #ecd4cd;
+    background-color: rgba(244, 77, 17, 0.7);
     border-radius: 10px;
-}
-
-.sub-country-list input[type="radio"] {
-    display: none;
-}
-
-.sub-country-list input[type="radio"] + label {
-    position: relative;
-    padding-left: 25px;
     cursor: pointer;
-    font-size: 1.5rem; /* Adjust the font size of the title */
+    transition: background-color 0.3s;
 }
 
-.sub-country-list input[type="radio"] + label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #ffffff;
-}
-
-.sub-country-list input[type="radio"]:checked + label::after {
-    content: "";
-    position: absolute;
-    left: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ff693c;;
+.sub-country-list.selected {
+    background-color: rgb(255, 84, 22) ; /* Different color for selected state */
 }
 
 .sub-country-list .sub-country-content {
@@ -170,16 +155,21 @@ body {
 
 .sub-country-list label {
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
-    color: #ff693c;
+    padding-left: 25px;
+    color: #ffffff;
 }
 
 .sub-country-list p {
     font-size: 20px;
     font-weight: 600;
     padding-left: 25px;
-    color: #ff693c;
+    color: #ffffff;
+}
+
+.country-availability-list {
+    background-image: url('../images/world-map-2.png');
 }
 
 .country-availability-list h1 {
@@ -187,7 +177,8 @@ body {
     font-weight: 900;
     margin-top: 50px;
     text-align: center;
-    padding: 30px 100px;
+    padding: 40px 100px;
+    color: #18183e;
 }
 
 .country-availability-list p {
@@ -198,10 +189,12 @@ body {
     display: block;
     margin-bottom: 10px;
     line-height: 1.5;
+    color: rgb(255, 84, 22);
 }
 
 .country-availability-list label {
     font-size: 25px;
+    color: #18183e;
 }
 
 .country-availability-list form {
@@ -212,7 +205,7 @@ body {
 }
 
 .country-availability-list span {
-    color: #fe892f;
+    color: rgb(255, 84, 22);
     font-weight: 800;
 }
 
@@ -227,8 +220,8 @@ body {
 }
 
 .country-availability-list select{
-    border: 1px solid #be6403;
-    background: #f18334;
+    border: 1px solid rgb(255, 84, 22);
+    background-color: rgb(255, 84, 22);
     border-radius: 4;
     height: 70px;
     width: 250px;
@@ -252,12 +245,14 @@ body {
     color: #fff;
 }
 
+
 #availabilityMessage {
     font-size: 30px;
     font-weight: 900;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
+    color: #0d273c;
 }
 
 .carousel-item img {
@@ -295,25 +290,31 @@ body {
     font-size: 28px;
     /* padding-right: 150px; */
     padding-bottom: 20px;
-    padding-top: 38px;
+    /* padding-top: 100px; */
     font-weight: 800;
     color:#051421 ;
+}
+
+.subscriptionPlan{
+    background-color: #ead6be;
+    padding: 60px 0px;
 }
 
 .subscribeSlogan{
     font-weight: 900;
     font-size: 28px;
     padding-bottom: 15px;
+    
 }
 
 .subscribeSlogan span{
     font-size: 35px;
-    color: #fe632c;
+    color: rgb(255, 84, 22);
 }
 
 
 .sub-plan-list {
-    background-color: rgba(255, 84, 22, 0.70);
+    background-color: rgba(244, 77, 17, 0.7);
     border-radius: 10px;
     height: 120px;
     align-items: center;
@@ -328,7 +329,6 @@ body {
     align-items: center;
     border: none;
 }
-
 
 
 .sub-plan-save{
@@ -478,12 +478,12 @@ oran {
     
    padding: 0;
 } */
-.popup-content h2{
+/* .popup-content h2{
     text-align: center;
     font-weight: 800;
     font-size: 30px;
     margin-bottom: 20px;
-}
+} */
 
 /* .popup-content .row{
     justify-content: space-between;
