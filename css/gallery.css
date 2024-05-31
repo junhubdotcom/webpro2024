@@ -140,6 +140,10 @@ p {
     font-style: normal;
 }
 
+.description p{
+    margin-top: 12px;
+}
+
 .snack-container {
     margin-bottom: 3rem;
 }
