@@ -61,7 +61,7 @@ body {
 
 .header {
     height:500px;  
-    background-image: url(snacks\ picture.jpeg);
+    background-image: url(../images/snacks\ picture.jpeg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -128,7 +128,7 @@ oran {
 
 .aboutUs {
     height: 100vh;
-    background-image: url("aboutus.png");
+    background-image: url("../images/aboutus.png");
     background-size: cover;
     background-position: center;
 }

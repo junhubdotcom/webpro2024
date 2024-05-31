@@ -1,0 +1,193 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    background: white;
+}
+
+.navbar {
+    background:#fe632c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+#clock {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+}
+
+.navbar-brand:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+    text-decoration: none;
+}
+
+
+.nav-link:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.header {
+    height: 100vh;
+    background-image: url("../images/intro.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    left: 50%;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+}
+
+.description h1 {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.description p {
+    padding: 0px 80px;
+    color: rgb(245, 155, 122);
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+span {
+    color: #ffff;
+    font-weight: 800;
+}
+
+oran {
+    color: #fe632c;
+    font-weight: 800;
+}
+
+.description button {
+    padding: 10px 20px;
+    border:1px solid #0d273c;
+    background:#0d273c;
+    border-radius: 4;
+    height: 80px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 900;
+    color:#fff;
+}
+
+.description button:hover {
+    border:1px solid #0a4778;
+    background:#0a4778;
+}
+
+.aboutUs {
+    height: 100vh;
+    background-image: url("../images/aboutus.png"); 
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutUs h1{
+    color: #0d273c;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.aboutUs p{
+    color: #0d273c;
+    text-align: justify;
+    font-size: 2rem 5vw;
+    line-height: 1.5;
+}
+
+.aboutUs button {
+    padding: 10px 20px;
+    border:1px solid #0d273c;
+    background:#0d273c;
+    border-radius: 4;
+    height: 80px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 900;
+    color:#fff;
+}
+
+.aboutUs button:hover {
+    border:1px solid #0a4778;
+    background:#0a4778;
+}
+
+.how2 h1{
+    color: #fe632c;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.how2 h2{
+    color: 2c2f5d;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 20px;
+}
+
+.how2 h3{
+    font-weight: 700;
+}
+
+:root {
+    --glow-rgb: 255, 255, 255;
+  }
+  
+.glow-point {
+    position: absolute;
+    box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+    pointer-events: none;
+  }
+  
+  
