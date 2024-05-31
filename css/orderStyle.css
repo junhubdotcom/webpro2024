@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-    background: #fe632c;
+    background: #18183e;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: black;
+    color: #18183e;
     transition: 0.3s;
 }
 
@@ -65,6 +65,16 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+.footer {
+    background: #18183e;
+}
+
+hr{
+    background-color: #e69b46;
+    margin: 25px 0px;
+    height: 1px; 
 }
 
 .overlay {

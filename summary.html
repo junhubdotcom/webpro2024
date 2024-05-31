@@ -32,7 +32,7 @@
                 <h4 class="mb-3">Contact Information</h4>
             
                 <div class="form-floating col-12 mt-3">
-                    <input id="email" name="email" type="email" class="form-control" placeholder="Email Address" >
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Email Address" required>
                     <label for="email" class="form-label text-muted">Email Address</label>
                     <div class="invalid-feedback">Please enter a valid email address</div>
                 </div>  
@@ -41,36 +41,36 @@
 
                 <div class="row g-2">
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" >
+                        <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" required>
                         <label for="firstName" class="form-label text-muted">First Name</label>
                         <div class="invalid-feedback">Please enter your first name</div>
                     </div>
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name" >
+                        <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name" required>
                         <label for="lastName" class="form-label text-muted">Last Name</label>
                         <div class="invalid-feedback">Please enter your last name</div>
                     </div>
                 </div>
 
                 <div class = "form-floating col-12 mb-3">
-                    <input id="phone" name="phone" type="text" class="form-control" placeholder="Phone" > 
+                    <input id="phone" name="phone" type="text" class="form-control" placeholder="Phone" required> 
                     <label for="phone" class="form-label text-muted">Phone</label>
                 </div>
                 
                 <div class = "form-floating col-12 mb-3">
-                    <input id="address" name="address" type="text" class="form-control" placeholder="Address" > 
+                    <input id="address" name="address" type="text" class="form-control" placeholder="Address" required> 
                     <label for="address" class="form-label text-muted">Address</label>
                 </div>
 
                 <div class="row g-2">
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="postalCode" name="postalCode" type="text" class="form-control" placeholder="Postal Code" >
+                        <input id="postalCode" name="postalCode" type="text" class="form-control" placeholder="Postal Code" required>
                         <label for="postalCode" class="form-label text-muted">Postal Code</label>
                         <div class="invalid-feedback">Please enter your postal code</div>
                     </div>
 
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="state" name="state" type="text" class="form-control" placeholder="State" >
+                        <input id="state" name="state" type="text" class="form-control" placeholder="State" required>
                         <label for="state" class="form-label text-muted">State</label>
                         <div class="invalid-feedback">Please enter your state</div>
                     </div>
@@ -79,7 +79,7 @@
                 <div class="row g-2 mb-3">
                     <div class="col-sm-6 mb-3">
                         <div class="form-floating">
-                            <select id="city" name="city" class="form-control"> 
+                            <select id="city" name="city" class="form-control" required> 
                                 <option value="">Select City...</option>
                                 <option value="Perak">Perak</option>
                                 <option value="Melacca">Melacca</option>
@@ -93,7 +93,7 @@
     
                     <div class="col-sm-6 mb-3">
                         <div class="form-floating">
-                            <select id="country" name="country"class="form-control"> 
+                            <select id="country" name="country"class="form-control" required> 
                                 <option value="">Select Country...</option>
                                 <option value="Malaysia">Malaysia</option>
                                 <option value="Thailand">Thailand</option>
@@ -126,32 +126,37 @@
 
                 <div class="row g-2">
                     <div class="form-floating col-sm-6 mb-3"> 
-                        <input id="cardName" name="cardName" type="text" class="form-control" placeholder="Name on Card" >
+                        <input id="cardName" name="cardName" type="text" class="form-control" placeholder="Name on Card" required>
                         <label for="cardName" class="form-label text-muted">Name on Card</label>
                         <small class="text-muted">Full name as displayed on card</small>
                     </div>
     
                     <div class="form-floating col-sm-6 mb-3"> 
-                        <input id="cardNo" name="cardNo" type="text" class="form-control" placeholder="Card Number" >
+                        <input id="cardNo" name="cardNo" type="text" class="form-control" placeholder="Card Number" required>
                         <label for="cardNo" class="form-label text-muted">Card Number</label>
                     </div>
                 </div>
                 
                 <div class="row g-2 mb-3">
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="expiredDate" name="expiredDate" type="text" class="form-control" placeholder="MM / YY" >
+                        <input id="expiredDate" name="expiredDate" type="text" class="form-control" placeholder="MM / YY" required>
                         <label for="expiredDate" class="form-label text-muted">MM / YY</label>
                         <div class="invalid-feedback">Please enter your card expired date</div>
                     </div>
 
                     <div class="form-floating col-sm-6 mb-3">
-                        <input id="cardVerification" name="cardVerification" type="text" class="form-control" placeholder="CVV" >
+                        <input id="cardVerification" name="cardVerification" type="text" class="form-control" placeholder="CVV" required>
                         <label for="cardVerification" class="form-label text-muted">CVV</label>
                         <div class="invalid-feedback">Please enter your card verification</div>
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-between algin-items-center">
+                <input type="hidden" name="selectedPlanTotalPrice" id="selectedPlanTotalPrice">
+                <input type="hidden" name="selectedPlanSaveAmount" id="selectedPlanSaveAmount">
+                <input type="hidden" name="selectedPlanName" id="selectedPlanName">
+                <input type="hidden" name="selectedPlanPrice" id="selectedPlanPrice">
+
+                <div class="d-flex justify-content-between align-items-center">
                     <a href="subscription.html" class="btn1 btn-primary btn-lg">&lt; Back to cart</a>
                     <button class="btn2 btn-primary btn-lg" type="submit">Checkout</button>
                 </div>
@@ -171,29 +176,27 @@
                     <li class="list-group-item align-item-center">
                         <div class="d-flex justify-content-between">
                             <h5><span>Product name</span></h5>
-                            <h5><span>$400</span></h5>
                         </div>
                         <div class="ml-5 d-flex justify-content-between">
-                            <h6><span class="text-muted">Product description</span></h6>
-                            <h6><span class="text-muted">$400  </span></h6>
+                            <h6><span class="text-muted" id="productName">Product description</span></h6>
+                            <h6><span class="text-muted" id="productPrice">RM  </span></h6>
                         </div>      
                     </li>
                     <hr class="my-2">
                     <li class="list-group-item align-item-center">
                         <div class="d-flex justify-content-between">
                             <h5><span>Product discount</span></h5>
-                            <h5><span>-$100</span></h5>
                         </div>
                         <div class="ml-5 d-flex justify-content-between">
-                            <h6><span class="text-muted">Discount description</span></h6>
-                            <h6><span class="text-muted">-$100  </span></h6>
+                            <h6><span class="text-muted" id="productDiscount">Discount description</span></h6>
+                            <h6><span class="text-muted" id="productDiscountPrice">RM  </span></h6>
                         </div>      
                     </li>
                     <hr class="my-2">
                 </ul>
                 <div class="d-flex justify-content-between align-item-center">
                     <h4 class="font-weight-bold"><span>Total</span></h4>
-                    <h4 class="font-weight-bold"><oran>$300</oran></h4>
+                    <h4 class="font-weight-bold"><oran id="totalPrice">RM</oran></h4>
                 </div>
                 <hr class="my-2">
                 <div class="justify-content-between align-item-center">
@@ -204,6 +207,27 @@
 
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const totalPrice = localStorage.getItem('selectedPlanTotalPrice');
+            const saveAmount = localStorage.getItem('selectedPlanSaveAmount');
+            const planTitle = localStorage.getItem('selectedPlanTitle');
+        
+            if (totalPrice && saveAmount && planTitle) {
+                // Update the summary page with the selected plan details
+                document.getElementById('productName').textContent = planTitle;
+                document.getElementById('productPrice').textContent = 'RM' + totalPrice;
+                document.getElementById('productDiscount').textContent = 'You Saved';
+                document.getElementById('productDiscountPrice').textContent = 'RM' + saveAmount;
+                document.getElementById('totalPrice').textContent = 'RM' + (totalPrice - saveAmount);
+
+                document.getElementById('selectedPlanTotalPrice').value = totalPrice - saveAmount;
+                document.getElementById('selectedPlanSaveAmount').value = saveAmount;
+                document.getElementById('selectedPlanName').value = planTitle;
+                document.getElementById('selectedPlanPrice').value = totalPrice;
+            }
+        });
+    </script>
 
     </body>
 
