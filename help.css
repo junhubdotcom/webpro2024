@@ -57,8 +57,13 @@ body {
     justify-content: flex-end;
 }
 
-.title{
-    height: 40vh;
+.image{
+    background-image: url('aboutus.png');
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 7em 0;
+    background-position: center;
 }
 
 .title h1{
@@ -70,55 +75,43 @@ body {
     transform: translate(-50%, -55%);
 }
 
-.title2{
-    background: url('aboutus.png');
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    padding: 7em 0;
-    background-position: center;
+main{
+    background-color: rgb(255, 243, 243);
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
 }
 
-.title .question h3{
-    font-size: 10px;
-}
-
-.title2 h3{
+.bar h2{
     font-weight: 800;
-    font-size: 35px;
-}
-
-.title2 p{
-    font-size: 20px;
-    font-weight: 600;
+    color: #fe632c;
 }
 
 .search-bar{
     position: relative;
-    margin: 50px 0;
+    margin: 20px 0;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 10px;
-    padding-right: 40px;
-    font-size: 30px;
-    border-style: none;
-    border-width: 2px;
-    background-color: rgb(240, 240, 240);
+    padding: 30px;
+    font-size: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fe632c;
+    background-color: rgb(255, 255, 255);
 }
 
 .search-bar button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
+    position: relative;
+    margin-top: 20px;
     border: none;
     background: transparent;
-    padding: 0 20px;
+    padding: 20px 35px 20px 35px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 15px;
     background:#fe632c;
+    color: white;
     border-radius: 5px;
 }
 
