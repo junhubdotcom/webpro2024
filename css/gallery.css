@@ -123,6 +123,7 @@ h2 {
     border-radius: 5px;
     padding: 15px;
     color: #614226cb;
+
 }
 
 h5{
@@ -140,12 +141,16 @@ p {
     font-style: normal;
 }
 
-.description p{
+
+.description p {
     margin-top: 12px;
+    font-weight: 500;
 }
 
 .snack-container {
     margin-bottom: 3rem;
+    width: 100%; /* Ensure the snack containers occupy the full width of the screen */
+    padding: 20px; /* Add padding to create space between the content and the background */
 }
 
 .card-img-top {

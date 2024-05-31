@@ -214,17 +214,20 @@
             const planTitle = localStorage.getItem('selectedPlanTitle');
         
             if (totalPrice && saveAmount && planTitle) {
+
+                const totalPriceInt = parseFloat(totalPrice);
+                const saveAmountInt = parseFloat(saveAmount);
                 // Update the summary page with the selected plan details
                 document.getElementById('productName').textContent = planTitle;
-                document.getElementById('productPrice').textContent = 'RM' + totalPrice;
+                document.getElementById('productPrice').textContent = 'RM' + (totalPriceInt + saveAmountInt);
                 document.getElementById('productDiscount').textContent = 'You Saved';
                 document.getElementById('productDiscountPrice').textContent = 'RM' + saveAmount;
-                document.getElementById('totalPrice').textContent = 'RM' + (totalPrice - saveAmount);
+                document.getElementById('totalPrice').textContent = 'RM' + totalPrice;
 
-                document.getElementById('selectedPlanTotalPrice').value = totalPrice - saveAmount;
+                document.getElementById('selectedPlanTotalPrice').value = totalPrice;
                 document.getElementById('selectedPlanSaveAmount').value = saveAmount;
                 document.getElementById('selectedPlanName').value = planTitle;
-                document.getElementById('selectedPlanPrice').value = totalPrice;
+                document.getElementById('selectedPlanPrice').value = totalPriceInt + saveAmountInt;
             }
         });
     </script>
