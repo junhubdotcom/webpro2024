@@ -72,6 +72,15 @@ body {
     height: 40vh;
 }
 
+.image h1 {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    /* font-size: 60px; */
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+}
+
 .title h1{
     font-weight: 800;
     text-align: center;
