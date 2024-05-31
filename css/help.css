@@ -57,6 +57,10 @@ body {
     justify-content: flex-end;
 }
 
+.footer {
+    background: #18183e;
+}
+
 .image{
     height: 40vh;
 }
@@ -180,6 +184,12 @@ body {
 span {
     color: #ffff;
     font-weight: 800;
+}
+
+hr{
+    background-color: #e69b46;
+    margin: 25px 0px;
+    height: 1px; 
 }
 
 oran {
