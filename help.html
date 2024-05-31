@@ -20,6 +20,7 @@
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
 
+    <!--Navigation bar-->
     <nav class="navbar navbar-expand-md">
         <div class="logo-navbar">
             <a class="navbar-brand" href="index.html">SUB-prize</a>
@@ -50,54 +51,110 @@
         </div>
     </nav>
 
+    <div class="popup" id="popup">
+        <h2>Thank You!</h2>
+        <p>We will send update information to your email.</p>
+        <button type="button" class="okbutton" onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+
+    </script>
+
     <div class="image">
         <div class="container-fluid p-5 title">
             <h1 class="display-4">Your right to know</h1>
         </div>
     </div>
 
-
+    <!--Search-->
     <div class="container-fluid p-4 bar">
         <h2>What can we help you with?</h2>
         <div class="container search-bar">
-            <div class="col-lg-12 col-md-12">
-                <input type="text" class="form-control" placeholder="Search for a question">
-                <button>SEARCH</button>
+            <div class="row d-flex justify-content-between">
+                <div class="col-sm-10 mb-3">
+                    <input type="text" class="form-control" placeholder="Search for a question">
+                </div>
+                <div class="col-sm-2 mb-3">
+                    <button type="button">SEARCH</button>
+                </div>
+
             </div>
         </div>
     </div>
 
-
-
-    <div class="wrapper">
+    <!--FAQ Accordion-->
+    <div class="wrapper mb-5">
         <h2 class="display-6">Frequently Asked Question</h2>
 
         <div class="faq">
             <div class="accordion">
-                How does it work?
+                What is a surprise box?
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
             <div class="panel">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis distinctio
-                    voluptatibus, quod molestiae numquam sunt corporis fugit, hic rem quos fuga doloremque optio
-                    inventore
-                    eveniet culpa repellendus atque. Ad.
+                    A surprise box is a curated package filled with a variety of mystery items that follow a specific
+                    theme. The contents of the box are a surprise until you open it!
                 </p>
             </div>
         </div>
 
         <div class="faq">
             <div class="accordion">
-                How does it fly?
+                How does the subscription work?
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
             <div class="panel">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis distinctio
-                    voluptatibus, quod molestiae numquam sunt corporis fugit, hic rem quos fuga doloremque optio
-                    inventore
-                    eveniet culpa repellendus atque. Ad.
+                    You can subscribe to receive a surprise box on a monthly, quarterly, or yearly basis. Each
+                    subscription period, you'll receive a new box filled with exciting items.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="accordion">
+                How long does delivery take?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="panel">
+                <p>
+                    Delivery times depend on your location. Typically, orders within the same country take 3-7 business
+                    days, while international orders may take 10-20 business days.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="accordion">
+                What kind of items can I expect in a surprise box?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="panel">
+                <p>
+                    Each box is themed and may include a mix of items such as collectibles, gadgets, fashion
+                    accessories, beauty products, snacks, and more. The specific contents are a surprise!
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="accordion">
+                Are the items in the surprise box brand new?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="panel">
+                <p>
+                    Yes, all items included in our surprise boxes are brand new and sourced from reputable suppliers.
                 </p>
             </div>
         </div>
@@ -106,45 +163,28 @@
     <script>
         const faqs = document.querySelectorAll(".faq");
 
-        faqs.forEach((faq) => { 
-            faq.addEventListener("click", () => { 
-                faq.classList.toggle("active"); 
-            }); 
+        faqs.forEach((faq) => {
+            faq.addEventListener("click", () => {
+                faq.classList.toggle("active");
+            });
         });
     </script>
 
-
-
-    <div class="printButton text-center">
-        <p></p>
-        <button class="btn-print btn-outline-secondary btn-lg" type="button">Print Me</button>
-    </div>
-
-    <br><br>
-
-    <script>
-        const btnPrint = document.querySelector('.btn-print');
-
-        btnPrint.addEventListener('click', () => {
-            window.print();
-        });
-    </script>
-
-
+    <!--Footer-->
     <footer class="footer text-white pt-5 pb-4">
 
         <div class="container text-center text-md-left">
 
             <div class="row text-center text-md-left">
 
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-success">
                         <oran>SUB-Prize</oran>
                     </h5>
                     <p>Accessing snack from different regions all time with SUB-prize</p>
                 </div>
 
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-success">
                         <oran>Products</oran>
                     </h5>
@@ -154,25 +194,21 @@
                     <p><a href="#">Product 4</a></p>
                 </div>
 
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-success">
-                        <oran>Useful Links</oran>
-                    </h5>
-                    <p><a href="#">Your Account</a></p>
-                    <p><a href="#">Dunno</a></p>
-                    <p><a href="#">Available Region</a></p>
-                    <p><a href="#">Help</a></p>
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 subscribe">
+                    <h4>Let's have a surprise!</h4>
+                    <p>Join our newsletter and receive tasty news and deals!</p>
+
+                    <div class="container">
+                        <div class="email">
+                            <form>
+                                <input type="text" class="emailinp" placeholder="Enter your email" required>
+                                <button type="submit" onclick="openPopup()"><i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-success">
-                        <oran>Contact</oran>
-                    </h5>
-                    <p><i class="fas fa-home mr-3"></i>Address</p>
-                    <p><i class="fas fa-envelope mr-3"></i>Gmail</p>
-                    <p><i class="fas fa-phone mr-3"></i>Contact no</p>
-                    <p><i class="fas fa-print mr-3"></i>Fax</p>
-                </div>
             </div>
 
             <hr class="mb-4 text-warning">
