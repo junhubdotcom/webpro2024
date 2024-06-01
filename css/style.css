@@ -288,25 +288,4 @@ oran {
     pointer-events: none;
 }
 
-/* @media (max-width: 640px) {
-    .description {
-        left: 50%;
-        width: 70%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -55%);
-        text-align: center;
-    }
 
-    .description h1 {
-        color: #fff;
-        font-size: 30px;
-        font-weight: 900;
-    }
-
-    .description p {
-        color: rgb(245, 155, 122);
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-} */
