@@ -138,8 +138,6 @@ oran {
 .aboutUs {
     background-image: url("/images/aboutus.png");
     background-size: cover;
-      /* height: 100vh;
-    background-position: center; */
 }
 
 .aboutUsDesc {
