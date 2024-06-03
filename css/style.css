@@ -88,7 +88,7 @@ hr{
 }
 
 .sub-header{
-    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/intro.png");
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/intro.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -136,7 +136,7 @@ oran {
 }
 
 .aboutUs {
-    background-image: url("/images/aboutus.png");
+    background-image: url('../images/aboutus.png');
     background-size: cover;
 }
 
