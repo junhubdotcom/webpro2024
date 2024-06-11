@@ -54,7 +54,8 @@
     <header class="sub-header jumbotron jumbotron-fluid text-white">
         <div class="sub-desciption">
             <h1>YOUR RIGHT TO KNOW</h1>
-            <p>Welcome to our <span>Help Page</span>! Explore global flavors with us. Need <span>assistance</span>? We're <span>here</span> for you!</p>
+            <p>Welcome to our <span>Help Page</span>! Explore global flavors with us. Need <span>assistance</span>?
+                We're <span>here</span> for you!</p>
         </div>
     </header>
 
@@ -157,11 +158,29 @@
             });
         });
 
-        document.getElementById('feedback').onclick = function(){
+        document.getElementById('feedback').onclick = function () {
             var feedback = prompt('Got a suggestion? Share it here to help us improve!');
             alert('Thank you for your suggestion!');
         }
     </script>
+
+    <div id="chatButton" onclick="toggleChat()">Chat with Us</div>
+    <div id="chatPanel" class="chat-panel">
+        <div class="chat-header">
+            <h2>Message Board</h2>
+            <span class="close" onclick="toggleChat()">&times;</span>
+        </div>
+        <div id="messages" class="chat-messages">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+        <div class="new-message">
+            <input type="text" id="username" placeholder="Your name" required>
+            <textarea id="message" placeholder="Type your message here..." required></textarea>
+            <button onclick="postMessage()">Post Message</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
     <!--Footer-->
     <footer class="footer text-white pt-5 pb-4">
@@ -178,14 +197,14 @@
                 </div>
 
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                        <h5 class="text-uppercase mb-4 font-weight-bold text-success">
-                            <oran>Services</oran>
-                        </h5>
-                        <p><a href="index.html">Home</a></p>
-                        <p><a href="gallery.html">Gallery</a></p>
-                        <p><a href="subscription.html">Subscription</a></p>
-                        <p><a href="help.html">Help</a></p>
-                    </div>
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-success">
+                        <oran>Services</oran>
+                    </h5>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="gallery.html">Gallery</a></p>
+                    <p><a href="subscription.html">Subscription</a></p>
+                    <p><a href="help.html">Help</a></p>
+                </div>
 
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 subscribe">
                     <h4>Let's have a surprise!</h4>
