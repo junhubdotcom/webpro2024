@@ -34,7 +34,7 @@ $mail = htmlspecialchars($rt['email']);
     <div>
     <nav class="navbar navbar-expand-md">
         <div class="logo-navbar">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+            <a class="navbar-brand" href="index.php"><img src="images/logo.png"></a>
             <a id="clock"></a>
         </div>
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
@@ -43,7 +43,7 @@ $mail = htmlspecialchars($rt['email']);
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="profile.html">Profile</a>
@@ -56,6 +56,10 @@ $mail = htmlspecialchars($rt['email']);
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="help.html">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.php">
+                        <i class="fa-solid fa-user"></i></a>
                 </li>
             </ul>
         </div>

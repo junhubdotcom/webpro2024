@@ -68,7 +68,7 @@ if(isset($_POST['signIn'])){
         $_SESSION['role'] = $row['role']; // Assuming 'role' is the column name in your database
         
         // Redirect to summary.php or any other page as needed
-        echo "<script>alert('Sign In successfully!'); window.location.href='../firstpage.html';</script>";
+        echo "<script>alert('Sign In successfully!'); window.location.href='../index.php';</script>";
         
         exit();
     } else {
