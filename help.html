@@ -63,17 +63,17 @@
     <div class="container-fluid p-5 bar">
         <h2>What can we help you with?</h2>
         <div class="container search-bar">
-            <div class="row d-flex justify-content-between">
-                <div class="col-sm-10 mb-3">
+            <div class="row">
+                <div class="col-md-10 mb-3">
                     <input type="text" class="form-control" placeholder="Search for a question">
                 </div>
-                <div class="col-sm-2 mb-3">
-                    <button type="button">SEARCH</button>
+                <div class="col-md-2 mb-3 d-flex align-items-center">
+                    <button type="button" class="btn btn-primary w-100">SEARCH</button>
                 </div>
-
             </div>
         </div>
     </div>
+    
 
     <!--FAQ Accordion-->
     <div class="wrapper mb-5">
@@ -144,12 +144,24 @@
         </div>
     </div>
 
-    <div class="container-fluid p-5 bar text-center">
-        <h2>Give Your Feedback Here</h2>
-        <button id="feedback">Submit Feedback</button>
-
-        <button id="forum">Forum</button>
+    <div class="container-fluid p-4" style="background-color:#ead6be;">
+        <div class="row no-gutters">
+            <div class="col-md-6 text-center">
+                <div class="p-4 forum">
+                    <h2>Give Your Feedback Here</h2>
+                    <button id="feedback">Submit Feedback</button>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="p-4 forum1">
+                    <h2>Share Your Thoughts and Ideas!</h2>
+                    <button id="forum">Forum</button>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    
 
     <script>
         const faqs = document.querySelectorAll(".faq");
@@ -170,22 +182,6 @@
            window.location.href='message-board/messageBoard.php';
         }
     </script>
-
-    <div id="chatButton" onclick="toggleChat()">Chat with Us</div>
-    <div id="chatPanel" class="chat-panel">
-        <div class="chat-header">
-            <h2>Message Board</h2>
-            <span class="close" onclick="toggleChat()">&times;</span>
-        </div>
-        <div id="messages" class="chat-messages">
-            <!-- Messages will be dynamically inserted here -->
-        </div>
-        <div class="new-message">
-            <input type="text" id="username" placeholder="Your name" required>
-            <textarea id="message" placeholder="Type your message here..." required></textarea>
-            <button onclick="postMessage()">Post Message</button>
-        </div>
-    </div>
 
     <script src="login&register/script.js"></script>
 
