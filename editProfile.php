@@ -17,7 +17,6 @@ $rt = mysqli_fetch_array($dbresult);
 $fname = htmlspecialchars($rt['firstName']);
 $lname = htmlspecialchars($rt['lastName']);
 $mail = htmlspecialchars($rt['email']);
-// $password = htmlspecialchars($rt['password']); // Consider not displaying the password for security reasons
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +30,6 @@ $mail = htmlspecialchars($rt['email']);
     <title>Profile</title>
 </head>
 <body>
-    <div>
     <nav class="navbar navbar-expand-md">
         <div class="logo-navbar">
             <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
@@ -60,37 +58,48 @@ $mail = htmlspecialchars($rt['email']);
             </ul>
         </div>
     </nav>
-</div>
-    
-<div class="row">
+
+    <div class="row">
     <div class="container-fluid col-sm-12 col-md-12 col-lg-12 profile">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-6">
-                    <h2>My Profile</h2>
-                </div>
-                <div class="col-md-6 text-right">
-                    <button type="button" class="btn editbtn" onclick="navToEditPage()">
-                        <i class="fas fa-pen"></i> Edit
-                    </button>
-                </div>
-            </div>
             
-            <p><b>Name:</b> <?php echo $fname; ?> <?php echo $lname; ?></p>
-            <p><b>Email:</b> <?php echo $mail; ?></p>
+                <h2>Edit Profile</h2>
+                <form id="editProfileForm" action="editProfileLogic.php" method="POST">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" value="<?php echo $fname; ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" value="<?php echo $lname; ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" value="<?php echo $mail; ?>" required>
+                    </div>
+                    <button type="submit" class="btn savebtn">Save Changes</button>
+                </form>
+            
         </div>
     </div>
-</div>
-<hr>
-<div class="my-sub">
-<h2>My Subscription</h2>
-</div>
 
-   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script>
+        // Optional: Add JavaScript for form submission confirmation using SweetAlert2
+        document.getElementById('editProfileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Are you sure you want to update your profile?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, update it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.submit(); // Submit the form
+                }
+            });
+        });
+    </script>
 </body>
-<script>
-    function navToEditPage(){
-        window.location.href='editProfile.php';
-    }
-</script>
 </html>
