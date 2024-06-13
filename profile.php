@@ -76,17 +76,13 @@
 
     <div class="row">
 
-        <div class="container col-lg-5 col-md-6 col-md-6 profileimg">
-            <img src="images/about.png">
-        </div>
-
-        <div class="container col-lg-7 col-md-6 col-md-6 profile">
+        <div class="container-fluid col-sm-12 col-md-12 col-lg-12 profile">
             <div class="container profiledetail">
                 <h1>My Profile</h1>
-                <h3>First Name: <span><?php echo $fname; ?></span></h3>
-                <h3>Last Name: <span><?php echo $lname; ?></span></h3>
-                <h3>Email: <span><?php echo $mail; ?></span></h3>
-                <h3>Password: <span><?php echo $password; ?></span></h3>
+                <h3>First Name: <span></span></h3>
+                <h3>Last Name: <span></span></h3>
+                <h3>Email: <span></span></h3>
+                <h3>Password: <span></span></h3>
             </div>
         </div>
     </div>

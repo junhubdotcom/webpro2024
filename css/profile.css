@@ -110,18 +110,23 @@ oran {
     pointer-events: none;
 }
 
-.profileimg{
-    padding: 130px 0px 50px 90px;
-}
-
-img{
-    height: 75vh;
-}
-
 .profiledetail{
+    padding: 50px;
     font-size: 40px;
-    margin-top: 30vh;
-    background-color: #e69b46;
+    margin-top: 20vh;
+    background-color: #ffffff;
     width: 15em;
+    font-weight: bold;
+    border-radius: 20px;
+
+}
+
+.profiledetail h1{
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.profiledetail h3{
     font-weight: 700;
+    margin-bottom: 30px;
 }
