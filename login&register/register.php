@@ -12,13 +12,14 @@ if(isset($_POST['signUp'])){
      $checkEmail="SELECT * From users where email='$email'";
      $result=$conn->query($checkEmail);
      if($result->num_rows>0){
-        echo "Email Address Already Exists !";
+        echo "<script>alert('Email Address Already Exists !');window.location.href='login.html';</script>";
      }
      else{
         $insertQuery="INSERT INTO users(firstName,lastName,email,password)
                        VALUES ('$firstName','$lastName','$email','$password')";
             if($conn->query($insertQuery)==TRUE){
-                header("location: index.php");
+                echo "<script>alert('Sign Up successfully! Please Sign In using your email and password.'); window.location.href='login.html';</script>";
+                // header("location: ../summary.html");
             }
             else{
                 echo "Error:".$conn->error;
@@ -39,11 +40,12 @@ if(isset($_POST['signIn'])){
     session_start();
     $row=$result->fetch_assoc();
     $_SESSION['email']=$row['email'];
-    header("Location: homepage.php");
+    echo "<script>alert('Sign In successfully!');window.location.href='../summary.php';</script>";
+    // header("Location: ../summary.html");
     exit();
    }
    else{
-    echo "Not Found, Incorrect Email or Password";
+    echo "<script>alert('Not Found, Incorrect Email or Password'); window.location.href='login.html';</script>";
    }
 
 }

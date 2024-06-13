@@ -172,3 +172,40 @@ function checkAvailability() {
     }, 100); // Delay in milliseconds (100ms)
 }
 
+function checkAllButtonClicked(){
+    var countryElements = document.querySelectorAll('.sub-country-list');
+    var planElements = document.querySelectorAll('.sub-plan-list');
+    var countryIsSelected = false;
+    var planIsSelected = false;
+    var locationAvailable = false;
+
+    countryElements.forEach(function(element){
+        if(element.classList.contains('selected')){
+            countryIsSelected=true;
+        }
+    });
+
+    planElements.forEach(function(element){
+        if(element.classList.contains('clicked')){
+            planIsSelected=true;
+        }
+    });
+
+    var location = document.getElementById('availabilityMessage');
+    if(!location.classList.contains('not-available') && !location.innerHTML == "" ){
+        locationAvailable= true;
+    }
+
+    if(countryIsSelected && planIsSelected && locationAvailable){
+        window.location.href = 'summary.php';
+    }else if(!countryIsSelected){
+        alert('Please select the country of the snacks ！');
+    }else if(!locationAvailable){
+        alert('Please check the location availability ！');
+    }else{
+        alert('Please select the subscription plan ！');
+    }
+
+}
+
+
