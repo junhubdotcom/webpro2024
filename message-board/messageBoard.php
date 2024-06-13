@@ -1,6 +1,3 @@
-<?php
-include '../check_login1.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
