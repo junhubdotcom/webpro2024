@@ -9,6 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="messageBoard.js"></script>
+  <link type="text/css" rel="stylesheet" href="messageBoard.css">
 </head>
 
 <!-- Modal -->
@@ -40,9 +41,14 @@
   </div>
 </div>
 
-<div class="container">
+<div class="d-flex justify-content-between align-items-center">
+  <a href="help.html" class="btn1 btn-primary btn-lg">&lt; Back to Help</a>
+</div>
 
-<div class="panel panel-default" style="margin-top:50px">
+<div class="container">
+<img class="mx-auto d-block" src ="images/oLogo.png" width="300" height="120">
+
+<div class="panel panel-default" style="margin-top:15px">
   <div class="panel-body">
     <h3>Community forum</h3>
     <hr>
