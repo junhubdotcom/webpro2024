@@ -11,3 +11,13 @@
     font-weight: 900;
     color:#DB4A2B;
 }
+
+.sendbtn{
+    background-color:#DB4A2B;
+    color: white;
+    font-weight: 700;
+}
+
+body{
+    background-color: bisque;
+}
