@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #d3bbb7;
+}
+
+.navbar {
+    background: #18183e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.navbar-brand img{
+    width: 120px;
+    height: 30px;
+}
+
+#clock {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+}
+
+.navbar-brand:hover {
+    color: #fe632c;
+    transition: 0.3s;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+    text-decoration: none;
+}
+
+
+.nav-link:hover {
+    color: #fe632c;
+    transition: 0.3s;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.header{
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/intro.png");
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/03/68/66/94/1000_F_368669476_Cl7gGRuBWRYnPLwwY8pBgmeH1lGvpQ1r.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0px;
+    /* padding-bottom: 0px;
+    margin-bottom: 0; */
+}
+
+.footer {
+    background: #18183e;
+}
+
+span {
+    color: #878787;
+    
+}
+
+oran {
+    color: #fe632c;
+    font-weight: 800;
+}
+
+.how2 h2 {
+    color: #2c2f5d;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 20px;
+}
+
+.how2 h3 {
+    font-weight: 700;
+}
+
+:root {
+    --glow-rgb: 255, 255, 255;
+}
+
+.glow-point {
+    position: absolute;
+    box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+    pointer-events: none;
+}
+
+.profiledetail{
+    padding: 50px;
+    font-size: 40px;
+    margin-top: 20vh;
+    background-color: #ffffff;
+    width: 15em;
+    font-weight: bold;
+    border-radius: 20px;
+
+}
+
+.profiledetail h1{
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.profiledetail h3{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
