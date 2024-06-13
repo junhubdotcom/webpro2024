@@ -23,7 +23,7 @@
     <!--Navigation bar-->
     <nav class="navbar navbar-expand-md">
         <div class="logo-navbar">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+            <a class="navbar-brand" href="firstpage.html"><img src="images/logo.png"></a>
             <a id=clock></a>
         </div>
 
@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="main-navigation">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="firstpage.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gallery.html">Gallery</a>
@@ -147,6 +147,8 @@
     <div class="container-fluid p-5 bar text-center">
         <h2>Give Your Feedback Here</h2>
         <button id="feedback">Submit Feedback</button>
+
+        <button id="forum">Forum</button>
     </div>
 
     <script>
@@ -161,6 +163,11 @@
         document.getElementById('feedback').onclick = function () {
             var feedback = prompt('Got a suggestion? Share it here to help us improve!');
             alert('Thank you for your suggestion!');
+        }
+
+        // this script direct to the forum when the forum button is clicked
+        document.getElementById('forum').onclick = function () {
+           window.location.href='message-board/messageBoard.php';
         }
     </script>
 
@@ -180,7 +187,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="login&register/script.js"></script>
 
     <!--Footer-->
     <footer class="footer text-white pt-5 pb-4">
