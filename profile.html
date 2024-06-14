@@ -1,31 +1,3 @@
-<?php
-    //这个要看你的database的资料没有错的话
-    $servername = "localhost";
-    $dbUsername = "root";
-    $dbpassword = "";
-    $dbname = "geturl";
-
-    $conn = mysqli_connect($servername, $dbUsername, $dbpassword, $dbname);
-
-    if(!$conn) {
-        die("Connection To Database Failed:".mysqli_connect_error());
-    }
-
-    if(isset(($_GET["id"]))) {
-        $mm = $_GET['id'];
-
-        $dbinfo = "SELECT firstName, lastName, email, password FROM users WHERE id='$mm'";
-        $dbresult = mysqli_query($conn, $dbinfo);
-        $rt = mysqli_fetch_array($dbresult);
-
-        $fname = $rt['firstName'];
-        $lname = $rt['lastName'];
-        $mail = $rt['email'];
-        $password = $rt['password'];
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
