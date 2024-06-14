@@ -162,7 +162,7 @@ include 'check_login.php';
                     <div class="container">
                         <div class="email">
                             <form action="send.php" method="post">
-                                <input type="hidden" name="referrer" value="firstpage.html">
+                                <input type="hidden" name="referrer" value="index.php">
                                 <input type="text" class="emailinp" name="emailinp" placeholder="Enter your email" required>
                                 <button type="submit" name="submit" onclick="openPopup()"><i
                                         class="fa-solid fa-arrow-right"></i></button>
