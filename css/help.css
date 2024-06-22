@@ -125,13 +125,12 @@ body {
     border-radius: 5px;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 30px;
     margin-bottom: 20px;
    
 }
 
 .search-bar{
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -145,7 +144,7 @@ body {
     text-align: center;
 }
 
-.search-bar button {
+.search-bar .btn-search {
     flex: 1;
     border: none;
     padding: 20px 30px;
@@ -153,8 +152,13 @@ body {
     font-size: 15px;
     color: #ffffff;
     font-weight: 600;
-    background:#fe632c;
+    background: #fe632c;
     border-radius: 5px;
+}
+
+.search-bar .btn-search:hover {
+    background-color: #18183e; /* New hover background color */
+    color: white; /* Hover text color */
 }
 
 .wrapper{
@@ -326,79 +330,57 @@ oran {
     pointer-events: none;
   }
 
-  #chatButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+
+.forum {
+    background-color: #ead6be;
+    border-radius: 0; /* Remove border radius if you want it to go edge-to-edge */
+    margin-bottom: 0; /* Remove any bottom margin if you want seamless background */
+}
+
+.forum h2 {
+    font-weight: 800;
+    color: #fe632c;
+}
+
+.forum button {
+    padding: 18px 40px;
     background-color: #fe632c;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.chat-panel {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 300px;
-    height: 400px;
-    background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.chat-header {
-    background-color: #fe632c;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.chat-messages {
-    padding: 10px;
-    flex: 1;
-    overflow-y: auto;
-}
-
-.message {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-.new-message {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-}
-
-#username, #message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px;
     border: none;
-    background: #0d273c;
-    color: white;
     border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px; /* Adjust margin to fit your design */
     cursor: pointer;
 }
 
-button:hover {
-    background: #0d273c;
+.forum button:hover {
+    background-color: #18183e; /* Darker shade for hover effect */
 }
 
-.close {
+.forum1 {
+    background-color: #ead6be;
+    border-radius: 0; /* Remove border radius if you want it to go edge-to-edge */
+    margin-bottom: 0; /* Remove any bottom margin if you want seamless background */
+}
+
+.forum1 h2 {
+    font-weight: 800;
+    color: #fe632c;
+}
+
+.forum1 button {
+    padding: 18px 85px;
+    background-color: #fe632c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px; /* Adjust margin to fit your design */
     cursor: pointer;
-    font-size: 20px;
+}
+
+.forum1 button:hover {
+    background-color: #18183e; /* Darker shade for hover effect */
 }

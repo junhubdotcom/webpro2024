@@ -9,7 +9,7 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    background: #d3bbb7;
+    background: #f5e3cf;
 }
 
 .navbar {
@@ -110,7 +110,17 @@ oran {
     pointer-events: none;
 }
 
-.profiledetail{
+.profile{
+    padding: 30px;
+    /* font-size: 40px; */
+    margin-top: 14vh;
+    /* background-color: rgb(234, 210, 181); */
+    width: 15em;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+/* .profiledetail{
     padding: 50px;
     font-size: 40px;
     margin-top: 20vh;
@@ -119,14 +129,55 @@ oran {
     font-weight: bold;
     border-radius: 20px;
 
+} */
+
+hr{
+    height: 1px;
+    background-color: grey;
+    border: none; /* Remove default border */
 }
 
-.profiledetail h1{
-    font-weight: 900;
-    margin-bottom: 50px;
-}
-
-.profiledetail h3{
-    font-weight: 700;
+.profile h2{
+    font-weight: 800;
     margin-bottom: 30px;
+    color: #DB4A2B;
+    font-size: 30px;
+}
+
+.profile p{
+    font-weight: 500;
+    /* margin-bottom: 30px; */
+    font-size: 20px;
+    color: black;
+}
+
+.editbtn{
+    background-color: #DB4A2B;
+    color: white;
+    font-weight: 600s;
+    
+}
+
+.profileTitle{
+    display: flex;
+}
+
+.my-sub{
+    padding: 20px 80px;
+
+}
+
+.my-sub h2{
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #DB4A2B;
+    font-size: 30px;
+}
+
+
+.savebtn{
+    background-color: #DB4A2B;
+    color: white;
+    font-weight: 600s;
+    margin-top: 30px;
 }
