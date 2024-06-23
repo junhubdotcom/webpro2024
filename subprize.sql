@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2024 at 02:53 AM
+-- Generation Time: Jun 22, 2024 at 05:11 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `forum`
 --
-
+DROP TABLE IF EXISTS `forum`;
 CREATE TABLE `forum` (
   `id` int(10) NOT NULL,
   `parent_comment` varchar(500) NOT NULL,
@@ -48,7 +48,8 @@ INSERT INTO `forum` (`id`, `parent_comment`, `student`, `post`, `date`) VALUES
 (11, '0', 'Yong Jun Wei', 'This prodcut is amaziang', '2024-06-14 00:33:28'),
 (12, '11', 'Jack', 'I agree', '2024-06-14 00:33:46'),
 (13, '0', 'david', '- im a king', '2024-06-14 00:43:10'),
-(14, '13', 'jun', 'you r dog', '2024-06-14 00:43:25');
+(14, '13', 'jun', 'you r dog', '2024-06-14 00:43:25'),
+(15, '0', 'juntest', 'you r dog', '2024-06-14 00:43:25');
 
 -- --------------------------------------------------------
 
@@ -56,6 +57,7 @@ INSERT INTO `forum` (`id`, `parent_comment`, `student`, `post`, `date`) VALUES
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `Id` int(10) NOT NULL,
   `role` varchar(10) NOT NULL DEFAULT 'user',
@@ -101,7 +103,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `forum`
 --
 ALTER TABLE `forum`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`
