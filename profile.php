@@ -86,9 +86,9 @@ $mail = htmlspecialchars($rt['email']);
     </div>
 </div>
 <hr>
-<div class="my-sub">
+<!-- <div class="my-sub">
 <h2>My Subscription</h2>
-</div>
+</div> -->
 
    
 </body>
