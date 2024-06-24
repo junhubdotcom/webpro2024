@@ -96,7 +96,7 @@ $mail = htmlspecialchars($rt['email']);
         <div class="row order-history">
             <div class="col-md-3 order-id">
                 <h4>Order ID</h4>
-                <a href="#" class="link">1231234</a>
+                <a href="order_history.php" class="link">1231234</a>
             </div>
 
             <div class="col-md-3 product-name">
