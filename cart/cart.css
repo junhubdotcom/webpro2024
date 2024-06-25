@@ -1,0 +1,116 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #f5e3cf;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+/* sidecart */
+
+.sidecart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 350px;
+    background-color: white;
+    box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1); /* Updated color value */
+}
+
+.cart_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* cart header */
+
+.cart_header {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header_title span {
+    margin-left: 10px; /* Adjust spacing between title and span */
+    width: 20px;
+    height: 20px;
+    background-color: rgb(244, 149, 91);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart_header .close_btn {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cart_header .close_btn:hover {
+    transform: scale(1.1);
+}
+
+/* Cart Item*/
+.cart_items{
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Cart Actions*/
+.cart_actions{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 1px solid lightgray;
+    box-shadow: 0 -5px 10px lightgray;
+}
+
+.cart_actions .subtotal{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cart_actions button{
+    border: none;
+    background-color: rgb(249, 138, 26);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.cart_actions button:nth-of-type(2){
+    background-color: lightgrey;
+}
