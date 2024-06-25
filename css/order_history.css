@@ -1,0 +1,118 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #d3bbb7;
+}
+
+.container-fluid{
+    display: flex;
+    height: 100vh;
+
+}
+
+.checkout-form{
+    flex: 2;
+    padding: 20px 40px;
+    overflow-y: scroll;
+    border-right: 1px solid #e0e0e0;
+}
+
+.summary-form {
+    flex: 1;
+    position: sticky;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h2 ,h4 {
+    font-weight: 800;
+}
+
+h5{
+    font-weight: 600;
+}
+
+oran{
+    color: #DB4A2B;
+}
+
+.btn1{
+    padding: 20px 20px;
+    text-align: center;
+    border: none;
+    background: none;
+    border-radius: 4;
+    height: 80px;
+    width: 250px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 900;
+    color: #DB4A2B;
+}
+
+
+.btn1:hover {
+    border:1px solid #dde4ea;
+    background:#dde4ea;
+    color:#DB4A2B;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.btn2{
+    padding: 20px 20px;
+    text-align: center;
+    border: none;
+    background: #DB4A2B;
+    border-radius: 4;
+    height: 80px;
+    width: 250px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 900;
+    color:white;
+}
+
+.btn2:hover {
+    border:1px solid #DB4A2B;
+    background:#DB4A2B;
+    color:white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+@media print{
+    body * {
+        display: none;
+    }
+    #SUM, #SUM *{
+        display: block;
+    
+    }
+}
+
+.printButton button{
+    padding: 10px 20px;
+    margin-right: 25px;
+    border:1px solid #0d273c;
+    background:#0d273c;
+    border-radius: 4;
+    height: 80px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 900;
+    color:#fff;
+    position: center;
+}
+
+
+.printButton button:hover {
+    border:1px solid #0a4778;
+    background:#0a4778;
+} 

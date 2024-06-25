@@ -174,10 +174,28 @@ hr{
     font-size: 30px;
 }
 
-
 .savebtn{
     background-color: #DB4A2B;
     color: white;
     font-weight: 600s;
     margin-top: 30px;
+}
+
+.order-history{
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.order-history h4{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.order-history a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.order-history a:hover{
+    color: #DB4A2B;
 }

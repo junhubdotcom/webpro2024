@@ -55,8 +55,9 @@ oran{
     text-decoration: none;
     font-size: 22px;
     font-weight: 900;
-    color:#DB4A2B;
+    color: #DB4A2B;
 }
+
 
 .btn1:hover {
     border:1px solid #dde4ea;
@@ -98,7 +99,7 @@ oran{
 
 .printButton button{
     padding: 10px 20px;
-    margin-top: 50px;
+    margin-right: 25px;
     border:1px solid #0d273c;
     background:#0d273c;
     border-radius: 4;
