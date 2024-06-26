@@ -40,6 +40,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
     display: none; /* Hide by default */
+    transition: 0.5s ease;
 }
 
 /* Side Cart */

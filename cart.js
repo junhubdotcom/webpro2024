@@ -10,11 +10,17 @@ backdrop.addEventListener('click', closeCart);
 // Open Cart
 function openCart() {
     cart.classList.add('open');
-    backdrop.classList.add('open');
+    backdrop.style.display = 'block'
+
+    setTimeout(() => { backdrop.classList.add('show') }, 0)
 }
 
 // Close Cart
 function closeCart() {
     cart.classList.remove('open');
-    backdrop.classList.remove('open');
+    backdrop.classList.remove('show');
+
+    setTimeout(() => {
+        backdrop.style.display = 'none'
+    }, 500)
 }
