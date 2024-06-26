@@ -18,6 +18,12 @@
     font-weight: 700;
 }
 
+.delete-button {
+    display: inline-block;
+    /* Other styling rules */
+}
+
+
 body{
     background-color: bisque;
 }
