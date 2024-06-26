@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'connect.php';
+include 'orderdb.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['email'])) {
@@ -47,9 +48,6 @@ $mail = htmlspecialchars($rt['email']);
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
-                </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
@@ -92,30 +90,47 @@ $mail = htmlspecialchars($rt['email']);
         <h2>My Subscription</h2>
     </div>
 
-    <div class="my-sub-history container">
-        <div class="row order-history">
-            <div class="col-md-3 order-id">
-                <h4>Order ID</h4>
-                <a href="order_history.php" class="link">1231234</a>
-            </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product Name</th>
+                    <th>Order Status</th>
+                    <th>Order Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $query = "SELECT * FROM order_history";
+                $stmt = $pdo->prepare($query);
+                $stmt->execute();
 
-            <div class="col-md-3 product-name">
-                <h4>Product Name</h4>
-                <h6>Korean blablabla</h6>
-            </div>
+                $result = $stmt->fetchAll();
+                if ($result) {
 
-            <div class="col-md-3 order-status">
-                <h4>Order Status</h4>
-                <h6>asdfrgwser</h6>
-            </div>
+                    foreach ($result as $row) {
+                ?>
+                        <tr>
+                            <td><a href="order_history.php?order_id=<?= $row['order_id'];?>"><?= $row['order_id'];?></a></td>
+                            <td><?= $row['productName'];?></td>
+                            <td><?= $row['date'];?></td>
+                            <td><?= $row['productPrice'];?></td>
+                        </tr>
+                    <?php
+                    }
+                } else {
+                    ?>
+                    <tr>
+                        <td colspan="4">No Record Found</td>
+                    </tr>
+                <?php
+                }
+                ?>
 
-            <div class="col-md-3 price">
-                <h4>Price</h4>
-                <h6>$60000</h6>
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
-
 
 </body>
 <script>
