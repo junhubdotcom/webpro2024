@@ -181,6 +181,13 @@ hr{
     margin-top: 30px;
 }
 
+.backbtn{
+    background-color: rgb(126, 123, 123);
+    color: white;
+    font-weight: 600s;
+    margin-top: 30px;
+}
+
 .order-history{
     background-color: #ffffff;
     border-radius: 5px;
