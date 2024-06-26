@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Subscription</title>
+    <link rel="stylesheet" href="cart.css">
+    <title>Side cart</title>
+</head>
+
+<body>
+    <!-- Open Btn -->
+    <button id="open_cart_btn">
+        <img src="images/shoppingcart.jpg" alt="" style="width: 30px;" />
+    </button>
+
+    <!-- Items -->
+     <div class="items">
+        
+     </div>
+    <!-- Backdrop -->
+     <div class="backdrop"></div>
+    <!-- Side Cart -->
+    <div id="sidecart" class="sidecart">
+        <div class="cart_content">
+            <!-- Cart Header -->
+            <div class="cart_header">
+                <img src="images/shoppingcart.jpg" alt="cart" style="width: 30px;" />
+                <div class="header_title">
+                    <h2>Shopping cart</h2>
+                    <span id="items_num">4</span>
+                </div>
+                <span id="close_btn" class="close_btn">&times;</span>
+            </div>
+            <!--Cart Items-->
+            <div class="cart_items">
+                <!-- Item1 -->
+                <div class="cart_item">
+                    <div class="remove_item">
+                        <span>&times;</span>
+                    </div>
+                    <div class="item_img">
+                        <img src="images/snackbox.png" alt="snackbox" />
+                    </div>
+                    <div class="item_details">
+                        <p>SUB-Prize Snack Box</p>
+                        <strong>$80</strong>
+                        <div class="qty">
+                            <span>-</span>
+                            <strong>1</strong>
+                            <span>+</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item1 -->
+                <!-- Item2 -->
+                <div class="cart_item">
+                    <div class="remove_item">
+                        <span>&times;</span>
+                    </div>
+                    <div class="item_img">
+                        <img src="images/snackbox.png" alt="snackbox" />
+                    </div>
+                    <div class="item_details">
+                        <p>SUB-Prize Snack Box</p>
+                        <strong>$80</strong>
+                        <div class="qty">
+                            <span>-</span>
+                            <strong>1</strong>
+                            <span>+</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item2 -->
+                <!-- Item3 -->
+                <div class="cart_item">
+                    <div class="remove_item">
+                        <span>&times;</span>
+                    </div>
+                    <div class="item_img">
+                        <img src="images/snackbox.png" alt="snackbox" />
+                    </div>
+                    <div class="item_details">
+                        <p>SUB-Prize Snack Box</p>
+                        <strong>$80</strong>
+                        <div class="qty">
+                            <span>-</span>
+                            <strong>1</strong>
+                            <span>+</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item3 -->
+            </div>
+            <!-- Cart Actions -->
+            <div class="cart_actions">
+                <div class="subtotal">
+                    <p>SUBTOTAL: </p>
+                    <p>$<span id="subtotal_price">3896</span></p>
+                </div>
+                <button>View Cart</button>
+                <button>Checkout</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
