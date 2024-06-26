@@ -1,27 +1,39 @@
-<?php
-// order_confirmation.php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = htmlspecialchars($_POST['email']);
-    $firstName = htmlspecialchars($_POST['firstName']);
-    $lastName = htmlspecialchars($_POST['lastName']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $address = htmlspecialchars($_POST['address']);
-    $postalCode = htmlspecialchars($_POST['postalCode']);
-    $state = htmlspecialchars($_POST['state']);
-    $city = htmlspecialchars($_POST['city']);
-    $country = htmlspecialchars($_POST['country']);
-    $paymentMethod = htmlspecialchars($_POST['paymentMethod']);
-    $cardName = htmlspecialchars($_POST['cardName']);
-    $cardNo = htmlspecialchars($_POST['cardNo']);
-    $expiredDate = htmlspecialchars($_POST['expiredDate']);
-    $cardVerification = htmlspecialchars($_POST['cardVerification']);
-    $saveInfo = isset($_POST['saveInfo']) ? 'Yes' : 'No';
-    // Assume order details and discounts are fetched from the session or database
-    $totalPrice = htmlspecialchars($_POST['selectedPlanTotalPrice']);
-    $productDiscount = htmlspecialchars($_POST['selectedPlanSaveAmount']);
-    $productName = htmlspecialchars($_POST['selectedPlanName']);
-    $productPrice = htmlspecialchars($_POST['selectedPlanPrice']);
+<?php 
+session_start();
+include 'orderdb.php';
+
+if (!isset($_GET['order_id'])) {
+    echo "<script>alert('No order ID provided.'); window.location.href='profile.php';</script>";
+    exit();
 }
+
+$order_id = $_GET['order_id'];
+
+$query = "SELECT * FROM order_history WHERE order_id = :order_id";
+$stmt = $pdo->prepare($query);
+$stmt->execute(['order_id' => $order_id]);
+$order = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$order) {
+    echo "<script>alert('Order not found.'); window.location.href='profile.php';</script>";
+    exit();
+}
+
+$email = htmlspecialchars($order['email']);
+$firstName = htmlspecialchars($order['firstName']);
+$lastName = htmlspecialchars($order['lastName']);
+$phone = htmlspecialchars($order['phone']);
+$address = htmlspecialchars($order['address']);
+$postalCode = htmlspecialchars($order['postalCode']);
+$state = htmlspecialchars($order['state']);
+$city = htmlspecialchars($order['city']);
+$country = htmlspecialchars($order['country']);
+$paymentMethod = htmlspecialchars($order['paymentMethod']);
+$productName = htmlspecialchars($order['productName']);
+$productPrice = htmlspecialchars($order['productPrice']);
+$productDiscount = htmlspecialchars($order['productDiscount']);
+$totalPrice = htmlspecialchars($order['totalPrice']);
+$date = htmlspecialchars($order['date']);
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container" id="SUM">
         <div class="py-5 text-center">
             <img class="mx-auto" src="images/oLogo.png" width="360" height="180">
-            <h2>Order Confirmation</h2>
+            <h2>Order History</h2>
             <p class="lead">Thank you for your order! Below are the details of your purchase.</p>
         </div>
         <div class="row">
@@ -46,28 +58,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h4 class="mb-3">Shipping Details</h4>
                 <ul class="list-group mb-3">
                     <li class="list-group-item">
-                        <strong>Email:</strong> <?php echo $email; ?>
+                        <strong>Email:</strong><?php echo $email;?>
                     </li>
                     <li class="list-group-item">
-                        <strong>Name:</strong> <?php echo $firstName . ' ' . $lastName; ?>
+                        <strong>Name:</strong><?php echo $firstName;?><?php echo $lastName;?>
                     </li>
                     <li class="list-group-item">
-                        <strong>Phone:</strong> <?php echo $phone; ?>
+                        <strong>Phone:</strong><?php echo $phone;?>
                     </li>
                     <li class="list-group-item">
-                        <strong>Address:</strong> <?php echo $address; ?>
+                        <strong>Address:</strong><?php echo $address;?>
                     </li>
                     <li class="list-group-item">
-                        <strong>Postal Code:</strong> <?php echo $postalCode; ?>
+                        <strong>Postal Code:</strong><?php echo $postalCode;?>
                     </li>
                     <li class="list-group-item">
-                        <strong>State:</strong> <?php echo $state; ?>
+                        <strong>State:</strong><?php echo $state;?>
                     </li>
                     <li class="list-group-item">
-                        <strong>City:</strong> <?php echo $city; ?>
+                        <strong>City:</strong><?php echo $city;?>
                     </li>
                     <li class="list-group-item">
-                        <strong>Country:</strong> <?php echo $country; ?>
+                        <strong>Country:</strong><?php echo $country;?>
                     </li>
                 </ul>
             </div>
@@ -76,14 +88,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <ul class="list-group mb-3">
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between">
-                            <h5><?php echo $productName; ?></h5>
-                            <h5>RM<?php echo $productPrice; ?></h5>
+                            <h5><?php echo $productName;?></h5>
+                            <h5>RM<?php echo $productPrice;?></h5>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="d-flex justify-content-between">
                             <h5>Product Discount</h5>
-                            <h5>RM<?php echo $productDiscount; ?></h5>
+                            <h5>RM<?php echo $productDiscount;?></h5>
                         </div>
                     </li>
                     <li class="list-group-item">
@@ -92,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <oran>Total</oran>
                             </h4>
                             <h4>
-                                <oran>RM<?php echo $totalPrice; ?></oran>
+                                <oran>RM<?php echo $totalPrice;?></oran>
                             </h4>
                         </div>
                     </li>
@@ -100,19 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h4 class="mb-3">Payment Details</h4>
                 <ul class="list-group mb-3">
                     <li class="list-group-item">
-                        <strong>Payment Method:</strong> <?php echo $paymentMethod; ?>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Name on Card:</strong> <?php echo $cardName; ?>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Card Number:</strong> <?php echo str_repeat('*', strlen($cardNo) - 4) . substr($cardNo, -4); ?>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Expiration Date:</strong> <?php echo $expiredDate; ?>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>CVV:</strong> <?php echo str_repeat('*', strlen($cardVerification)); ?>
+                        <strong>Payment Method:</strong><?php echo $paymentMethod;?>
                     </li>
                 </ul>
             </div>
@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="confirm-page-button">
-        
+
         <div class="printButton text-center">
             <div class="row d-flex justify-content-center mt-5">
                 <a href="subscription.html" class="btn1 btn-primary btn-lg me-5">&lt; Back to cart</a>

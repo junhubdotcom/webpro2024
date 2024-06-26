@@ -21,7 +21,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productDiscount = htmlspecialchars($_POST['selectedPlanSaveAmount']);
     $productName = htmlspecialchars($_POST['selectedPlanName']);
     $productPrice = htmlspecialchars($_POST['selectedPlanPrice']);
-}
+
+    //order history
+    $email = $_POST["email"];
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $address = $_POST["address"];
+    $postalCode = $_POST["postalCode"];
+    $state = $_POST["state"];
+    $city = $_POST["city"];
+    $country = $_POST["country"];
+    $paymentMethod = $_POST["paymentMethod"];
+    $productName = $_POST["selectedPlanName"];
+    $productPrice = ($_POST['selectedPlanPrice']);
+    $productDiscount = $_POST["selectedPlanSaveAmount"];
+    $totalPrice = $_POST["selectedPlanTotalPrice"];
+
+    try {
+        require_once "orderdb.php";
+
+        $query = "INSERT INTO order_history (email, firstName, lastname, address, postalCode, state, city, country, paymentMethod, productName, productPrice, productDiscount, totalPrice)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([$email, $firstName, $lastName, $address, $postalCode, $state, $city, $country, $paymentMethod, $productName, $productPrice, $productDiscount, $totalPrice]);
+
+        $pdo = null;
+        $stmt = null;
+        
+    } catch (PDOException $e) {
+        die("Query failed: " . $e->getMessage());
+    }
+} 
 ?>
 
 <!DOCTYPE html>
@@ -120,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="confirm-page-button">
-        
+
         <div class="printButton text-center">
             <div class="row d-flex justify-content-center mt-5">
                 <a href="subscription.html" class="btn1 btn-primary btn-lg me-5">&lt; Back to cart</a>
