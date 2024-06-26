@@ -112,7 +112,7 @@ $mail = htmlspecialchars($rt['email']);
                     foreach ($result as $row) {
                 ?>
                         <tr>
-                            <td><?= $row['order_id'];?></td>
+                            <td><a href="order_history.php?order_id=<?= $row['order_id'];?>"><?= $row['order_id'];?></a></td>
                             <td><?= $row['productName'];?></td>
                             <td><?= $row['date'];?></td>
                             <td><?= $row['productPrice'];?></td>

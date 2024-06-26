@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2024 at 05:11 PM
+-- Generation Time: Jun 26, 2024 at 06:46 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `forum`
 --
-DROP TABLE IF EXISTS `forum`;
+DROP TABLE IF EXISTS 'forum';
 CREATE TABLE `forum` (
   `id` int(10) NOT NULL,
   `parent_comment` varchar(500) NOT NULL,
@@ -54,10 +54,46 @@ INSERT INTO `forum` (`id`, `parent_comment`, `student`, `post`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `order_history`
+--
+
+DROP TABLE IF EXISTS 'order_history';
+CREATE TABLE `order_history` (
+  `order_id` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `firstName` varchar(20) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `phone` int(20) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `postalCode` int(10) NOT NULL,
+  `state` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `country` varchar(20) NOT NULL,
+  `paymentMethod` varchar(50) NOT NULL,
+  `productName` varchar(50) NOT NULL,
+  `productPrice` int(50) NOT NULL,
+  `productDiscount` int(20) NOT NULL,
+  `totalPrice` int(20) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order_history`
+--
+
+INSERT INTO `order_history` (`order_id`, `email`, `firstName`, `lastName`, `phone`, `address`, `postalCode`, `state`, `city`, `country`, `paymentMethod`, `productName`, `productPrice`, `productDiscount`, `totalPrice`, `date`) VALUES
+(1, 'choojianfeng3000@gmail.com', 'jian', 'feng', 0, 'Kolej Canselor', 123233, 'asd', 'Perak', 'Thailand', 'Credit Card/Debit Card', '12 Month Plan', 0, 60, 360, '2024-06-26 13:36:44'),
+(2, 'feng@gmail.com', 'jian', 'feng', 0, 'Kolej Canselor', 123233, 'asdfasd', 'Melacca', 'Thailand', 'Credit Card/Debit Card', '12 Month Plan', 0, 60, 360, '2024-06-26 13:40:59'),
+(5, '215089@student.upm.edu.my', 'i', 'kun', 0, 'Kolej Canselor', 123233, 'asdfasd', 'Melacca', 'Thailand', 'Credit Card/Debit Card', '12 Month Plan', 420, 60, 360, '2024-06-26 14:58:42'),
+(6, 'qweqwq@gmail.com', 'asdasd', 'kun', 0, 'Kolej Canselor', 123233, 'asd', 'Melacca', 'Malaysia', 'Credit Card/Debit Card', '3 Month Plan', 105, 9, 96, '2024-06-26 16:25:28');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS 'users';
 CREATE TABLE `users` (
   `Id` int(10) NOT NULL,
   `role` varchar(10) NOT NULL DEFAULT 'user',
@@ -77,7 +113,8 @@ INSERT INTO `users` (`Id`, `role`, `firstName`, `lastName`, `email`, `password`)
 (8, 'user', 'Wendy', 'Tan', 'abby1004@gmail.com', '202cb962ac59075b964b07152d234b70'),
 (9, 'user', 'Tan', 'Yong Jin', 'yongjin03@gmail.com', '202cb962ac59075b964b07152d234b70'),
 (10, 'user', 'Abby', 'Ng', 'wendyng0303@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(11, 'user', 'Liew', 'Jun Wei', 'junwei@gmail.com', '202cb962ac59075b964b07152d234b70');
+(11, 'user', 'Liew', 'Jun Wei', 'junwei@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(12, 'user', 'jian', 'feng', 'feng@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Indexes for dumped tables
@@ -88,6 +125,12 @@ INSERT INTO `users` (`Id`, `role`, `firstName`, `lastName`, `email`, `password`)
 --
 ALTER TABLE `forum`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_history`
+--
+ALTER TABLE `order_history`
+  ADD PRIMARY KEY (`order_id`);
 
 --
 -- Indexes for table `users`
@@ -106,10 +149,16 @@ ALTER TABLE `forum`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
+-- AUTO_INCREMENT for table `order_history`
+--
+ALTER TABLE `order_history`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
