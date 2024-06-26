@@ -13,6 +13,24 @@ else{
 }
 $conn = null;
 
+// include 'database.php';
+
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     $id = $_POST['id'];
+
+//     $stmt = $pdo->prepare("DELETE FROM forum WHERE id = :id");
+//     $stmt->bindParam(':id', $id);
+
+//     if ($stmt->execute()) {
+//         echo json_encode(array("statusCode" => 200));
+//     } else {
+//         echo json_encode(array("statusCode" => 201));
+//     }
+// }
+?>
+
+
+
 // session_start();
 // include '../connect.php';
 
@@ -36,4 +54,3 @@ $conn = null;
 // $conn = null;
 
 
-?>
