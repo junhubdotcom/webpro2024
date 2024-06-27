@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -26,7 +25,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `forum`
 --
-DROP TABLE IF EXISTS 'forum';
+DROP TABLE IF EXISTS `forum`;
 CREATE TABLE `forum` (
   `id` int(10) NOT NULL,
   `parent_comment` varchar(500) NOT NULL,
@@ -57,7 +56,7 @@ INSERT INTO `forum` (`id`, `parent_comment`, `student`, `post`, `date`) VALUES
 -- Table structure for table `order_history`
 --
 
-DROP TABLE IF EXISTS 'order_history';
+DROP TABLE IF EXISTS `order_history`;
 CREATE TABLE `order_history` (
   `order_id` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -93,7 +92,7 @@ INSERT INTO `order_history` (`order_id`, `email`, `firstName`, `lastName`, `phon
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS 'users';
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `Id` int(10) NOT NULL,
   `role` varchar(10) NOT NULL DEFAULT 'user',
