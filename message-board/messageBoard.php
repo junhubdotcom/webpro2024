@@ -35,25 +35,25 @@
             <label for="comment">Write your reply:</label>
             <textarea class="form-control" rows="5" name="Rmsg" required></textarea>
           </div>
-          <input type="button" id="btnreply" name="btnreply" class="btn btn-primary" value="Reply">
+          <input type="button" id="btnreply" name="btnreply" class="btn2 btn-primary" value="Reply">
         </form>
       </div>
     </div>
   </div>
 </div>
 
-<div class="d-flex justify-content-between align-items-center">
-  <a href="../help.html" class="btn1 btn-primary btn-lg">&lt; Back to Help</a>
-</div>
-
 <div class="container-fluid">
+  <div class="button-back-to-help">
+    <a href="../help.html">&lt; Back to Help</a>
+  </div>
+
   <div class="text-center">
-    <img src="../images/oLogo.png" width="300" height="150">
+    <img src="../images/oLogo.png" width="350" height="190">
   </div>
 
   <div class="panel panel-default" style="margin-top:15px">
     <div class="panel-body">
-      <h3>Community forum</h3>
+      <h3>Community Forum</h3>
       <hr>
       <form name="frm" method="post" action="register.php">
         <input type="hidden" id="commentid" name="Pcommentid" value="0">
@@ -72,9 +72,9 @@
   </div>
 
   <div class="panel panel-default">
-    <div class="panel-body">
-      <h4>Recent questions</h4>
-      <table class="table" id="MyTable" style="background-color: #edfafa; border:0px;border-radius:10px">
+    <div class="panel-body1">
+      <h4>Recent Questions</h4>
+      <table class="table" id="MyTable" style="background-color: #fff6ec; border:0px;border-radius:10px">
         <tbody id="record">
         </tbody>
       </table>
