@@ -15,17 +15,18 @@ const ITEMS = [
   },
 ];
 
-
-const cart_data = [
-  
-];
-
 const openBtn = document.getElementById("open_cart_btn");
 const cart = document.getElementById("sidecart");
 const closeBtn = document.getElementById("close_btn");
 const backdrop = document.querySelector(".backdrop");
 const itemsEl = document.querySelector(".items");
 const cartItems = document.querySelector(".cart_items");
+const itemsNum = document.getElementById("items_num");
+const subtotalPrice = document.getElementById("subtotal_price");
+
+let cart_data = [
+
+]
 
 openBtn.addEventListener("click", openCart);
 closeBtn.addEventListener("click", closeCart);
@@ -44,12 +45,21 @@ function openCart() {
   }, 0);
 }
 
-//Add Item to cart
-function addItem(idx, itemId){
-    //find same items 
-    cart_data.push(ITEMS[idx]);
-    updateCart();
-    openCart();
+// Add Items to Cart
+function addItem(idx, itemId) {
+  // find same items
+  const foundedItem = cart_data.find(
+  (item) => item.id.toString() === itemId.toString()
+  )
+
+  if (foundedItem) {
+  // increase item qty
+  } else {
+  cart_data.push(ITEMS[idx])
+  
+  updateCart()
+  openCart()
+  }
 }
 
 // Close Cart
@@ -60,6 +70,31 @@ function closeCart() {
   setTimeout(() => {
     backdrop.style.display = "none";
   }, 500);
+}
+
+//Remove Cart Items
+function removeCartItem(itemId) {
+  cart_data = cart_data.filter((item) => item.id != itemId)
+  
+  updateCart()
+}
+
+// Calculate Items Number
+function calcItemsNum() {
+  let itemsCount = 0
+  
+  cart_data.forEach((item) => (itemsCount += item.qty))
+  
+  itemsNum.innerText = itemsCount
+}
+
+// Calculate Subtotal Price
+function calcSubtotalPrice() {
+  let subtotal = 0
+  
+  cart_data. forEach((item) => (subtotal += item.price * item.qty))
+  
+  subtotalPrice. innerText = subtotal
 }
 
 // Render Items
@@ -91,7 +126,7 @@ function renderCartItems() {
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart_item");
     cartItem.innerHTML = `
-            <div class="remove_item">
+            <div class="remove_item" onclick="removeCartItem(${item.id})">
             <span>&times;</span>
                     </div>
                     <div class="item_img">
@@ -118,4 +153,10 @@ function renderCartItems() {
 function updateCart(){
     //render cart items when cart is updated
     renderCartItems()
+
+    // Update Items Number in Cart
+    calcItemsNum()
+
+    //Update Subtotal 
+    calcSubtotalPrice()
 }
