@@ -15,7 +15,8 @@ const ITEMS = [
   },
 ];
 
-const openBtn = document.getElementById("open_cart_btn");
+document.addEventListener('DOMContentLoaded', () => {
+  const openBtn = document.getElementById("open_cart_btn");
 const cart = document.getElementById("sidecart");
 const closeBtn = document.getElementById("close_btn");
 const backdrop = document.querySelector(".backdrop");
@@ -160,3 +161,5 @@ function updateCart(){
     //Update Subtotal 
     calcSubtotalPrice()
 }
+}
+);

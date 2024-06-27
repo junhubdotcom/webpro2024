@@ -16,7 +16,8 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
             integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-        <script src="subscription.js"></script>
+        <script src="subscription1.js"></script>
+        <script src="cart.js"></script>
         <script src="main.js"></script>
 
 
@@ -41,16 +42,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="subscription.html">Subscription</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="order.html">Order</a>
-                </li> -->
+
                 <li class="nav-item">
                     <a class="nav-link" href="help.html">Help</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="cart.php">
+                    <button id="open_cart_btn">
                         <i class="fa-solid fa-cart-shopping"></i></a>
+                    </button>
                 </li>
                 
                 <li class="nav-item">
@@ -61,6 +61,37 @@
             </ul>
         </div>
     </nav>
+
+    <div>
+        <link href="cart.css" rel="stylesheet" />
+        <!-- Backdrop -->
+        <div class="backdrop"></div>
+        <!-- Side Cart -->
+        <div id="sidecart" class="sidecart">
+            <div class="cart_content">
+                <!-- Cart Header -->
+                <div class="cart_header">
+                    <img src="images/shoppingcart.jpg" alt="cart" style="width: 30px;" />
+                    <div class="header_title">
+                        <h2>Shopping cart</h2>
+                        <span id="items_num">4</span>
+                    </div>
+                    <span id="close_btn" class="close_btn">&times;</span>
+                </div>
+                <!--Cart Items-->
+                <div class="cart_items"></div>
+                <!-- Cart Actions -->
+                <div class="cart_actions">
+                    <div class="subtotal">
+                        <p>SUBTOTAL: </p>
+                        <p>$<span id="subtotal_price">3896</span></p>
+                    </div>
+                    <button>View Cart</button>
+                    <button>Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!--Content-->
     <div>
@@ -80,7 +111,7 @@
                 </div>
                 <!-- Column for the Yearly Adventure -->
                 <div class="col-md-6 col-xs-6">
-                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'japan')">
+                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'Japan')">
                         <div class="row">
                             <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
                                 <label class="sub-country-title">Japan</label>
@@ -88,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'thailand')">
+                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'Thailand')">
                         <div class="row">
                             <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
                                 <label class="sub-country-title">Thailand</label>
@@ -96,7 +127,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'korea')">
+                    <div class="sub-country-list container-fluid pt-1 mb-2" onclick="selectCountry(this, 'Korea')">
                         <div class="row">
                             <div class="col-md-12 col-xs-12 text-center text-md-left pl-3">
                                 <label class="sub-country-title">Korea</label>
@@ -270,53 +301,6 @@
             </div>   
         </div>
 
-
-
-        <!-- <div class="sub-plan-list container p-3 mb-3">
-            <div class="row">
-                <div class="col-md-8 col-xs-12 text-center text-md-left">
-                    <h3 class="sub-plan-title font-weight-bold text-white">Six-Month Expedition</h3>
-                    <p class="sub-plan-caption text-white">Dive into the world of global snacking with our six-month subscription.</p>
-                </div>
-                <div class="col-md-4 col-xs-12 text-center text-md-left" >
-                    <h2 class="sub-plan-price font-weight-bold text-white">RM186</h2>
-                    <p class="before-discount">RM210</p>
-                    <a href="#"><button type="'button" class="btn sub-button font-weight-bold choose" id="2"><i class="fa-solid fa-cart-shopping fa-1x"></i> Choose</button></a>
-                </div>
-            </div>
-            
-        </div> -->
-
-        <!-- <div class="sub-plan-list container p-3 mb-3">
-            <div class="row">
-                <div class="col-md-8 col-xs-12 text-center text-md-left">
-                    <h3 class="sub-plan-title font-weight-bold text-white">Quarterly Expedition</h3>
-                    <p class="sub-plan-caption text-white">Prefer a slower pace? Opt for our quarterly subscription and receive a box of snacks every three months.</p>
-                </div>
-                <div class="col-md-4 col-xs-12 text-center text-md-left">
-                    <h2 class="sub-plan-price font-weight-bold text-white ">RM96</h2>
-                    <p class="before-discount">RM105</p>
-                    <a href="#"><button type="'button" class="btn sub-button font-weight-bold choose" id="3"><i class="fa-solid fa-cart-shopping fa-1x"></i> Choose</button></a>
-                </div>
-            </div>
-            <div class></div>   
-        </div>
-
-        <div class="sub-plan-list container p-3 mb-3">
-            <div class="row">
-                <div class="col-md-8 col-xs-12 text-center text-md-left" >
-                    <h3 class="sub-plan-title font-weight-bold text-white">Monthly Explorer</h3>
-                    <p class="sub-plan-caption text-white">Immerse yourself in a world of flavors with our monthly subscription </p>
-                </div>
-                <div class="col-md-4 col-xs-12 text-center text-md-left" >
-                    <h2 class="sub-plan-price font-weight-bold text-white">RM35</h2>
-                    <p class="basic-plan">Basic Plan</p>
-                    <a href="#"><button type="'button" class="btn sub-button font-weight-bold choose" id="4"><i class="fa-solid fa-cart-shopping fa-1x"></i> Choose</button></a>
-                </div>
-            </div>
-            <div class></div>   
-        </div> -->
-
         <hr>
         <div class="row total-price">
            
@@ -326,7 +310,7 @@
                 <p>You save: <span id="saver"></span></p>
             </div>
             <div class="col-md-6 text-center">
-               <button type="button" class="btn" onclick="checkAllButtonClicked()">Go to Checkout</button>
+               <button type="button" class="btn" onclick="checkAllButtonClicked()" id="addToCart">Add to cart</button>
             </div>
         </div>
         
