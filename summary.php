@@ -212,14 +212,14 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             const totalPrice = localStorage.getItem('selectedPlanTotalPrice');
             const saveAmount = localStorage.getItem('selectedPlanSaveAmount');
-            const planTitle = localStorage.getItem('selectedPlanTitle');
+            const planPackage = localStorage.getItem('selectedPlanPackage');
 
-            if (totalPrice && saveAmount && planTitle) {
+            if (totalPrice && saveAmount && planPackage) {
 
                 const totalPriceInt = parseFloat(totalPrice);
                 const saveAmountInt = parseFloat(saveAmount);
                 // Update the summary page with the selected plan details
-                document.getElementById('productName').textContent = planTitle;
+                document.getElementById('productName').textContent = planPackage;
                 document.getElementById('productPrice').textContent = 'RM' + (totalPriceInt + saveAmountInt);
                 document.getElementById('productDiscount').textContent = 'You Saved';
                 document.getElementById('productDiscountPrice').textContent = 'RM' + saveAmount;
@@ -227,25 +227,25 @@
 
                 document.getElementById('selectedPlanTotalPrice').value = totalPrice;
                 document.getElementById('selectedPlanSaveAmount').value = saveAmount;
-                document.getElementById('selectedPlanName').value = planTitle;
+                document.getElementById('selectedPlanName').value = planPackage;
                 document.getElementById('selectedPlanPrice').value = totalPriceInt + saveAmountInt;
 
 
-                const xhr = new XMLHttpRequest();
-                xhr.open("POST", "order_confirmation.php", true);
-                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === XMLHttpRequest.DONE) {
-                        const status = xhr.status;
-                        if (status === 0 || (status >= 200 && status < 400)) {
-                            console.log("Data sent successfully");
-                        } else {
-                            console.error("Error sending data");
-                        }
-                    }
-                };
-                const data = "productName=${encodeURIComponent(planTitle)}&productPrice=${encodeURIComponent(totalPriceInt+saveAmountInt)}&productDiscount=You Saved&productDiscountPrice=${encodeURIComponent(saveAmount)}&totalPrice=${encodeURIComponent(totalPrice)}";
-                xhr.send(data);
+                // const xhr = new XMLHttpRequest();
+                // xhr.open("POST", "order_confirmation.php", true);
+                // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                // xhr.onreadystatechange = function () {
+                //     if (xhr.readyState === XMLHttpRequest.DONE) {
+                //         const status = xhr.status;
+                //         if (status === 0 || (status >= 200 && status < 400)) {
+                //             console.log("Data sent successfully");
+                //         } else {
+                //             console.error("Error sending data");
+                //         }
+                //     }
+                // };
+                // const data = "productName=${encodeURIComponent(planPackage)}&productPrice=${encodeURIComponent(totalPriceInt+saveAmountInt)}&productDiscount=You Saved&productDiscountPrice=${encodeURIComponent(saveAmount)}&totalPrice=${encodeURIComponent(totalPrice)}";
+                // xhr.send(data);
             }
         });
     </script>

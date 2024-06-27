@@ -23,6 +23,38 @@
 //     });
 // });
 
+// const element = document.getElementById('addToCart');
+// element.addEventListener('click', function() {
+//     addToCart();
+//     //call add to cart function
+// });
+
+function addToCart(){
+    const productPrice = localStorage.getItem('selectedPlanTotalPrice');
+    const productDiscount= localStorage.getItem('selectedPlanSaveAmount');
+    const productPlan = localStorage.getItem('selectedPlanPackage');
+    const productName = localStorage.getItem('selectedPlanName');
+
+    const formData = new FormData();
+    formData.append('productName', productName);
+    formData.append('productPlan', productPlan);
+    formData.append('productPrice', productPrice);
+    formData.append('productDiscount', productDiscount);
+
+    fetch('./addcart/addcart.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log('Success:', data);
+        // You can add further actions here, like showing a confirmation message
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+}
 
 function selectPlan(totalPrice, saveAmount, clickedPlan) {
 
@@ -42,7 +74,7 @@ clickedPlan.classList.add('clicked');
 
     localStorage.setItem('selectedPlanTotalPrice', totalPrice);
     localStorage.setItem('selectedPlanSaveAmount', saveAmount);
-    localStorage.setItem('selectedPlanTitle', clickedPlan.querySelector('.sub-plan-title').textContent);
+    localStorage.setItem('selectedPlanPackage', clickedPlan.querySelector('.sub-plan-title').textContent);
 }
 
 function displayCarousel(snackCountry){
@@ -141,14 +173,9 @@ function selectCountry(element, country) {
     displayCarousel(country);
     document.querySelector('.country-availability-list p').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // Optionally, set the country in the select box or perform other actions
-    //document.getElementById('country').value = country;
+    localStorage.setItem('selectedPlanName', country + ' Snack Box');
 }
 
-// function scrollToAvailability(country) {
-//     displayCarousel(country);
-//     document.querySelector('.country-availability-list p').scrollIntoView({ behavior: 'smooth', block: 'center' });
-// }
 
 function checkAvailability() {
     var country = document.getElementById("country").value;
@@ -197,7 +224,8 @@ function checkAllButtonClicked(){
     }
 
     if(countryIsSelected && planIsSelected && locationAvailable){
-        window.location.href = 'summary.php';
+        addToCart();
+        console.log('Added to cart');
     }else if(!countryIsSelected){
         alert('Please select the country of the snacks ！');
     }else if(!locationAvailable){

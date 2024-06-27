@@ -25,7 +25,9 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `forum`
 --
+
 DROP TABLE IF EXISTS `forum`;
+
 CREATE TABLE `forum` (
   `id` int(10) NOT NULL,
   `parent_comment` varchar(500) NOT NULL,
@@ -57,6 +59,7 @@ INSERT INTO `forum` (`id`, `parent_comment`, `student`, `post`, `date`) VALUES
 --
 
 DROP TABLE IF EXISTS `order_history`;
+
 CREATE TABLE `order_history` (
   `order_id` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -93,6 +96,7 @@ INSERT INTO `order_history` (`order_id`, `email`, `firstName`, `lastName`, `phon
 --
 
 DROP TABLE IF EXISTS `users`;
+
 CREATE TABLE `users` (
   `Id` int(10) NOT NULL,
   `role` varchar(10) NOT NULL DEFAULT 'user',

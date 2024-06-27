@@ -16,20 +16,6 @@ button:hover {
     opacity: 0.8;
 }
 
-#open_cart_btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background-color: #18183e;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
 /* Backdrop */
 .backdrop {
     position: fixed;
