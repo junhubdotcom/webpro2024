@@ -77,11 +77,32 @@ $mail = htmlspecialchars($rt['email']);
                         <label for="lastName">Last Name:</label>
                         <input type="text" class="form-control" id="lastName" name="lastName" value="<?php echo $lname; ?>" required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" id="email" name="email" value="<?php echo $mail; ?>" required>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="oldPassword">Old Password:</label>
+                        <input type="password" class="form-control" id="oldPassword" name="oldPassword" required>
                     </div>
-                    <button type="submit" class="btn savebtn">Save Changes</button>
+
+                    <div class="form-group">
+                        <label for="newPassword">New Password:</label>
+                        <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn savebtn">Save Changes</button>
+                        <button type="button" class="btn backbtn" onclick="backToProfile()">Back</button>
+                    </div>
+
+                    
                 </form>
             
         </div>
@@ -105,6 +126,10 @@ $mail = htmlspecialchars($rt['email']);
                 }
             });
         });
+
+        function backToProfile(){
+            window.location.href = "profile.php";
+        }
     </script>
 </body>
 </html>
