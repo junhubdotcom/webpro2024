@@ -224,7 +224,8 @@ function checkAllButtonClicked(){
     }
 
     if(countryIsSelected && planIsSelected && locationAvailable){
-        addToCart();
+        window.location.href = 'summary.php';
+        // addToCart();
         console.log('Added to cart');
     }else if(!countryIsSelected){
         alert('Please select the country of the snacks ！');
