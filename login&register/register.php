@@ -53,7 +53,7 @@ if(isset($_POST['signUp'])){
 if(isset($_POST['signIn'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $password = md5($password); // Using MD5 hashing (not recommended for security, consider using more secure hashing methods)
+    $password = md5($password); // Using MD5 hashing
 
     // Query to retrieve user details including role
     $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
@@ -65,7 +65,7 @@ if(isset($_POST['signIn'])){
         
         // Store relevant user information in session variables
         $_SESSION['email'] = $row['email'];
-        $_SESSION['role'] = $row['role']; // Assuming 'role' is the column name in your database
+        // $_SESSION['role'] = $row['role']; 
         
         // Redirect to summary.php or any other page as needed
         echo "<script>alert('Sign In successfully!'); window.location.href='../index.php';</script>";

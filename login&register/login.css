@@ -34,27 +34,33 @@ form {
     margin-bottom: 0.4rem;
 }
 
+
+
 input {
     color: inherit;
     width: 100%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #757575;
-    padding-left: 1.5rem;
+    padding: 0.8rem  2rem;
     font-size: 15px;
+    margin-bottom: 15px;
 }
 
 .input-group {
-    padding: 1% 0;
+    padding: 20;
     position: relative;
 }
+   
 
 .input-group i {
     position: absolute;
     color: black;
+    padding: 5px;
+    transform: translateY(30%);
 }
 
-input:focus {
+/* input:focus {
     background-color: transparent;
     outline: transparent;
     border-bottom: 2px solid hsl(327, 90%, 28%);
@@ -62,24 +68,24 @@ input:focus {
 
 input::placeholder {
     color: transparent;
-}
+}  */
 
-label {
+/* label {
     color: #757575;
     position: relative;
     left: 1.2em;
     top: -1.3em;
     cursor: auto;
     transition: 0.3s ease all;
-}
+} */
 
-input:focus~label, input:not(:placeholder-shown)~label {
+/* input:focus~label, input:not(:placeholder-shown)~label {
     top: -3em;
     color: hsl(327, 90%, 28%);
     font-size: 15px;
-}
+} */
 
-.recover {
+/* .recover {
     text-align: right;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -93,7 +99,7 @@ input:focus~label, input:not(:placeholder-shown)~label {
 .recover a:hover {
     color: rgba(254, 130, 14, 0.316);
     text-decoration: underline;
-}
+} */
 
 .btn {
     font-size: 1.1rem;
