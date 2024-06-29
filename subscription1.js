@@ -1,34 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const subPlanLists = document.querySelectorAll('.sub-plan-list');
-//     const totalPriceDisplay = document.getElementById('total-price-display');
-//     const saver = document.getElementById('saver');
-
-//     subPlanLists.forEach(plan => {
-//         plan.addEventListener('click', function() {
-//             subPlanLists.forEach(p => p.classList.remove('active'));
-//             this.classList.add('active');
-
-//             const planTitle = this.querySelector('.sub-plan-title').textContent.trim();
-
-//             if (planTitle === '12 Month Plan') {
-//                 totalPriceDisplay.textContent = 'RM360';
-//             } else if (planTitle === '6 Month Plan') {
-//                 totalPriceDisplay.textContent = 'RM186';
-//             } else if (planTitle === '3 Month Plan') {
-//                 totalPriceDisplay.textContent = 'RM96';
-//             } else if (planTitle === 'Monthly Plan') {
-//                 totalPriceDisplay.textContent = 'RM35';
-//             }
-//         });
-//     });
-// });
-
-// const element = document.getElementById('addToCart');
-// element.addEventListener('click', function() {
-//     addToCart();
-//     //call add to cart function
-// });
-
 function addToCart(){
     const productPrice = localStorage.getItem('selectedPlanTotalPrice');
     const productDiscount= localStorage.getItem('selectedPlanSaveAmount');
@@ -199,6 +168,11 @@ function checkAvailability() {
     }, 100); // Delay in milliseconds (100ms)
 }
 
+function checkout(){
+    window.location.href = 'summary.php';
+}
+
+
 function checkAllButtonClicked(){
     var countryElements = document.querySelectorAll('.sub-country-list');
     var planElements = document.querySelectorAll('.sub-plan-list');
@@ -224,9 +198,9 @@ function checkAllButtonClicked(){
     }
 
     if(countryIsSelected && planIsSelected && locationAvailable){
-        window.location.href = 'summary.php';
-        // addToCart();
-        console.log('Added to cart');
+        addToCart();
+        alert('Added to cart');
+
     }else if(!countryIsSelected){
         alert('Please select the country of the snacks ！');
     }else if(!locationAvailable){
@@ -236,5 +210,6 @@ function checkAllButtonClicked(){
     }
 
 }
+
 
 

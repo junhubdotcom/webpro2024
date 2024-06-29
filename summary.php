@@ -208,17 +208,33 @@
 
     <script src="summary.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const totalPrice = localStorage.getItem('selectedPlanTotalPrice');
-            const saveAmount = localStorage.getItem('selectedPlanSaveAmount');
-            const planPackage = localStorage.getItem('selectedPlanPackage');
 
-            if (totalPrice && saveAmount && planPackage) {
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            let cart_data = [];
+
+            fetch('./addcart/readcart.php')
+            .then(response => response.json())
+            .then(data => {
+            cart_data = data;
+            updateSummaryPage(cart_data);
+            })
+            .catch(error => console.error('Error fetching cart data:', error));
+
+            function updateSummaryPage(cart_data) {
+                const selectedItem = cart_data[0];
+
+                const totalPrice = selectedItem.productPrice;
+                const saveAmount = selectedItem.productDiscount;
+                const planName = selectedItem.productName;
+                const planPackage = selectedItem.productPlan;
+
+                if (totalPrice && saveAmount && planPackage) {
 
                 const totalPriceInt = parseFloat(totalPrice);
                 const saveAmountInt = parseFloat(saveAmount);
                 // Update the summary page with the selected plan details
-                document.getElementById('productName').textContent = planPackage;
+                document.getElementById('productName').textContent = planName + " " + planPackage;
                 document.getElementById('productPrice').textContent = 'RM' + (totalPriceInt + saveAmountInt);
                 document.getElementById('productDiscount').textContent = 'You Saved';
                 document.getElementById('productDiscountPrice').textContent = 'RM' + saveAmount;
@@ -226,8 +242,9 @@
 
                 document.getElementById('selectedPlanTotalPrice').value = totalPrice;
                 document.getElementById('selectedPlanSaveAmount').value = saveAmount;
-                document.getElementById('selectedPlanName').value = planPackage;
+                document.getElementById('selectedPlanName').value = planName + " " + planPackage;
                 document.getElementById('selectedPlanPrice').value = totalPriceInt + saveAmountInt;
+                }
             }
         });
     </script>
