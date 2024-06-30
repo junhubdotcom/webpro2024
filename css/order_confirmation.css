@@ -12,13 +12,13 @@ body {
     background: #d3bbb7;
 }
 
-.container-fluid{
+.container-fluid {
     display: flex;
     height: 100vh;
 
 }
 
-.checkout-form{
+.checkout-form {
     flex: 2;
     padding: 20px 40px;
     overflow-y: scroll;
@@ -32,19 +32,20 @@ body {
     overflow: hidden;
 }
 
-h2 ,h4 {
+h2,
+h4 {
     font-weight: 800;
 }
 
-h5{
+h5 {
     font-weight: 600;
 }
 
-oran{
+oran {
     color: #DB4A2B;
 }
 
-.btn1{
+.btn1 {
     padding: 20px 20px;
     text-align: center;
     border: none;
@@ -60,13 +61,13 @@ oran{
 
 
 .btn1:hover {
-    border:1px solid #dde4ea;
-    background:#dde4ea;
-    color:#DB4A2B;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+    border: 1px solid #dde4ea;
+    background: #dde4ea;
+    color: #DB4A2B;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn2{
+.btn2 {
     padding: 20px 20px;
     text-align: center;
     border: none;
@@ -77,42 +78,43 @@ oran{
     text-decoration: none;
     font-size: 22px;
     font-weight: 900;
-    color:white;
+    color: white;
 }
 
 .btn2:hover {
-    border:1px solid #DB4A2B;
-    background:#DB4A2B;
-    color:white;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+    border: 1px solid #DB4A2B;
+    background: #DB4A2B;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media print{
+@media print {
     body * {
         display: none;
     }
-    #SUM, #SUM *{
+
+    #SUM,
+    #SUM * {
         display: block;
-    
+
     }
 }
 
-.printButton button{
+.printButton button {
     padding: 10px 20px;
     margin-right: 25px;
-    border:1px solid #0d273c;
-    background:#0d273c;
+    border: 1px solid #0d273c;
+    background: #0d273c;
     border-radius: 4;
     height: 80px;
     width: 250px;
     font-size: 22px;
     font-weight: 900;
-    color:#fff;
+    color: #fff;
     position: center;
 }
 
-
 .printButton button:hover {
-    border:1px solid #0a4778;
-    background:#0a4778;
-} 
+    border: 1px solid #0a4778;
+    background: #0a4778;
+}
