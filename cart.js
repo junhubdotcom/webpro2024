@@ -49,16 +49,16 @@ function openCart() {
 function addItem(idx, itemId) {
   // find same items
   const foundedItem = cart_data.find(
-  (item) => item.id.toString() === itemId.toString()
+    (item) => item.id.toString() === itemId.toString()
   )
 
   if (foundedItem) {
-  // increase item qty
+    // increase item qty
   } else {
-  cart_data.push(ITEMS[idx])
-  
-  updateCart()
-  openCart()
+    cart_data.push(ITEMS[idx])
+
+    updateCart()
+    openCart()
   }
 }
 
@@ -75,26 +75,26 @@ function closeCart() {
 //Remove Cart Items
 function removeCartItem(itemId) {
   cart_data = cart_data.filter((item) => item.id != itemId)
-  
+
   updateCart()
 }
 
 // Calculate Items Number
 function calcItemsNum() {
   let itemsCount = 0
-  
+
   cart_data.forEach((item) => (itemsCount += item.qty))
-  
+
   itemsNum.innerText = itemsCount
 }
 
 // Calculate Subtotal Price
 function calcSubtotalPrice() {
   let subtotal = 0
-  
-  cart_data. forEach((item) => (subtotal += item.price * item.qty))
-  
-  subtotalPrice. innerText = subtotal
+
+  cart_data.forEach((item) => (subtotal += item.price * item.qty))
+
+  subtotalPrice.innerText = subtotal
 }
 
 // Render Items
@@ -119,10 +119,10 @@ function renderItems() {
 
 //Display /Render Cart Items
 function renderCartItems() {
-    //remove everything from cart
-    cartItems.innerHTML = "";
-    //add new data
-    cart_data.forEach((item) => {
+  //remove everything from cart
+  cartItems.innerHTML = "";
+  //add new data
+  cart_data.forEach((item) => {
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart_item");
     cartItem.innerHTML = `
@@ -150,13 +150,13 @@ function renderCartItems() {
   });
 }
 
-function updateCart(){
-    //render cart items when cart is updated
-    renderCartItems()
+function updateCart() {
+  //render cart items when cart is updated
+  renderCartItems()
 
-    // Update Items Number in Cart
-    calcItemsNum()
+  // Update Items Number in Cart
+  calcItemsNum()
 
-    //Update Subtotal 
-    calcSubtotalPrice()
+  //Update Subtotal 
+  calcSubtotalPrice()
 }
