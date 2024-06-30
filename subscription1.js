@@ -1,28 +1,29 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const subPlanLists = document.querySelectorAll('.sub-plan-list');
-//     const totalPriceDisplay = document.getElementById('total-price-display');
-//     const saver = document.getElementById('saver');
+function addToCart(){
+    const productPrice = localStorage.getItem('selectedPlanTotalPrice');
+    const productDiscount= localStorage.getItem('selectedPlanSaveAmount');
+    const productPlan = localStorage.getItem('selectedPlanPackage');
+    const productName = localStorage.getItem('selectedPlanName');
 
-//     subPlanLists.forEach(plan => {
-//         plan.addEventListener('click', function() {
-//             subPlanLists.forEach(p => p.classList.remove('active'));
-//             this.classList.add('active');
+    const formData = new FormData();
+    formData.append('productName', productName);
+    formData.append('productPlan', productPlan);
+    formData.append('productPrice', productPrice);
+    formData.append('productDiscount', productDiscount);
 
-//             const planTitle = this.querySelector('.sub-plan-title').textContent.trim();
+    fetch('./addcart/addcart.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log('Success:', data);
+        // You can add further actions here, like showing a confirmation message
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 
-//             if (planTitle === '12 Month Plan') {
-//                 totalPriceDisplay.textContent = 'RM360';
-//             } else if (planTitle === '6 Month Plan') {
-//                 totalPriceDisplay.textContent = 'RM186';
-//             } else if (planTitle === '3 Month Plan') {
-//                 totalPriceDisplay.textContent = 'RM96';
-//             } else if (planTitle === 'Monthly Plan') {
-//                 totalPriceDisplay.textContent = 'RM35';
-//             }
-//         });
-//     });
-// });
-
+}
 
 function selectPlan(totalPrice, saveAmount, clickedPlan) {
 
@@ -42,7 +43,7 @@ clickedPlan.classList.add('clicked');
 
     localStorage.setItem('selectedPlanTotalPrice', totalPrice);
     localStorage.setItem('selectedPlanSaveAmount', saveAmount);
-    localStorage.setItem('selectedPlanTitle', clickedPlan.querySelector('.sub-plan-title').textContent);
+    localStorage.setItem('selectedPlanPackage', clickedPlan.querySelector('.sub-plan-title').textContent);
 }
 
 function displayCarousel(snackCountry){
@@ -141,14 +142,9 @@ function selectCountry(element, country) {
     displayCarousel(country);
     document.querySelector('.country-availability-list p').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // Optionally, set the country in the select box or perform other actions
-    //document.getElementById('country').value = country;
+    localStorage.setItem('selectedPlanName', country + ' Snack Box');
 }
 
-// function scrollToAvailability(country) {
-//     displayCarousel(country);
-//     document.querySelector('.country-availability-list p').scrollIntoView({ behavior: 'smooth', block: 'center' });
-// }
 
 function checkAvailability() {
     var country = document.getElementById("country").value;
@@ -171,6 +167,11 @@ function checkAvailability() {
         document.getElementById("availabilityMessage").scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 100); // Delay in milliseconds (100ms)
 }
+
+function checkout(){
+    window.location.href = 'summary.php';
+}
+
 
 function checkAllButtonClicked(){
     var countryElements = document.querySelectorAll('.sub-country-list');
@@ -197,7 +198,9 @@ function checkAllButtonClicked(){
     }
 
     if(countryIsSelected && planIsSelected && locationAvailable){
-        window.location.href = 'summary.php';
+        addToCart();
+        alert('Added to cart');
+
     }else if(!countryIsSelected){
         alert('Please select the country of the snacks ！');
     }else if(!locationAvailable){
@@ -207,5 +210,6 @@ function checkAllButtonClicked(){
     }
 
 }
+
 
 

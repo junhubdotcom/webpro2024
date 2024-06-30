@@ -123,7 +123,7 @@ $date = htmlspecialchars($order['date']);
 
         <div class="printButton text-center">
             <div class="row d-flex justify-content-center mt-5">
-                <a href="subscription.html" class="btn1 btn-primary btn-lg me-5">&lt; Back to cart</a>
+                <a href="profile.php" class="btn1 btn-primary btn-lg me-5">&lt; Back to profile</a>
                 <button class="btn-print btn-outline-secondary btn-lg" type="button">Print Me</button>
             </div>
         </div>

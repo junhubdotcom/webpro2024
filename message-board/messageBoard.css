@@ -1,21 +1,100 @@
-.btn1{
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.panel-body1{
+    font-size: 18px;
+}
+
+.form-group{
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.panel-body h3{
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.panel-body1 h4{
+    margin-left: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.modal-header h4{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.button-back-to-help {
     padding: 20px 20px;
     text-align: center;
     border: none;
-    background: none;
-    border-radius: 4;
+    background-color: bisque;
+    border-radius: 4px; /* Added 'px' unit */
     height: 80px;
     width: 250px;
-    text-decoration: none;
     font-size: 22px;
     font-weight: 900;
-    color:#DB4A2B;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex; /* Ensure the div sizes correctly with the link inside */
+    align-items: center; /* Center align text vertically */
+    justify-content: center; /* Center align text horizontally */
+}
+
+.button-back-to-help a {
+    color: #DB4A2B; /* Set the font color to white */
+    text-decoration: none; /* Remove underline from the link */
+    width: 100%; /* Ensure the link takes full width */
+    height: 100%; /* Ensure the link takes full height */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center align text vertically */
+    justify-content: center; /* Center align text horizontally */
+}
+
+.button-back-to-help:hover {
+    background-color: #0d273c;
+}
+
+.button-back-to-help a:hover {
+    color: #ffffff; /* Ensure font color remains white on hover */
 }
 
 .sendbtn{
     background-color:#DB4A2B;
     color: white;
     font-weight: 700;
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+}
+  
+.sendbtn:hover {
+    color: white;
+    background-color: #0d273c;
+}
+
+/* Style for reply button */
+.btn2 {
+    background-color:#DB4A2B;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+}
+  
+.btn2:hover{
+    color: white;
+    background-color: #0d273c;
 }
 
 .delete-button {
