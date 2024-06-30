@@ -198,7 +198,6 @@ function checkAllButtonClicked(){
     }
 
     if(countryIsSelected && planIsSelected && locationAvailable){
-        window.location.href = 'summary.php';
         addToCart();
         alert('Added to cart');
 
