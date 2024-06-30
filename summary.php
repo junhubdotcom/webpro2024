@@ -202,6 +202,7 @@
     </div>
 
     <script src="summary.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             let cart_data = [];
@@ -239,18 +240,6 @@
                 }
             }
         });
-
-        $(document).ready(function() {
-    $('.select2').select2({
-        width: '100%', 
-        dropdownCssClass: 'form-control', 
-        placeholder: function() {
-            $(this).data('placeholder');
-        } 
-    });
-});
-
-
     </script>
 </body>
 </html>
