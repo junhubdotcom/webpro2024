@@ -224,6 +224,7 @@ function checkAllButtonClicked(){
     }
 
     if(countryIsSelected && planIsSelected && locationAvailable){
+        window.location.href = 'summary.php';
         addToCart();
         console.log('Added to cart');
     }else if(!countryIsSelected){

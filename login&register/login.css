@@ -44,12 +44,13 @@ input {
     border-bottom: 1px solid #757575;
     padding: 0.8rem  2rem;
     font-size: 15px;
-    margin-bottom: 15px;
+   
 }
 
 .input-group {
     padding: 20;
     position: relative;
+    margin-bottom: 15px;
 }
    
 

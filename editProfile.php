@@ -8,16 +8,19 @@ if(!isset($_SESSION['email'])){
     exit();
 }
 
-// Fetch user details from the database using the email stored in the session
+// Fetch user details from the database using prepared statements
 $email = $_SESSION['email'];
-$dbinfo = "SELECT firstName, lastName, email, password FROM users WHERE email='$email'";
-$dbresult = mysqli_query($conn, $dbinfo);
-$rt = mysqli_fetch_array($dbresult);
+$stmt = $conn->prepare("SELECT firstName, lastName FROM users WHERE email=?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
+$rt = $result->fetch_assoc();
 
 $fname = htmlspecialchars($rt['firstName']);
 $lname = htmlspecialchars($rt['lastName']);
-$mail = htmlspecialchars($rt['email']);
+$stmt->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +46,6 @@ $mail = htmlspecialchars($rt['email']);
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="gallery.html">Gallery</a>
                 </li>
@@ -77,11 +77,6 @@ $mail = htmlspecialchars($rt['email']);
                         <label for="lastName">Last Name:</label>
                         <input type="text" class="form-control" id="lastName" name="lastName" value="<?php echo $lname; ?>" required>
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" value="<?php echo $mail; ?>" required>
-                    </div> -->
-
                     <div class="form-group">
                         <label for="oldPassword">Old Password:</label>
                         <input type="password" class="form-control" id="oldPassword" name="oldPassword" required>
@@ -90,11 +85,13 @@ $mail = htmlspecialchars($rt['email']);
                     <div class="form-group">
                         <label for="newPassword">New Password:</label>
                         <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                        <span style="color: red" id="new_password_error"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="confirmPassword">Confirm Password:</label>
                         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                        <span style="color: red" id="confirm_password_error"></span>
                     </div>
 
                     <div>
@@ -110,9 +107,53 @@ $mail = htmlspecialchars($rt['email']);
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script>
+
+        document.addEventListener("DOMContentLoaded", function(){
+        const newPassword= document.getElementById('newPassword');
+        const confirmPassword= document.getElementById('confirmPassword');
+        const newPasswordError= document.getElementById('new_password_error');
+        const confirmPasswordError= document.getElementById('confirm_password_error');
+
         // Optional: Add JavaScript for form submission confirmation using SweetAlert2
         document.getElementById('editProfileForm').addEventListener('submit', function(event) {
             event.preventDefault();
+            newPasswordError.innerHTML = "";
+            confirmPasswordError.innerHTML = "";
+            if(!(newPassword.value.length >= 6)){
+                event.preventDefault();
+                newPasswordError.innerHTML = "Password must be more than 6 characters";
+                return;
+            }
+
+            if(!(/[a-z]/.test(newPassword.value))){
+                event.preventDefault();
+                newPasswordError.innerHTML = "Password must contain at least one lowercase letter";
+                return;
+            }
+
+            if(!(/[A-Z]/.test(newPassword.value))){
+                event.preventDefault();
+                newPasswordError.innerHTML = "Password must contain at least one uppercase letter";
+                return;
+            }
+
+            if(!(/[0-9]/.test(newPassword.value))){
+                event.preventDefault();
+                newPasswordError.innerHTML = "Password must contain at least one number";
+                return;
+            }
+
+            if(!(/[^a-zA-Z0-9]/.test(newPassword.value))){
+                event.preventDefault();
+                newPasswordError.innerHTML = "Password must contain at least one special character";
+                return;
+            }
+
+            if(newPassword.value !== confirmPassword.value){
+                event.preventDefault();
+                confirmPasswordError.innerHTML = "Confirm password does not match with new password";
+                return;
+            }
             Swal.fire({
                 title: 'Are you sure you want to update your profile?',
                 icon: 'question',
@@ -130,6 +171,8 @@ $mail = htmlspecialchars($rt['email']);
         function backToProfile(){
             window.location.href = "profile.php";
         }
+
+    });
     </script>
 </body>
 </html>

@@ -32,6 +32,10 @@
     font-weight: 900;
 }
 
+.title {
+    display: flex;
+}
+
 .button-back-to-help {
     padding: 20px 20px;
     text-align: center;
@@ -42,11 +46,6 @@
     width: 250px;
     font-size: 22px;
     font-weight: 900;
-    margin-left: 10px;
-    margin-top: 10px;
-    display: flex; /* Ensure the div sizes correctly with the link inside */
-    align-items: center; /* Center align text vertically */
-    justify-content: center; /* Center align text horizontally */
 }
 
 .button-back-to-help a {
@@ -54,9 +53,6 @@
     text-decoration: none; /* Remove underline from the link */
     width: 100%; /* Ensure the link takes full width */
     height: 100%; /* Ensure the link takes full height */
-    display: flex; /* Flexbox for centering */
-    align-items: center; /* Center align text vertically */
-    justify-content: center; /* Center align text horizontally */
 }
 
 .button-back-to-help:hover {
@@ -101,7 +97,6 @@
     display: inline-block;
     /* Other styling rules */
 }
-
 
 body{
     background-color: bisque;

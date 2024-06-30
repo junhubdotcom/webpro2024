@@ -21,19 +21,15 @@ if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['oldP
     if($getPasswordResult->num_rows>0){
         $row = $getPasswordResult->fetch_assoc();
         $storedPassword = $row['password'];
-        if($storedPassword==$oldPassword){
-            if($newPassword == $confirmPassword){
-                // Update the user's profile data in the database
-                $updateQuery = "UPDATE users SET firstName='$firstName', lastName='$lastName', password='$newPassword' WHERE email='$email'";
-                if($conn->query($updateQuery) === TRUE){
-                    // $_SESSION['email'] = $email; // Update session email if changed
-                    echo "<script>alert('Profile updated successfully!'); window.location.href='profile.php';</script>";
-                } else {
-                    echo "Error updating record: " . $conn->error;
-                }
+        if($storedPassword==$oldPassword){ 
+            // Update the user's profile data in the database
+            $updateQuery = "UPDATE users SET firstName='$firstName', lastName='$lastName', password='$newPassword' WHERE email='$email'";
+            if($conn->query($updateQuery) === TRUE){
+                // $_SESSION['email'] = $email; // Update session email if changed
+                echo "<script>alert('Profile updated successfully!'); window.location.href='profile.php';</script>";
                 
-            }else{
-                echo "<script>alert('Your new password is unmatch with the confirm password! Please try again.');window.location.href='editProfile.php';</script>" ;
+            } else {
+                echo "Error updating record: " . $conn->error;
             }
 
         }else{
