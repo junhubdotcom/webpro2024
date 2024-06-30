@@ -43,13 +43,19 @@
 </div>
 
 <div class="container-fluid">
-  <div class="button-back-to-help">
-    <a href="../help.html">&lt; Back to Help</a>
+  <div class="row">
+    <div class="col-md-2 d-flex justify-content-center align-items-center">
+      <div class="button-back-to-help">
+        <a href="../help.html">&lt; Back to Help</a>
+      </div>
+    </div>
+    <div class="col-md-8 d-flex justify-content-start align-items-start">
+      <div class="text-center">
+      <img src="../images/oLogo.png" class="img-fluid custom-img" width="350" height="190">
+      </div>
+    </div>
   </div>
 
-  <div class="text-center">
-    <img src="../images/oLogo.png" width="350" height="190">
-  </div>
 
   <div class="panel panel-default" style="margin-top:15px">
     <div class="panel-body">

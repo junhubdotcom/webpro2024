@@ -2,25 +2,20 @@
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $cartID = $_POST['cartID'];
-    $updates = [];
-    if (isset($_POST['productName'])) {
-        $productName = $_POST['productName'];
-        $updates[] = "productName = '$productName'";
-    }
-    if (isset($_POST['productPlan'])) {
-        $productPlan = $_POST['productPlan'];
-        $updates[] = "productPlan = '$productPlan'";
-    }
+    $productName = $_POST['productName'];
 
     try {
         require_once "../orderdb.php";
 
         // Prepare SQL statement to update cart item
-        $sql = "UPDATE cart SET " . implode(", ", $updates) . " WHERE cartID = :cartID";
-        $stmt = $pdo->prepare($sql);
+        $query = "UPDATE cart SET productName = :productName; WHERE cartID = :cartID"; ;
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(':productName', $productName);
         $stmt->bindParam(':cartID', $cartID);
         $stmt->execute();
 
+        $pdo = null;
+        $stmt = null;
         // Respond with success message
         echo "Product details updated successfully";
 
