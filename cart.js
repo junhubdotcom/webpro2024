@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const cart = document.getElementById("sidecart");
   const closeBtn = document.getElementById("close_btn");
   const backdrop = document.querySelector(".backdrop");
-  const itemsEl = document.querySelector(".items");
   const cartItems = document.querySelector(".cart_items");
   const itemsNum = document.getElementById("items_num");
   const subtotalPrice = document.getElementById("subtotal_price");
@@ -84,6 +83,37 @@ document.addEventListener('DOMContentLoaded', () => {
     
     updateCart()
   }
+
+   // Update Cart Items
+   function updateCartItem(cartID, productName) {
+    const formData = new FormData();
+    formData.append('cartID', cartID);
+    formData.append('productName', productName);
+  
+    fetch('./addcart/updatecart.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to update cart item');
+      }
+      return response.text();
+    })
+    .then(data => {
+      console.log('Item updated successfully:', data);
+      // Update cart_data and re-render
+      const itemIndex = cart_data.findIndex(item => item.cartID == cartID);
+      if (itemIndex !== -1) {
+        cart_data[itemIndex].productName = productName;
+      }
+      updateCart();
+    })
+    .catch(error => {
+      console.error('Error updating cart item:', error);
+      // Handle error scenarios here
+    });
+  }
   
   // Calculate Items Number
   function calcItemsNum() {
@@ -110,9 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
   }
   
-  // Update Cart Items
-  
-  
   //Display /Render Cart Items
   function renderCartItems() {
       //remove everything from cart
@@ -132,14 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
                           <p>${item.productName} Snack Box </p>
                           <strong>RM${item.productPrice}</strong>
                           <div class="plan">
-                              <select id="city" name="city" class="form-control product_plan_select" required>
-                                  <option value="">Select City...</option>
-                                  <option value="Thailand">Thailand</option>
-                                  <option value="Japan">Japan</option>
-                                  <option value="Korean">Korean</option>
+                              <select id="productName-${item.cartID}" name="productName" class="form-control product_name_select" required>
+                                  <option value="">Select Product...</option>
+                                  <option value="Thailand Snack Box">Thailand</option>
+                                  <option value="Japan Snack Box">Japan</option>
+                                  <option value="Korean Snack">Korean</option>
                               </select>
-                              <button class="update_btn">Confirm</button>
                           </div>
+                          <button class="update_btn" data-cart-id="${item.cartID}">Confirm</button>
                       </div>`;
   
     const removeBtn = cartItem.querySelector(".remove_item");
@@ -147,6 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
       removeCartItem(item.cartID);
     });
   
+    const updateBtn = cartItem.querySelector(".update_btn");
+    updateBtn.addEventListener("click", () => {
+      const productName = document.getElementById(`productName-${item.cartID}`).value;
+      updateCartItem(item.cartID, productName);
+    });
   
   
       cartItems.appendChild(cartItem);
